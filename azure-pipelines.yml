@@ -7,8 +7,7 @@ Linux:
     export VSTS_AGENT_HTTPTRACE=true
 
 pr:
-  - master
-  - releases/*
+  - azure_pipelines
 
 strategy:
   matrix:
