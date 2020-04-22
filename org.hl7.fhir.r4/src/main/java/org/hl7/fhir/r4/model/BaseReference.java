@@ -73,9 +73,8 @@ public abstract class BaseReference extends Type implements IBaseReference, ICom
      * a part of the FHIR "wire format" and is never transmitted or receieved inline, but this property
      * may be changed/accessed by parsers.
      */
-    public IBaseReference setResource(IBaseResource theResource) {
+    public void setResource(IBaseResource theResource) {
         resource = theResource;
-        return this;
     }
 
     @Override

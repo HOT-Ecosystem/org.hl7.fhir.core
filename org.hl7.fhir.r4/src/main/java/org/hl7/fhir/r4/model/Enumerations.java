@@ -1,25 +1,38 @@
 package org.hl7.fhir.r4.model;
 
-/*-
- * #%L
- * org.hl7.fhir.r4
- * %%
- * Copyright (C) 2014 - 2019 Health Level 7
- * %%
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *      http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * #L%
- */
+/*
+  Copyright (c) 2011+, HL7, Inc.
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification, 
+  are permitted provided that the following conditions are met:
+  
+   * Redistributions of source code must retain the above copyright notice, this 
+     list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above copyright notice, 
+     this list of conditions and the following disclaimer in the documentation 
+     and/or other materials provided with the distribution.
+   * Neither the name of HL7 nor the names of its contributors may be used to 
+     endorse or promote products derived from this software without specific 
+     prior written permission.
+  
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
+  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+  POSSIBILITY OF SUCH DAMAGE.
+  
+*/
 
+// Generated on Thu, Sep 5, 2019 18:21-0500 for FHIR v4.1.0
+
+
+import org.hl7.fhir.instance.model.api.*;
 import org.hl7.fhir.exceptions.FHIRException;
 
 public class Enumerations {
@@ -1153,6 +1166,10 @@ public class Enumerations {
          */
         NARRATIVE, 
         /**
+         * An ordered list (distribution) of statistics.
+         */
+        ORDEREDDISTRIBUTION, 
+        /**
          * The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
          */
         PARAMETERDEFINITION, 
@@ -1204,6 +1221,10 @@ public class Enumerations {
          * null
          */
         SIMPLEQUANTITY, 
+        /**
+         * A fact or piece of data from a  study of a large quantity of numerical data.  A mathematical or quantified characteristic of a group of observations.
+         */
+        STATISTIC, 
         /**
          * Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.
          */
@@ -1359,6 +1380,8 @@ public class Enumerations {
           return MONEYQUANTITY;
         if ("Narrative".equals(codeString))
           return NARRATIVE;
+        if ("OrderedDistribution".equals(codeString))
+          return ORDEREDDISTRIBUTION;
         if ("ParameterDefinition".equals(codeString))
           return PARAMETERDEFINITION;
         if ("Period".equals(codeString))
@@ -1385,6 +1408,8 @@ public class Enumerations {
           return SIGNATURE;
         if ("SimpleQuantity".equals(codeString))
           return SIMPLEQUANTITY;
+        if ("Statistic".equals(codeString))
+          return STATISTIC;
         if ("SubstanceAmount".equals(codeString))
           return SUBSTANCEAMOUNT;
         if ("Timing".equals(codeString))
@@ -1463,6 +1488,7 @@ public class Enumerations {
             case MONEY: return "Money";
             case MONEYQUANTITY: return "MoneyQuantity";
             case NARRATIVE: return "Narrative";
+            case ORDEREDDISTRIBUTION: return "OrderedDistribution";
             case PARAMETERDEFINITION: return "ParameterDefinition";
             case PERIOD: return "Period";
             case POPULATION: return "Population";
@@ -1476,6 +1502,7 @@ public class Enumerations {
             case SAMPLEDDATA: return "SampledData";
             case SIGNATURE: return "Signature";
             case SIMPLEQUANTITY: return "SimpleQuantity";
+            case STATISTIC: return "Statistic";
             case SUBSTANCEAMOUNT: return "SubstanceAmount";
             case TIMING: return "Timing";
             case TRIGGERDEFINITION: return "TriggerDefinition";
@@ -1531,6 +1558,7 @@ public class Enumerations {
             case MONEY: return "http://hl7.org/fhir/data-types";
             case MONEYQUANTITY: return "http://hl7.org/fhir/data-types";
             case NARRATIVE: return "http://hl7.org/fhir/data-types";
+            case ORDEREDDISTRIBUTION: return "http://hl7.org/fhir/data-types";
             case PARAMETERDEFINITION: return "http://hl7.org/fhir/data-types";
             case PERIOD: return "http://hl7.org/fhir/data-types";
             case POPULATION: return "http://hl7.org/fhir/data-types";
@@ -1544,6 +1572,7 @@ public class Enumerations {
             case SAMPLEDDATA: return "http://hl7.org/fhir/data-types";
             case SIGNATURE: return "http://hl7.org/fhir/data-types";
             case SIMPLEQUANTITY: return "http://hl7.org/fhir/data-types";
+            case STATISTIC: return "http://hl7.org/fhir/data-types";
             case SUBSTANCEAMOUNT: return "http://hl7.org/fhir/data-types";
             case TIMING: return "http://hl7.org/fhir/data-types";
             case TRIGGERDEFINITION: return "http://hl7.org/fhir/data-types";
@@ -1599,6 +1628,7 @@ public class Enumerations {
             case MONEY: return "An amount of economic utility in some recognized currency.";
             case MONEYQUANTITY: return "";
             case NARRATIVE: return "A human-readable summary of the resource conveying the essential clinical and business information for the resource.";
+            case ORDEREDDISTRIBUTION: return "An ordered list (distribution) of statistics.";
             case PARAMETERDEFINITION: return "The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.";
             case PERIOD: return "A time period defined by a start and end date and optionally time.";
             case POPULATION: return "A populatioof people with some set of grouping criteria.";
@@ -1612,6 +1642,7 @@ public class Enumerations {
             case SAMPLEDDATA: return "A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.";
             case SIGNATURE: return "A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.";
             case SIMPLEQUANTITY: return "";
+            case STATISTIC: return "A fact or piece of data from a  study of a large quantity of numerical data.  A mathematical or quantified characteristic of a group of observations.";
             case SUBSTANCEAMOUNT: return "Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.";
             case TIMING: return "Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.";
             case TRIGGERDEFINITION: return "A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.";
@@ -1667,6 +1698,7 @@ public class Enumerations {
             case MONEY: return "Money";
             case MONEYQUANTITY: return "MoneyQuantity";
             case NARRATIVE: return "Narrative";
+            case ORDEREDDISTRIBUTION: return "OrderedDistribution";
             case PARAMETERDEFINITION: return "ParameterDefinition";
             case PERIOD: return "Period";
             case POPULATION: return "Population";
@@ -1680,6 +1712,7 @@ public class Enumerations {
             case SAMPLEDDATA: return "SampledData";
             case SIGNATURE: return "Signature";
             case SIMPLEQUANTITY: return "SimpleQuantity";
+            case STATISTIC: return "Statistic";
             case SUBSTANCEAMOUNT: return "SubstanceAmount";
             case TIMING: return "Timing";
             case TRIGGERDEFINITION: return "TriggerDefinition";
@@ -1766,6 +1799,8 @@ public class Enumerations {
           return DataType.MONEYQUANTITY;
         if ("Narrative".equals(codeString))
           return DataType.NARRATIVE;
+        if ("OrderedDistribution".equals(codeString))
+          return DataType.ORDEREDDISTRIBUTION;
         if ("ParameterDefinition".equals(codeString))
           return DataType.PARAMETERDEFINITION;
         if ("Period".equals(codeString))
@@ -1792,6 +1827,8 @@ public class Enumerations {
           return DataType.SIGNATURE;
         if ("SimpleQuantity".equals(codeString))
           return DataType.SIMPLEQUANTITY;
+        if ("Statistic".equals(codeString))
+          return DataType.STATISTIC;
         if ("SubstanceAmount".equals(codeString))
           return DataType.SUBSTANCEAMOUNT;
         if ("Timing".equals(codeString))
@@ -1902,6 +1939,8 @@ public class Enumerations {
           return new Enumeration<DataType>(this, DataType.MONEYQUANTITY);
         if ("Narrative".equals(codeString))
           return new Enumeration<DataType>(this, DataType.NARRATIVE);
+        if ("OrderedDistribution".equals(codeString))
+          return new Enumeration<DataType>(this, DataType.ORDEREDDISTRIBUTION);
         if ("ParameterDefinition".equals(codeString))
           return new Enumeration<DataType>(this, DataType.PARAMETERDEFINITION);
         if ("Period".equals(codeString))
@@ -1928,6 +1967,8 @@ public class Enumerations {
           return new Enumeration<DataType>(this, DataType.SIGNATURE);
         if ("SimpleQuantity".equals(codeString))
           return new Enumeration<DataType>(this, DataType.SIMPLEQUANTITY);
+        if ("Statistic".equals(codeString))
+          return new Enumeration<DataType>(this, DataType.STATISTIC);
         if ("SubstanceAmount".equals(codeString))
           return new Enumeration<DataType>(this, DataType.SUBSTANCEAMOUNT);
         if ("Timing".equals(codeString))
@@ -2031,6 +2072,8 @@ public class Enumerations {
         return "MoneyQuantity";
       if (code == DataType.NARRATIVE)
         return "Narrative";
+      if (code == DataType.ORDEREDDISTRIBUTION)
+        return "OrderedDistribution";
       if (code == DataType.PARAMETERDEFINITION)
         return "ParameterDefinition";
       if (code == DataType.PERIOD)
@@ -2057,6 +2100,8 @@ public class Enumerations {
         return "Signature";
       if (code == DataType.SIMPLEQUANTITY)
         return "SimpleQuantity";
+      if (code == DataType.STATISTIC)
+        return "Statistic";
       if (code == DataType.SUBSTANCEAMOUNT)
         return "SubstanceAmount";
       if (code == DataType.TIMING)
@@ -2383,6 +2428,10 @@ public class Enumerations {
          * A clinical assessment performed when planning treatments and management strategies for a patient.
          */
         CLINICALIMPRESSION, 
+	/**
+         * Clinical Profiles summarize and demonstrate the features of a population.
+         */
+        CLINICALPROFILE, 
         /**
          * A record of information transmitted from a sender to a receiver.
          */
@@ -2470,7 +2519,7 @@ public class Enumerations {
         /**
          * Record of medication being taken by a patient.
          */
-        MEDICATIONSTATEMENT, 
+        MEDICATIONUSAGE, 
         /**
          * Measurements and simple assertions.
          */
@@ -2520,6 +2569,8 @@ public class Enumerations {
           return CLAIMRESPONSE;
         if ("ClinicalImpression".equals(codeString))
           return CLINICALIMPRESSION;
+        if ("ClinicalProfile".equals(codeString))
+          return CLINICALPROFILE;
         if ("Communication".equals(codeString))
           return COMMUNICATION;
         if ("Composition".equals(codeString))
@@ -2562,8 +2613,8 @@ public class Enumerations {
           return MEDICATIONADMINISTRATION;
         if ("MedicationDispense".equals(codeString))
           return MEDICATIONDISPENSE;
-        if ("MedicationStatement".equals(codeString))
-          return MEDICATIONSTATEMENT;
+        if ("MedicationUsage".equals(codeString))
+          return MEDICATIONUSAGE;
         if ("Observation".equals(codeString))
           return OBSERVATION;
         if ("PaymentNotice".equals(codeString))
@@ -2589,6 +2640,7 @@ public class Enumerations {
             case CHARGEITEM: return "ChargeItem";
             case CLAIMRESPONSE: return "ClaimResponse";
             case CLINICALIMPRESSION: return "ClinicalImpression";
+            case CLINICALPROFILE: return "ClinicalProfile";
             case COMMUNICATION: return "Communication";
             case COMPOSITION: return "Composition";
             case CONDITION: return "Condition";
@@ -2610,7 +2662,7 @@ public class Enumerations {
             case MEDIA: return "Media";
             case MEDICATIONADMINISTRATION: return "MedicationAdministration";
             case MEDICATIONDISPENSE: return "MedicationDispense";
-            case MEDICATIONSTATEMENT: return "MedicationStatement";
+            case MEDICATIONUSAGE: return "MedicationUsage";
             case OBSERVATION: return "Observation";
             case PAYMENTNOTICE: return "PaymentNotice";
             case PAYMENTRECONCILIATION: return "PaymentReconciliation";
@@ -2628,6 +2680,7 @@ public class Enumerations {
             case CHARGEITEM: return "http://hl7.org/fhir/event-resource-types";
             case CLAIMRESPONSE: return "http://hl7.org/fhir/event-resource-types";
             case CLINICALIMPRESSION: return "http://hl7.org/fhir/event-resource-types";
+            case CLINICALPROFILE: return "http://hl7.org/fhir/event-resource-types";
             case COMMUNICATION: return "http://hl7.org/fhir/event-resource-types";
             case COMPOSITION: return "http://hl7.org/fhir/event-resource-types";
             case CONDITION: return "http://hl7.org/fhir/event-resource-types";
@@ -2649,7 +2702,7 @@ public class Enumerations {
             case MEDIA: return "http://hl7.org/fhir/event-resource-types";
             case MEDICATIONADMINISTRATION: return "http://hl7.org/fhir/event-resource-types";
             case MEDICATIONDISPENSE: return "http://hl7.org/fhir/event-resource-types";
-            case MEDICATIONSTATEMENT: return "http://hl7.org/fhir/event-resource-types";
+            case MEDICATIONUSAGE: return "http://hl7.org/fhir/event-resource-types";
             case OBSERVATION: return "http://hl7.org/fhir/event-resource-types";
             case PAYMENTNOTICE: return "http://hl7.org/fhir/event-resource-types";
             case PAYMENTRECONCILIATION: return "http://hl7.org/fhir/event-resource-types";
@@ -2667,6 +2720,7 @@ public class Enumerations {
             case CHARGEITEM: return "Item containing charge code(s) associated with the provision of healthcare provider products.";
             case CLAIMRESPONSE: return "Remittance resource.";
             case CLINICALIMPRESSION: return "A clinical assessment performed when planning treatments and management strategies for a patient.";
+            case CLINICALPROFILE: return "Clinical Profiles summarize and demonstrate the features of a population.";
             case COMMUNICATION: return "A record of information transmitted from a sender to a receiver.";
             case COMPOSITION: return "A set of resources composed into a single coherent clinical statement with clinical attestation.";
             case CONDITION: return "Detailed information about conditions, problems or diagnoses.";
@@ -2688,7 +2742,7 @@ public class Enumerations {
             case MEDIA: return "A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.";
             case MEDICATIONADMINISTRATION: return "Administration of medication to a patient.";
             case MEDICATIONDISPENSE: return "Dispensing a medication to a named patient.";
-            case MEDICATIONSTATEMENT: return "Record of medication being taken by a patient.";
+            case MEDICATIONUSAGE: return "Record of medication being taken by a patient.";
             case OBSERVATION: return "Measurements and simple assertions.";
             case PAYMENTNOTICE: return "PaymentNotice request.";
             case PAYMENTRECONCILIATION: return "PaymentReconciliation resource.";
@@ -2706,6 +2760,7 @@ public class Enumerations {
             case CHARGEITEM: return "ChargeItem";
             case CLAIMRESPONSE: return "ClaimResponse";
             case CLINICALIMPRESSION: return "ClinicalImpression";
+            case CLINICALPROFILE: return "ClinicalProfile";
             case COMMUNICATION: return "Communication";
             case COMPOSITION: return "Composition";
             case CONDITION: return "Condition";
@@ -2727,7 +2782,7 @@ public class Enumerations {
             case MEDIA: return "Media";
             case MEDICATIONADMINISTRATION: return "MedicationAdministration";
             case MEDICATIONDISPENSE: return "MedicationDispense";
-            case MEDICATIONSTATEMENT: return "MedicationStatement";
+            case MEDICATIONUSAGE: return "MedicationUsage";
             case OBSERVATION: return "Observation";
             case PAYMENTNOTICE: return "PaymentNotice";
             case PAYMENTRECONCILIATION: return "PaymentReconciliation";
@@ -2753,6 +2808,8 @@ public class Enumerations {
           return EventResourceType.CLAIMRESPONSE;
         if ("ClinicalImpression".equals(codeString))
           return EventResourceType.CLINICALIMPRESSION;
+        if ("ClinicalProfile".equals(codeString))
+          return EventResourceType.CLINICALPROFILE;
         if ("Communication".equals(codeString))
           return EventResourceType.COMMUNICATION;
         if ("Composition".equals(codeString))
@@ -2795,8 +2852,8 @@ public class Enumerations {
           return EventResourceType.MEDICATIONADMINISTRATION;
         if ("MedicationDispense".equals(codeString))
           return EventResourceType.MEDICATIONDISPENSE;
-        if ("MedicationStatement".equals(codeString))
-          return EventResourceType.MEDICATIONSTATEMENT;
+        if ("MedicationUsage".equals(codeString))
+          return EventResourceType.MEDICATIONUSAGE;
         if ("Observation".equals(codeString))
           return EventResourceType.OBSERVATION;
         if ("PaymentNotice".equals(codeString))
@@ -2831,6 +2888,8 @@ public class Enumerations {
           return new Enumeration<EventResourceType>(this, EventResourceType.CLAIMRESPONSE);
         if ("ClinicalImpression".equals(codeString))
           return new Enumeration<EventResourceType>(this, EventResourceType.CLINICALIMPRESSION);
+        if ("ClinicalProfile".equals(codeString))
+          return new Enumeration<EventResourceType>(this, EventResourceType.CLINICALPROFILE);
         if ("Communication".equals(codeString))
           return new Enumeration<EventResourceType>(this, EventResourceType.COMMUNICATION);
         if ("Composition".equals(codeString))
@@ -2873,8 +2932,8 @@ public class Enumerations {
           return new Enumeration<EventResourceType>(this, EventResourceType.MEDICATIONADMINISTRATION);
         if ("MedicationDispense".equals(codeString))
           return new Enumeration<EventResourceType>(this, EventResourceType.MEDICATIONDISPENSE);
-        if ("MedicationStatement".equals(codeString))
-          return new Enumeration<EventResourceType>(this, EventResourceType.MEDICATIONSTATEMENT);
+        if ("MedicationUsage".equals(codeString))
+          return new Enumeration<EventResourceType>(this, EventResourceType.MEDICATIONUSAGE);
         if ("Observation".equals(codeString))
           return new Enumeration<EventResourceType>(this, EventResourceType.OBSERVATION);
         if ("PaymentNotice".equals(codeString))
@@ -2902,6 +2961,8 @@ public class Enumerations {
         return "ClaimResponse";
       if (code == EventResourceType.CLINICALIMPRESSION)
         return "ClinicalImpression";
+      if (code == EventResourceType.CLINICALPROFILE)
+        return "ClinicalProfile";
       if (code == EventResourceType.COMMUNICATION)
         return "Communication";
       if (code == EventResourceType.COMPOSITION)
@@ -2944,8 +3005,8 @@ public class Enumerations {
         return "MedicationAdministration";
       if (code == EventResourceType.MEDICATIONDISPENSE)
         return "MedicationDispense";
-      if (code == EventResourceType.MEDICATIONSTATEMENT)
-        return "MedicationStatement";
+      if (code == EventResourceType.MEDICATIONUSAGE)
+        return "MedicationUsage";
       if (code == EventResourceType.OBSERVATION)
         return "Observation";
       if (code == EventResourceType.PAYMENTNOTICE)
@@ -3077,6 +3138,10 @@ public class Enumerations {
          */
         NARRATIVE, 
         /**
+         * An ordered list (distribution) of statistics.
+         */
+        ORDEREDDISTRIBUTION, 
+        /**
          * The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
          */
         PARAMETERDEFINITION, 
@@ -3128,6 +3193,10 @@ public class Enumerations {
          * null
          */
         SIMPLEQUANTITY, 
+        /**
+         * A fact or piece of data from a  study of a large quantity of numerical data.  A mathematical or quantified characteristic of a group of observations.
+         */
+        STATISTIC, 
         /**
          * Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.
          */
@@ -3233,7 +3302,7 @@ public class Enumerations {
          */
         ACTIVITYDEFINITION, 
         /**
-         * Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
+         * An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.
          */
         ADVERSEEVENT, 
         /**
@@ -3249,7 +3318,7 @@ public class Enumerations {
          */
         APPOINTMENTRESPONSE, 
         /**
-         * A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
+         * A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.
          */
         AUDITEVENT, 
         /**
@@ -3278,11 +3347,15 @@ into another (possibly the same) biological entity.
          */
         CAPABILITYSTATEMENT, 
         /**
+         * A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+         */
+        CAPABILITYSTATEMENT2, 
+        /**
          * Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
          */
         CAREPLAN, 
         /**
-         * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.
+         * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care.
          */
         CARETEAM, 
         /**
@@ -3310,11 +3383,19 @@ into another (possibly the same) biological entity.
          */
         CLINICALIMPRESSION, 
         /**
+         * Clinical Profiles summarize and demonstrate the features of a population.
+         */
+        CLINICALPROFILE, 
+        /**
+         * A single item of clinical particulars - an indication, contraindication, interaction etc. for a medicinal product.
+         */
+        CLINICALUSEISSUE, 
+        /**
          * The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
          */
         CODESYSTEM, 
         /**
-         * An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency that was notified about a reportable condition.
+         * An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency communication to a provider/reporter in response to a case report for a reportable condition.
          */
         COMMUNICATION, 
         /**
@@ -3337,6 +3418,10 @@ into another (possibly the same) biological entity.
          * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
          */
         CONDITION, 
+        /**
+         * A definition of a condition and information relevant to managing it.
+         */
+        CONDITIONDEFINITION, 
         /**
          * A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
          */
@@ -3398,10 +3483,6 @@ into another (possibly the same) biological entity.
          */
         DOMAINRESOURCE, 
         /**
-         * The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
-         */
-        EFFECTEVIDENCESYNTHESIS, 
-        /**
          * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
          */
         ENCOUNTER, 
@@ -3426,7 +3507,7 @@ into another (possibly the same) biological entity.
          */
         EVENTDEFINITION, 
         /**
-         * The Evidence resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.
+         * This represents statistics, certainty, both the intended and actual population, and evidence variables.
          */
         EVIDENCE, 
         /**
@@ -3490,6 +3571,10 @@ into another (possibly the same) biological entity.
          */
         IMPLEMENTATIONGUIDE, 
         /**
+         * An ingredient of a manufactured item or pharmaceutical product.
+         */
+        INGREDIENT, 
+        /**
          * Details of a Health Insurance product/plan provided by an organization.
          */
         INSURANCEPLAN, 
@@ -3546,51 +3631,11 @@ into another (possibly the same) biological entity.
          */
         MEDICATIONREQUEST, 
         /**
-         * A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
+         * A record of a medication that is being consumed by a patient.   A MedicationUsage may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
 
-The primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
+The primary difference between a medicationusage and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationusage is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Usage information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
          */
-        MEDICATIONSTATEMENT, 
-        /**
-         * Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
-         */
-        MEDICINALPRODUCT, 
-        /**
-         * The regulatory authorization of a medicinal product.
-         */
-        MEDICINALPRODUCTAUTHORIZATION, 
-        /**
-         * The clinical particulars - indications, contraindications etc. of a medicinal product, including for regulatory purposes.
-         */
-        MEDICINALPRODUCTCONTRAINDICATION, 
-        /**
-         * Indication for the Medicinal Product.
-         */
-        MEDICINALPRODUCTINDICATION, 
-        /**
-         * An ingredient of a manufactured item or pharmaceutical product.
-         */
-        MEDICINALPRODUCTINGREDIENT, 
-        /**
-         * The interactions of the medicinal product with other medicinal products, or other forms of interactions.
-         */
-        MEDICINALPRODUCTINTERACTION, 
-        /**
-         * The manufactured item as contained in the packaged medicinal product.
-         */
-        MEDICINALPRODUCTMANUFACTURED, 
-        /**
-         * A medicinal product in a container or package.
-         */
-        MEDICINALPRODUCTPACKAGED, 
-        /**
-         * A pharmaceutical product described in terms of its composition and dose form.
-         */
-        MEDICINALPRODUCTPHARMACEUTICAL, 
-        /**
-         * Describe the undesirable effects of the medicinal product.
-         */
-        MEDICINALPRODUCTUNDESIRABLEEFFECT, 
+        MEDICATIONUSAGE, 
         /**
          * Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
          */
@@ -3684,6 +3729,26 @@ The primary difference between a medication statement and a medication administr
          */
         QUESTIONNAIRERESPONSE, 
         /**
+         * A pharmaceutical product described in terms of its composition and dose form.
+         */
+        REGULATEDADMINISTRABLEPRODUCT, 
+        /**
+         * The regulatory authorization of a medicinal product.
+         */
+        REGULATEDAUTHORIZATION, 
+        /**
+         * The manufactured item as contained in the packaged medicinal product.
+         */
+        REGULATEDMANUFACTUREDITEM, 
+        /**
+         * Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
+         */
+        REGULATEDMEDICINALPRODUCT, 
+        /**
+         * A medicinal product in a container or package.
+         */
+        REGULATEDPACKAGEDPRODUCT, 
+        /**
          * Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.
          */
         RELATEDPERSON, 
@@ -3691,14 +3756,6 @@ The primary difference between a medication statement and a medication administr
          * A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
          */
         REQUESTGROUP, 
-        /**
-         * The ResearchDefinition resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.
-         */
-        RESEARCHDEFINITION, 
-        /**
-         * The ResearchElementDefinition resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
-         */
-        RESEARCHELEMENTDEFINITION, 
         /**
          * A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques.  A ResearchStudy involves the gathering of information about human or animal subjects.
          */
@@ -3715,10 +3772,6 @@ The primary difference between a medication statement and a medication administr
          * An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
          */
         RISKASSESSMENT, 
-        /**
-         * The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.
-         */
-        RISKEVIDENCESYNTHESIS, 
         /**
          * A container for slots of time that may be available for booking appointments.
          */
@@ -3760,6 +3813,10 @@ The primary difference between a medication statement and a medication administr
          */
         SUBSTANCE, 
         /**
+         * The detailed description of a substance, typically at a level beyond what is used for prescribing.
+         */
+        SUBSTANCEDEFINITION, 
+        /**
          * Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
          */
         SUBSTANCENUCLEICACID, 
@@ -3780,10 +3837,6 @@ The primary difference between a medication statement and a medication administr
          */
         SUBSTANCESOURCEMATERIAL, 
         /**
-         * The detailed description of a substance, typically at a level beyond what is used for prescribing.
-         */
-        SUBSTANCESPECIFICATION, 
-        /**
          * Record of delivery of what is supplied.
          */
         SUPPLYDELIVERY, 
@@ -3796,7 +3849,7 @@ The primary difference between a medication statement and a medication administr
          */
         TASK, 
         /**
-         * A Terminology Capabilities documents a set of capabilities (behaviors) of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+         * A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
          */
         TERMINOLOGYCAPABILITIES, 
         /**
@@ -3807,6 +3860,10 @@ The primary difference between a medication statement and a medication administr
          * A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
          */
         TESTSCRIPT, 
+        /**
+         * Describes a stream of resource state changes identified by trigger criteria and annotated with labels useful to filter projections from this topic.
+         */
+        TOPIC, 
         /**
          * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).
          */
@@ -3886,6 +3943,8 @@ The primary difference between a medication statement and a medication administr
           return MONEYQUANTITY;
         if ("Narrative".equals(codeString))
           return NARRATIVE;
+        if ("OrderedDistribution".equals(codeString))
+          return ORDEREDDISTRIBUTION;
         if ("ParameterDefinition".equals(codeString))
           return PARAMETERDEFINITION;
         if ("Period".equals(codeString))
@@ -3912,6 +3971,8 @@ The primary difference between a medication statement and a medication administr
           return SIGNATURE;
         if ("SimpleQuantity".equals(codeString))
           return SIMPLEQUANTITY;
+        if ("Statistic".equals(codeString))
+          return STATISTIC;
         if ("SubstanceAmount".equals(codeString))
           return SUBSTANCEAMOUNT;
         if ("Timing".equals(codeString))
@@ -3986,6 +4047,8 @@ The primary difference between a medication statement and a medication administr
           return BUNDLE;
         if ("CapabilityStatement".equals(codeString))
           return CAPABILITYSTATEMENT;
+        if ("CapabilityStatement2".equals(codeString))
+          return CAPABILITYSTATEMENT2;
         if ("CarePlan".equals(codeString))
           return CAREPLAN;
         if ("CareTeam".equals(codeString))
@@ -4002,6 +4065,10 @@ The primary difference between a medication statement and a medication administr
           return CLAIMRESPONSE;
         if ("ClinicalImpression".equals(codeString))
           return CLINICALIMPRESSION;
+        if ("ClinicalProfile".equals(codeString))
+          return CLINICALPROFILE;
+        if ("ClinicalUseIssue".equals(codeString))
+          return CLINICALUSEISSUE;
         if ("CodeSystem".equals(codeString))
           return CODESYSTEM;
         if ("Communication".equals(codeString))
@@ -4016,6 +4083,8 @@ The primary difference between a medication statement and a medication administr
           return CONCEPTMAP;
         if ("Condition".equals(codeString))
           return CONDITION;
+        if ("ConditionDefinition".equals(codeString))
+          return CONDITIONDEFINITION;
         if ("Consent".equals(codeString))
           return CONSENT;
         if ("Contract".equals(codeString))
@@ -4046,8 +4115,6 @@ The primary difference between a medication statement and a medication administr
           return DOCUMENTREFERENCE;
         if ("DomainResource".equals(codeString))
           return DOMAINRESOURCE;
-        if ("EffectEvidenceSynthesis".equals(codeString))
-          return EFFECTEVIDENCESYNTHESIS;
         if ("Encounter".equals(codeString))
           return ENCOUNTER;
         if ("Endpoint".equals(codeString))
@@ -4092,6 +4159,8 @@ The primary difference between a medication statement and a medication administr
           return IMMUNIZATIONRECOMMENDATION;
         if ("ImplementationGuide".equals(codeString))
           return IMPLEMENTATIONGUIDE;
+        if ("Ingredient".equals(codeString))
+          return INGREDIENT;
         if ("InsurancePlan".equals(codeString))
           return INSURANCEPLAN;
         if ("Invoice".equals(codeString))
@@ -4120,28 +4189,8 @@ The primary difference between a medication statement and a medication administr
           return MEDICATIONKNOWLEDGE;
         if ("MedicationRequest".equals(codeString))
           return MEDICATIONREQUEST;
-        if ("MedicationStatement".equals(codeString))
-          return MEDICATIONSTATEMENT;
-        if ("MedicinalProduct".equals(codeString))
-          return MEDICINALPRODUCT;
-        if ("MedicinalProductAuthorization".equals(codeString))
-          return MEDICINALPRODUCTAUTHORIZATION;
-        if ("MedicinalProductContraindication".equals(codeString))
-          return MEDICINALPRODUCTCONTRAINDICATION;
-        if ("MedicinalProductIndication".equals(codeString))
-          return MEDICINALPRODUCTINDICATION;
-        if ("MedicinalProductIngredient".equals(codeString))
-          return MEDICINALPRODUCTINGREDIENT;
-        if ("MedicinalProductInteraction".equals(codeString))
-          return MEDICINALPRODUCTINTERACTION;
-        if ("MedicinalProductManufactured".equals(codeString))
-          return MEDICINALPRODUCTMANUFACTURED;
-        if ("MedicinalProductPackaged".equals(codeString))
-          return MEDICINALPRODUCTPACKAGED;
-        if ("MedicinalProductPharmaceutical".equals(codeString))
-          return MEDICINALPRODUCTPHARMACEUTICAL;
-        if ("MedicinalProductUndesirableEffect".equals(codeString))
-          return MEDICINALPRODUCTUNDESIRABLEEFFECT;
+        if ("MedicationUsage".equals(codeString))
+          return MEDICATIONUSAGE;
         if ("MessageDefinition".equals(codeString))
           return MESSAGEDEFINITION;
         if ("MessageHeader".equals(codeString))
@@ -4188,14 +4237,20 @@ The primary difference between a medication statement and a medication administr
           return QUESTIONNAIRE;
         if ("QuestionnaireResponse".equals(codeString))
           return QUESTIONNAIRERESPONSE;
+        if ("RegulatedAdministrableProduct".equals(codeString))
+          return REGULATEDADMINISTRABLEPRODUCT;
+        if ("RegulatedAuthorization".equals(codeString))
+          return REGULATEDAUTHORIZATION;
+        if ("RegulatedManufacturedItem".equals(codeString))
+          return REGULATEDMANUFACTUREDITEM;
+        if ("RegulatedMedicinalProduct".equals(codeString))
+          return REGULATEDMEDICINALPRODUCT;
+        if ("RegulatedPackagedProduct".equals(codeString))
+          return REGULATEDPACKAGEDPRODUCT;
         if ("RelatedPerson".equals(codeString))
           return RELATEDPERSON;
         if ("RequestGroup".equals(codeString))
           return REQUESTGROUP;
-        if ("ResearchDefinition".equals(codeString))
-          return RESEARCHDEFINITION;
-        if ("ResearchElementDefinition".equals(codeString))
-          return RESEARCHELEMENTDEFINITION;
         if ("ResearchStudy".equals(codeString))
           return RESEARCHSTUDY;
         if ("ResearchSubject".equals(codeString))
@@ -4204,8 +4259,6 @@ The primary difference between a medication statement and a medication administr
           return RESOURCE;
         if ("RiskAssessment".equals(codeString))
           return RISKASSESSMENT;
-        if ("RiskEvidenceSynthesis".equals(codeString))
-          return RISKEVIDENCESYNTHESIS;
         if ("Schedule".equals(codeString))
           return SCHEDULE;
         if ("SearchParameter".equals(codeString))
@@ -4226,6 +4279,8 @@ The primary difference between a medication statement and a medication administr
           return SUBSCRIPTION;
         if ("Substance".equals(codeString))
           return SUBSTANCE;
+        if ("SubstanceDefinition".equals(codeString))
+          return SUBSTANCEDEFINITION;
         if ("SubstanceNucleicAcid".equals(codeString))
           return SUBSTANCENUCLEICACID;
         if ("SubstancePolymer".equals(codeString))
@@ -4236,8 +4291,6 @@ The primary difference between a medication statement and a medication administr
           return SUBSTANCEREFERENCEINFORMATION;
         if ("SubstanceSourceMaterial".equals(codeString))
           return SUBSTANCESOURCEMATERIAL;
-        if ("SubstanceSpecification".equals(codeString))
-          return SUBSTANCESPECIFICATION;
         if ("SupplyDelivery".equals(codeString))
           return SUPPLYDELIVERY;
         if ("SupplyRequest".equals(codeString))
@@ -4250,6 +4303,8 @@ The primary difference between a medication statement and a medication administr
           return TESTREPORT;
         if ("TestScript".equals(codeString))
           return TESTSCRIPT;
+        if ("Topic".equals(codeString))
+          return TOPIC;
         if ("ValueSet".equals(codeString))
           return VALUESET;
         if ("VerificationResult".equals(codeString))
@@ -4290,6 +4345,7 @@ The primary difference between a medication statement and a medication administr
             case MONEY: return "Money";
             case MONEYQUANTITY: return "MoneyQuantity";
             case NARRATIVE: return "Narrative";
+            case ORDEREDDISTRIBUTION: return "OrderedDistribution";
             case PARAMETERDEFINITION: return "ParameterDefinition";
             case PERIOD: return "Period";
             case POPULATION: return "Population";
@@ -4303,6 +4359,7 @@ The primary difference between a medication statement and a medication administr
             case SAMPLEDDATA: return "SampledData";
             case SIGNATURE: return "Signature";
             case SIMPLEQUANTITY: return "SimpleQuantity";
+            case STATISTIC: return "Statistic";
             case SUBSTANCEAMOUNT: return "SubstanceAmount";
             case TIMING: return "Timing";
             case TRIGGERDEFINITION: return "TriggerDefinition";
@@ -4340,6 +4397,7 @@ The primary difference between a medication statement and a medication administr
             case BODYSTRUCTURE: return "BodyStructure";
             case BUNDLE: return "Bundle";
             case CAPABILITYSTATEMENT: return "CapabilityStatement";
+            case CAPABILITYSTATEMENT2: return "CapabilityStatement2";
             case CAREPLAN: return "CarePlan";
             case CARETEAM: return "CareTeam";
             case CATALOGENTRY: return "CatalogEntry";
@@ -4348,6 +4406,8 @@ The primary difference between a medication statement and a medication administr
             case CLAIM: return "Claim";
             case CLAIMRESPONSE: return "ClaimResponse";
             case CLINICALIMPRESSION: return "ClinicalImpression";
+            case CLINICALPROFILE: return "ClinicalProfile";
+            case CLINICALUSEISSUE: return "ClinicalUseIssue";
             case CODESYSTEM: return "CodeSystem";
             case COMMUNICATION: return "Communication";
             case COMMUNICATIONREQUEST: return "CommunicationRequest";
@@ -4355,6 +4415,7 @@ The primary difference between a medication statement and a medication administr
             case COMPOSITION: return "Composition";
             case CONCEPTMAP: return "ConceptMap";
             case CONDITION: return "Condition";
+            case CONDITIONDEFINITION: return "ConditionDefinition";
             case CONSENT: return "Consent";
             case CONTRACT: return "Contract";
             case COVERAGE: return "Coverage";
@@ -4370,7 +4431,6 @@ The primary difference between a medication statement and a medication administr
             case DOCUMENTMANIFEST: return "DocumentManifest";
             case DOCUMENTREFERENCE: return "DocumentReference";
             case DOMAINRESOURCE: return "DomainResource";
-            case EFFECTEVIDENCESYNTHESIS: return "EffectEvidenceSynthesis";
             case ENCOUNTER: return "Encounter";
             case ENDPOINT: return "Endpoint";
             case ENROLLMENTREQUEST: return "EnrollmentRequest";
@@ -4393,6 +4453,7 @@ The primary difference between a medication statement and a medication administr
             case IMMUNIZATIONEVALUATION: return "ImmunizationEvaluation";
             case IMMUNIZATIONRECOMMENDATION: return "ImmunizationRecommendation";
             case IMPLEMENTATIONGUIDE: return "ImplementationGuide";
+            case INGREDIENT: return "Ingredient";
             case INSURANCEPLAN: return "InsurancePlan";
             case INVOICE: return "Invoice";
             case LIBRARY: return "Library";
@@ -4407,17 +4468,7 @@ The primary difference between a medication statement and a medication administr
             case MEDICATIONDISPENSE: return "MedicationDispense";
             case MEDICATIONKNOWLEDGE: return "MedicationKnowledge";
             case MEDICATIONREQUEST: return "MedicationRequest";
-            case MEDICATIONSTATEMENT: return "MedicationStatement";
-            case MEDICINALPRODUCT: return "MedicinalProduct";
-            case MEDICINALPRODUCTAUTHORIZATION: return "MedicinalProductAuthorization";
-            case MEDICINALPRODUCTCONTRAINDICATION: return "MedicinalProductContraindication";
-            case MEDICINALPRODUCTINDICATION: return "MedicinalProductIndication";
-            case MEDICINALPRODUCTINGREDIENT: return "MedicinalProductIngredient";
-            case MEDICINALPRODUCTINTERACTION: return "MedicinalProductInteraction";
-            case MEDICINALPRODUCTMANUFACTURED: return "MedicinalProductManufactured";
-            case MEDICINALPRODUCTPACKAGED: return "MedicinalProductPackaged";
-            case MEDICINALPRODUCTPHARMACEUTICAL: return "MedicinalProductPharmaceutical";
-            case MEDICINALPRODUCTUNDESIRABLEEFFECT: return "MedicinalProductUndesirableEffect";
+            case MEDICATIONUSAGE: return "MedicationUsage";
             case MESSAGEDEFINITION: return "MessageDefinition";
             case MESSAGEHEADER: return "MessageHeader";
             case MOLECULARSEQUENCE: return "MolecularSequence";
@@ -4441,15 +4492,17 @@ The primary difference between a medication statement and a medication administr
             case PROVENANCE: return "Provenance";
             case QUESTIONNAIRE: return "Questionnaire";
             case QUESTIONNAIRERESPONSE: return "QuestionnaireResponse";
+            case REGULATEDADMINISTRABLEPRODUCT: return "RegulatedAdministrableProduct";
+            case REGULATEDAUTHORIZATION: return "RegulatedAuthorization";
+            case REGULATEDMANUFACTUREDITEM: return "RegulatedManufacturedItem";
+            case REGULATEDMEDICINALPRODUCT: return "RegulatedMedicinalProduct";
+            case REGULATEDPACKAGEDPRODUCT: return "RegulatedPackagedProduct";
             case RELATEDPERSON: return "RelatedPerson";
             case REQUESTGROUP: return "RequestGroup";
-            case RESEARCHDEFINITION: return "ResearchDefinition";
-            case RESEARCHELEMENTDEFINITION: return "ResearchElementDefinition";
             case RESEARCHSTUDY: return "ResearchStudy";
             case RESEARCHSUBJECT: return "ResearchSubject";
             case RESOURCE: return "Resource";
             case RISKASSESSMENT: return "RiskAssessment";
-            case RISKEVIDENCESYNTHESIS: return "RiskEvidenceSynthesis";
             case SCHEDULE: return "Schedule";
             case SEARCHPARAMETER: return "SearchParameter";
             case SERVICEREQUEST: return "ServiceRequest";
@@ -4460,18 +4513,19 @@ The primary difference between a medication statement and a medication administr
             case STRUCTUREMAP: return "StructureMap";
             case SUBSCRIPTION: return "Subscription";
             case SUBSTANCE: return "Substance";
+            case SUBSTANCEDEFINITION: return "SubstanceDefinition";
             case SUBSTANCENUCLEICACID: return "SubstanceNucleicAcid";
             case SUBSTANCEPOLYMER: return "SubstancePolymer";
             case SUBSTANCEPROTEIN: return "SubstanceProtein";
             case SUBSTANCEREFERENCEINFORMATION: return "SubstanceReferenceInformation";
             case SUBSTANCESOURCEMATERIAL: return "SubstanceSourceMaterial";
-            case SUBSTANCESPECIFICATION: return "SubstanceSpecification";
             case SUPPLYDELIVERY: return "SupplyDelivery";
             case SUPPLYREQUEST: return "SupplyRequest";
             case TASK: return "Task";
             case TERMINOLOGYCAPABILITIES: return "TerminologyCapabilities";
             case TESTREPORT: return "TestReport";
             case TESTSCRIPT: return "TestScript";
+            case TOPIC: return "Topic";
             case VALUESET: return "ValueSet";
             case VERIFICATIONRESULT: return "VerificationResult";
             case VISIONPRESCRIPTION: return "VisionPrescription";
@@ -4508,6 +4562,7 @@ The primary difference between a medication statement and a medication administr
             case MONEY: return "http://hl7.org/fhir/data-types";
             case MONEYQUANTITY: return "http://hl7.org/fhir/data-types";
             case NARRATIVE: return "http://hl7.org/fhir/data-types";
+            case ORDEREDDISTRIBUTION: return "http://hl7.org/fhir/data-types";
             case PARAMETERDEFINITION: return "http://hl7.org/fhir/data-types";
             case PERIOD: return "http://hl7.org/fhir/data-types";
             case POPULATION: return "http://hl7.org/fhir/data-types";
@@ -4521,6 +4576,7 @@ The primary difference between a medication statement and a medication administr
             case SAMPLEDDATA: return "http://hl7.org/fhir/data-types";
             case SIGNATURE: return "http://hl7.org/fhir/data-types";
             case SIMPLEQUANTITY: return "http://hl7.org/fhir/data-types";
+            case STATISTIC: return "http://hl7.org/fhir/data-types";
             case SUBSTANCEAMOUNT: return "http://hl7.org/fhir/data-types";
             case TIMING: return "http://hl7.org/fhir/data-types";
             case TRIGGERDEFINITION: return "http://hl7.org/fhir/data-types";
@@ -4558,6 +4614,7 @@ The primary difference between a medication statement and a medication administr
             case BODYSTRUCTURE: return "http://hl7.org/fhir/resource-types";
             case BUNDLE: return "http://hl7.org/fhir/resource-types";
             case CAPABILITYSTATEMENT: return "http://hl7.org/fhir/resource-types";
+            case CAPABILITYSTATEMENT2: return "http://hl7.org/fhir/resource-types";
             case CAREPLAN: return "http://hl7.org/fhir/resource-types";
             case CARETEAM: return "http://hl7.org/fhir/resource-types";
             case CATALOGENTRY: return "http://hl7.org/fhir/resource-types";
@@ -4566,6 +4623,8 @@ The primary difference between a medication statement and a medication administr
             case CLAIM: return "http://hl7.org/fhir/resource-types";
             case CLAIMRESPONSE: return "http://hl7.org/fhir/resource-types";
             case CLINICALIMPRESSION: return "http://hl7.org/fhir/resource-types";
+            case CLINICALPROFILE: return "http://hl7.org/fhir/resource-types";
+            case CLINICALUSEISSUE: return "http://hl7.org/fhir/resource-types";
             case CODESYSTEM: return "http://hl7.org/fhir/resource-types";
             case COMMUNICATION: return "http://hl7.org/fhir/resource-types";
             case COMMUNICATIONREQUEST: return "http://hl7.org/fhir/resource-types";
@@ -4573,6 +4632,7 @@ The primary difference between a medication statement and a medication administr
             case COMPOSITION: return "http://hl7.org/fhir/resource-types";
             case CONCEPTMAP: return "http://hl7.org/fhir/resource-types";
             case CONDITION: return "http://hl7.org/fhir/resource-types";
+            case CONDITIONDEFINITION: return "http://hl7.org/fhir/resource-types";
             case CONSENT: return "http://hl7.org/fhir/resource-types";
             case CONTRACT: return "http://hl7.org/fhir/resource-types";
             case COVERAGE: return "http://hl7.org/fhir/resource-types";
@@ -4588,7 +4648,6 @@ The primary difference between a medication statement and a medication administr
             case DOCUMENTMANIFEST: return "http://hl7.org/fhir/resource-types";
             case DOCUMENTREFERENCE: return "http://hl7.org/fhir/resource-types";
             case DOMAINRESOURCE: return "http://hl7.org/fhir/resource-types";
-            case EFFECTEVIDENCESYNTHESIS: return "http://hl7.org/fhir/resource-types";
             case ENCOUNTER: return "http://hl7.org/fhir/resource-types";
             case ENDPOINT: return "http://hl7.org/fhir/resource-types";
             case ENROLLMENTREQUEST: return "http://hl7.org/fhir/resource-types";
@@ -4611,6 +4670,7 @@ The primary difference between a medication statement and a medication administr
             case IMMUNIZATIONEVALUATION: return "http://hl7.org/fhir/resource-types";
             case IMMUNIZATIONRECOMMENDATION: return "http://hl7.org/fhir/resource-types";
             case IMPLEMENTATIONGUIDE: return "http://hl7.org/fhir/resource-types";
+            case INGREDIENT: return "http://hl7.org/fhir/resource-types";
             case INSURANCEPLAN: return "http://hl7.org/fhir/resource-types";
             case INVOICE: return "http://hl7.org/fhir/resource-types";
             case LIBRARY: return "http://hl7.org/fhir/resource-types";
@@ -4625,17 +4685,7 @@ The primary difference between a medication statement and a medication administr
             case MEDICATIONDISPENSE: return "http://hl7.org/fhir/resource-types";
             case MEDICATIONKNOWLEDGE: return "http://hl7.org/fhir/resource-types";
             case MEDICATIONREQUEST: return "http://hl7.org/fhir/resource-types";
-            case MEDICATIONSTATEMENT: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCT: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTAUTHORIZATION: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTCONTRAINDICATION: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTINDICATION: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTINGREDIENT: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTINTERACTION: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTMANUFACTURED: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTPACKAGED: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTPHARMACEUTICAL: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTUNDESIRABLEEFFECT: return "http://hl7.org/fhir/resource-types";
+            case MEDICATIONUSAGE: return "http://hl7.org/fhir/resource-types";
             case MESSAGEDEFINITION: return "http://hl7.org/fhir/resource-types";
             case MESSAGEHEADER: return "http://hl7.org/fhir/resource-types";
             case MOLECULARSEQUENCE: return "http://hl7.org/fhir/resource-types";
@@ -4659,15 +4709,17 @@ The primary difference between a medication statement and a medication administr
             case PROVENANCE: return "http://hl7.org/fhir/resource-types";
             case QUESTIONNAIRE: return "http://hl7.org/fhir/resource-types";
             case QUESTIONNAIRERESPONSE: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDADMINISTRABLEPRODUCT: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDAUTHORIZATION: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDMANUFACTUREDITEM: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDMEDICINALPRODUCT: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDPACKAGEDPRODUCT: return "http://hl7.org/fhir/resource-types";
             case RELATEDPERSON: return "http://hl7.org/fhir/resource-types";
             case REQUESTGROUP: return "http://hl7.org/fhir/resource-types";
-            case RESEARCHDEFINITION: return "http://hl7.org/fhir/resource-types";
-            case RESEARCHELEMENTDEFINITION: return "http://hl7.org/fhir/resource-types";
             case RESEARCHSTUDY: return "http://hl7.org/fhir/resource-types";
             case RESEARCHSUBJECT: return "http://hl7.org/fhir/resource-types";
             case RESOURCE: return "http://hl7.org/fhir/resource-types";
             case RISKASSESSMENT: return "http://hl7.org/fhir/resource-types";
-            case RISKEVIDENCESYNTHESIS: return "http://hl7.org/fhir/resource-types";
             case SCHEDULE: return "http://hl7.org/fhir/resource-types";
             case SEARCHPARAMETER: return "http://hl7.org/fhir/resource-types";
             case SERVICEREQUEST: return "http://hl7.org/fhir/resource-types";
@@ -4678,18 +4730,19 @@ The primary difference between a medication statement and a medication administr
             case STRUCTUREMAP: return "http://hl7.org/fhir/resource-types";
             case SUBSCRIPTION: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCE: return "http://hl7.org/fhir/resource-types";
+            case SUBSTANCEDEFINITION: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCENUCLEICACID: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCEPOLYMER: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCEPROTEIN: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCEREFERENCEINFORMATION: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCESOURCEMATERIAL: return "http://hl7.org/fhir/resource-types";
-            case SUBSTANCESPECIFICATION: return "http://hl7.org/fhir/resource-types";
             case SUPPLYDELIVERY: return "http://hl7.org/fhir/resource-types";
             case SUPPLYREQUEST: return "http://hl7.org/fhir/resource-types";
             case TASK: return "http://hl7.org/fhir/resource-types";
             case TERMINOLOGYCAPABILITIES: return "http://hl7.org/fhir/resource-types";
             case TESTREPORT: return "http://hl7.org/fhir/resource-types";
             case TESTSCRIPT: return "http://hl7.org/fhir/resource-types";
+            case TOPIC: return "http://hl7.org/fhir/resource-types";
             case VALUESET: return "http://hl7.org/fhir/resource-types";
             case VERIFICATIONRESULT: return "http://hl7.org/fhir/resource-types";
             case VISIONPRESCRIPTION: return "http://hl7.org/fhir/resource-types";
@@ -4726,6 +4779,7 @@ The primary difference between a medication statement and a medication administr
             case MONEY: return "An amount of economic utility in some recognized currency.";
             case MONEYQUANTITY: return "";
             case NARRATIVE: return "A human-readable summary of the resource conveying the essential clinical and business information for the resource.";
+            case ORDEREDDISTRIBUTION: return "An ordered list (distribution) of statistics.";
             case PARAMETERDEFINITION: return "The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.";
             case PERIOD: return "A time period defined by a start and end date and optionally time.";
             case POPULATION: return "A populatioof people with some set of grouping criteria.";
@@ -4739,6 +4793,7 @@ The primary difference between a medication statement and a medication administr
             case SAMPLEDDATA: return "A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.";
             case SIGNATURE: return "A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.";
             case SIMPLEQUANTITY: return "";
+            case STATISTIC: return "A fact or piece of data from a  study of a large quantity of numerical data.  A mathematical or quantified characteristic of a group of observations.";
             case SUBSTANCEAMOUNT: return "Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.";
             case TIMING: return "Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.";
             case TRIGGERDEFINITION: return "A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.";
@@ -4765,32 +4820,36 @@ The primary difference between a medication statement and a medication administr
             case XHTML: return "XHTML format, as defined by W3C, but restricted usage (mainly, no active content)";
             case ACCOUNT: return "A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.";
             case ACTIVITYDEFINITION: return "This resource allows for the definition of some activity to be performed, independent of a particular patient, practitioner, or other performance context.";
-            case ADVERSEEVENT: return "Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.";
+            case ADVERSEEVENT: return "An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.";
             case ALLERGYINTOLERANCE: return "Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.";
             case APPOINTMENT: return "A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).";
             case APPOINTMENTRESPONSE: return "A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.";
-            case AUDITEVENT: return "A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.";
+            case AUDITEVENT: return "A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.";
             case BASIC: return "Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.";
             case BINARY: return "A resource that represents the data of a single raw artifact as digital content accessible in its native format.  A Binary resource can contain any content, whether text, image, pdf, zip archive, etc.";
             case BIOLOGICALLYDERIVEDPRODUCT: return "A material substance originating from a biological entity intended to be transplanted or infused\ninto another (possibly the same) biological entity.";
             case BODYSTRUCTURE: return "Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.";
             case BUNDLE: return "A container for a collection of resources.";
             case CAPABILITYSTATEMENT: return "A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.";
+            case CAPABILITYSTATEMENT2: return "A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.";
             case CAREPLAN: return "Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.";
-            case CARETEAM: return "The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.";
+            case CARETEAM: return "The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care.";
             case CATALOGENTRY: return "Catalog entries are wrappers that contextualize items included in a catalog.";
             case CHARGEITEM: return "The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.";
             case CHARGEITEMDEFINITION: return "The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.";
             case CLAIM: return "A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.";
             case CLAIMRESPONSE: return "This resource provides the adjudication details from the processing of a Claim resource.";
             case CLINICALIMPRESSION: return "A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter,  but this varies greatly depending on the clinical workflow. This resource is called \"ClinicalImpression\" rather than \"ClinicalAssessment\" to avoid confusion with the recording of assessment tools such as Apgar score.";
+            case CLINICALPROFILE: return "Clinical Profiles summarize and demonstrate the features of a population.";
+            case CLINICALUSEISSUE: return "A single item of clinical particulars - an indication, contraindication, interaction etc. for a medicinal product.";
             case CODESYSTEM: return "The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.";
-            case COMMUNICATION: return "An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency that was notified about a reportable condition.";
+            case COMMUNICATION: return "An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency communication to a provider/reporter in response to a case report for a reportable condition.";
             case COMMUNICATIONREQUEST: return "A request to convey information; e.g. the CDS system proposes that an alert be sent to a responsible provider, the CDS system proposes that the public health agency be notified about a reportable condition.";
             case COMPARTMENTDEFINITION: return "A compartment definition that defines how resources are accessed on a server.";
             case COMPOSITION: return "A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).";
             case CONCEPTMAP: return "A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.";
             case CONDITION: return "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.";
+            case CONDITIONDEFINITION: return "A definition of a condition and information relevant to managing it.";
             case CONSENT: return "A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.";
             case CONTRACT: return "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.";
             case COVERAGE: return "Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.";
@@ -4806,14 +4865,13 @@ The primary difference between a medication statement and a medication administr
             case DOCUMENTMANIFEST: return "A collection of documents compiled for a purpose together with metadata that applies to the collection.";
             case DOCUMENTREFERENCE: return "A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed. The scope of a document is any seralized object with a mime-type, so includes formal patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.";
             case DOMAINRESOURCE: return "A resource that includes narrative, extensions, and contained resources.";
-            case EFFECTEVIDENCESYNTHESIS: return "The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.";
             case ENCOUNTER: return "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.";
             case ENDPOINT: return "The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information.";
             case ENROLLMENTREQUEST: return "This resource provides the insurance enrollment details to the insurer regarding a specified coverage.";
             case ENROLLMENTRESPONSE: return "This resource provides enrollment and plan details from the processing of an EnrollmentRequest resource.";
             case EPISODEOFCARE: return "An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.";
             case EVENTDEFINITION: return "The EventDefinition resource provides a reusable description of when a particular event can occur.";
-            case EVIDENCE: return "The Evidence resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.";
+            case EVIDENCE: return "This represents statistics, certainty, both the intended and actual population, and evidence variables.";
             case EVIDENCEVARIABLE: return "The EvidenceVariable resource describes a \"PICO\" element that knowledge (evidence, assertion, recommendation) is about.";
             case EXAMPLESCENARIO: return "Example of workflow instance.";
             case EXPLANATIONOFBENEFIT: return "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.";
@@ -4829,6 +4887,7 @@ The primary difference between a medication statement and a medication administr
             case IMMUNIZATIONEVALUATION: return "Describes a comparison of an immunization event against published recommendations to determine if the administration is \"valid\" in relation to those  recommendations.";
             case IMMUNIZATIONRECOMMENDATION: return "A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.";
             case IMPLEMENTATIONGUIDE: return "A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.";
+            case INGREDIENT: return "An ingredient of a manufactured item or pharmaceutical product.";
             case INSURANCEPLAN: return "Details of a Health Insurance product/plan provided by an organization.";
             case INVOICE: return "Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.";
             case LIBRARY: return "The Library resource is a general-purpose container for knowledge asset definitions. It can be used to describe and expose existing knowledge assets such as logic libraries and information model descriptions, as well as to describe a collection of knowledge assets.";
@@ -4843,17 +4902,7 @@ The primary difference between a medication statement and a medication administr
             case MEDICATIONDISPENSE: return "Indicates that a medication product is to be or has been dispensed for a named person/patient.  This includes a description of the medication product (supply) provided and the instructions for administering the medication.  The medication dispense is the result of a pharmacy system responding to a medication order.";
             case MEDICATIONKNOWLEDGE: return "Information about a medication that is used to support knowledge.";
             case MEDICATIONREQUEST: return "An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called \"MedicationRequest\" rather than \"MedicationPrescription\" or \"MedicationOrder\" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.";
-            case MEDICATIONSTATEMENT: return "A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. \n\nThe primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.";
-            case MEDICINALPRODUCT: return "Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).";
-            case MEDICINALPRODUCTAUTHORIZATION: return "The regulatory authorization of a medicinal product.";
-            case MEDICINALPRODUCTCONTRAINDICATION: return "The clinical particulars - indications, contraindications etc. of a medicinal product, including for regulatory purposes.";
-            case MEDICINALPRODUCTINDICATION: return "Indication for the Medicinal Product.";
-            case MEDICINALPRODUCTINGREDIENT: return "An ingredient of a manufactured item or pharmaceutical product.";
-            case MEDICINALPRODUCTINTERACTION: return "The interactions of the medicinal product with other medicinal products, or other forms of interactions.";
-            case MEDICINALPRODUCTMANUFACTURED: return "The manufactured item as contained in the packaged medicinal product.";
-            case MEDICINALPRODUCTPACKAGED: return "A medicinal product in a container or package.";
-            case MEDICINALPRODUCTPHARMACEUTICAL: return "A pharmaceutical product described in terms of its composition and dose form.";
-            case MEDICINALPRODUCTUNDESIRABLEEFFECT: return "Describe the undesirable effects of the medicinal product.";
+            case MEDICATIONUSAGE: return "A record of a medication that is being consumed by a patient.   A MedicationUsage may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. \n\nThe primary difference between a medicationusage and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationusage is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Usage information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.";
             case MESSAGEDEFINITION: return "Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.";
             case MESSAGEHEADER: return "The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.";
             case MOLECULARSEQUENCE: return "Raw data describing a biological sequence.";
@@ -4877,15 +4926,17 @@ The primary difference between a medication statement and a medication administr
             case PROVENANCE: return "Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.";
             case QUESTIONNAIRE: return "A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.";
             case QUESTIONNAIRERESPONSE: return "A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.";
+            case REGULATEDADMINISTRABLEPRODUCT: return "A pharmaceutical product described in terms of its composition and dose form.";
+            case REGULATEDAUTHORIZATION: return "The regulatory authorization of a medicinal product.";
+            case REGULATEDMANUFACTUREDITEM: return "The manufactured item as contained in the packaged medicinal product.";
+            case REGULATEDMEDICINALPRODUCT: return "Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).";
+            case REGULATEDPACKAGEDPRODUCT: return "A medicinal product in a container or package.";
             case RELATEDPERSON: return "Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.";
             case REQUESTGROUP: return "A group of related requests that can be used to capture intended activities that have inter-dependencies such as \"give this medication after that one\".";
-            case RESEARCHDEFINITION: return "The ResearchDefinition resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.";
-            case RESEARCHELEMENTDEFINITION: return "The ResearchElementDefinition resource describes a \"PICO\" element that knowledge (evidence, assertion, recommendation) is about.";
             case RESEARCHSTUDY: return "A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques.  A ResearchStudy involves the gathering of information about human or animal subjects.";
             case RESEARCHSUBJECT: return "A physical entity which is the primary unit of operational and/or administrative interest in a study.";
             case RESOURCE: return "This is the base resource type for everything.";
             case RISKASSESSMENT: return "An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.";
-            case RISKEVIDENCESYNTHESIS: return "The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.";
             case SCHEDULE: return "A container for slots of time that may be available for booking appointments.";
             case SEARCHPARAMETER: return "A search parameter that defines a named search item that can be used to search/filter on a resource.";
             case SERVICEREQUEST: return "A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.";
@@ -4896,18 +4947,19 @@ The primary difference between a medication statement and a medication administr
             case STRUCTUREMAP: return "A Map of relationships between 2 structures that can be used to transform data.";
             case SUBSCRIPTION: return "The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined \"channel\" so that another system can take an appropriate action.";
             case SUBSTANCE: return "A homogeneous material with a definite composition.";
+            case SUBSTANCEDEFINITION: return "The detailed description of a substance, typically at a level beyond what is used for prescribing.";
             case SUBSTANCENUCLEICACID: return "Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.";
             case SUBSTANCEPOLYMER: return "Todo.";
             case SUBSTANCEPROTEIN: return "A SubstanceProtein is defined as a single unit of a linear amino acid sequence, or a combination of subunits that are either covalently linked or have a defined invariant stoichiometric relationship. This includes all synthetic, recombinant and purified SubstanceProteins of defined sequence, whether the use is therapeutic or prophylactic. This set of elements will be used to describe albumins, coagulation factors, cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant vaccines, and immunomodulators.";
             case SUBSTANCEREFERENCEINFORMATION: return "Todo.";
             case SUBSTANCESOURCEMATERIAL: return "Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.";
-            case SUBSTANCESPECIFICATION: return "The detailed description of a substance, typically at a level beyond what is used for prescribing.";
             case SUPPLYDELIVERY: return "Record of delivery of what is supplied.";
             case SUPPLYREQUEST: return "A record of a request for a medication, substance or device used in the healthcare setting.";
             case TASK: return "A task to be performed.";
-            case TERMINOLOGYCAPABILITIES: return "A Terminology Capabilities documents a set of capabilities (behaviors) of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.";
+            case TERMINOLOGYCAPABILITIES: return "A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.";
             case TESTREPORT: return "A summary of information based on the results of executing a TestScript.";
             case TESTSCRIPT: return "A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.";
+            case TOPIC: return "Describes a stream of resource state changes identified by trigger criteria and annotated with labels useful to filter projections from this topic.";
             case VALUESET: return "A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).";
             case VERIFICATIONRESULT: return "Describes validation requirements, source(s), status and dates for one or more elements.";
             case VISIONPRESCRIPTION: return "An authorization for the provision of glasses and/or contact lenses to a patient.";
@@ -4944,6 +4996,7 @@ The primary difference between a medication statement and a medication administr
             case MONEY: return "Money";
             case MONEYQUANTITY: return "MoneyQuantity";
             case NARRATIVE: return "Narrative";
+            case ORDEREDDISTRIBUTION: return "OrderedDistribution";
             case PARAMETERDEFINITION: return "ParameterDefinition";
             case PERIOD: return "Period";
             case POPULATION: return "Population";
@@ -4957,6 +5010,7 @@ The primary difference between a medication statement and a medication administr
             case SAMPLEDDATA: return "SampledData";
             case SIGNATURE: return "Signature";
             case SIMPLEQUANTITY: return "SimpleQuantity";
+            case STATISTIC: return "Statistic";
             case SUBSTANCEAMOUNT: return "SubstanceAmount";
             case TIMING: return "Timing";
             case TRIGGERDEFINITION: return "TriggerDefinition";
@@ -4994,6 +5048,7 @@ The primary difference between a medication statement and a medication administr
             case BODYSTRUCTURE: return "BodyStructure";
             case BUNDLE: return "Bundle";
             case CAPABILITYSTATEMENT: return "CapabilityStatement";
+            case CAPABILITYSTATEMENT2: return "CapabilityStatement2";
             case CAREPLAN: return "CarePlan";
             case CARETEAM: return "CareTeam";
             case CATALOGENTRY: return "CatalogEntry";
@@ -5002,6 +5057,8 @@ The primary difference between a medication statement and a medication administr
             case CLAIM: return "Claim";
             case CLAIMRESPONSE: return "ClaimResponse";
             case CLINICALIMPRESSION: return "ClinicalImpression";
+            case CLINICALPROFILE: return "ClinicalProfile";
+            case CLINICALUSEISSUE: return "ClinicalUseIssue";
             case CODESYSTEM: return "CodeSystem";
             case COMMUNICATION: return "Communication";
             case COMMUNICATIONREQUEST: return "CommunicationRequest";
@@ -5009,6 +5066,7 @@ The primary difference between a medication statement and a medication administr
             case COMPOSITION: return "Composition";
             case CONCEPTMAP: return "ConceptMap";
             case CONDITION: return "Condition";
+            case CONDITIONDEFINITION: return "ConditionDefinition";
             case CONSENT: return "Consent";
             case CONTRACT: return "Contract";
             case COVERAGE: return "Coverage";
@@ -5024,7 +5082,6 @@ The primary difference between a medication statement and a medication administr
             case DOCUMENTMANIFEST: return "DocumentManifest";
             case DOCUMENTREFERENCE: return "DocumentReference";
             case DOMAINRESOURCE: return "DomainResource";
-            case EFFECTEVIDENCESYNTHESIS: return "EffectEvidenceSynthesis";
             case ENCOUNTER: return "Encounter";
             case ENDPOINT: return "Endpoint";
             case ENROLLMENTREQUEST: return "EnrollmentRequest";
@@ -5047,6 +5104,7 @@ The primary difference between a medication statement and a medication administr
             case IMMUNIZATIONEVALUATION: return "ImmunizationEvaluation";
             case IMMUNIZATIONRECOMMENDATION: return "ImmunizationRecommendation";
             case IMPLEMENTATIONGUIDE: return "ImplementationGuide";
+            case INGREDIENT: return "Ingredient";
             case INSURANCEPLAN: return "InsurancePlan";
             case INVOICE: return "Invoice";
             case LIBRARY: return "Library";
@@ -5061,17 +5119,7 @@ The primary difference between a medication statement and a medication administr
             case MEDICATIONDISPENSE: return "MedicationDispense";
             case MEDICATIONKNOWLEDGE: return "MedicationKnowledge";
             case MEDICATIONREQUEST: return "MedicationRequest";
-            case MEDICATIONSTATEMENT: return "MedicationStatement";
-            case MEDICINALPRODUCT: return "MedicinalProduct";
-            case MEDICINALPRODUCTAUTHORIZATION: return "MedicinalProductAuthorization";
-            case MEDICINALPRODUCTCONTRAINDICATION: return "MedicinalProductContraindication";
-            case MEDICINALPRODUCTINDICATION: return "MedicinalProductIndication";
-            case MEDICINALPRODUCTINGREDIENT: return "MedicinalProductIngredient";
-            case MEDICINALPRODUCTINTERACTION: return "MedicinalProductInteraction";
-            case MEDICINALPRODUCTMANUFACTURED: return "MedicinalProductManufactured";
-            case MEDICINALPRODUCTPACKAGED: return "MedicinalProductPackaged";
-            case MEDICINALPRODUCTPHARMACEUTICAL: return "MedicinalProductPharmaceutical";
-            case MEDICINALPRODUCTUNDESIRABLEEFFECT: return "MedicinalProductUndesirableEffect";
+            case MEDICATIONUSAGE: return "MedicationUsage";
             case MESSAGEDEFINITION: return "MessageDefinition";
             case MESSAGEHEADER: return "MessageHeader";
             case MOLECULARSEQUENCE: return "MolecularSequence";
@@ -5095,15 +5143,17 @@ The primary difference between a medication statement and a medication administr
             case PROVENANCE: return "Provenance";
             case QUESTIONNAIRE: return "Questionnaire";
             case QUESTIONNAIRERESPONSE: return "QuestionnaireResponse";
+            case REGULATEDADMINISTRABLEPRODUCT: return "RegulatedAdministrableProduct";
+            case REGULATEDAUTHORIZATION: return "RegulatedAuthorization";
+            case REGULATEDMANUFACTUREDITEM: return "RegulatedManufacturedItem";
+            case REGULATEDMEDICINALPRODUCT: return "RegulatedMedicinalProduct";
+            case REGULATEDPACKAGEDPRODUCT: return "RegulatedPackagedProduct";
             case RELATEDPERSON: return "RelatedPerson";
             case REQUESTGROUP: return "RequestGroup";
-            case RESEARCHDEFINITION: return "ResearchDefinition";
-            case RESEARCHELEMENTDEFINITION: return "ResearchElementDefinition";
             case RESEARCHSTUDY: return "ResearchStudy";
             case RESEARCHSUBJECT: return "ResearchSubject";
             case RESOURCE: return "Resource";
             case RISKASSESSMENT: return "RiskAssessment";
-            case RISKEVIDENCESYNTHESIS: return "RiskEvidenceSynthesis";
             case SCHEDULE: return "Schedule";
             case SEARCHPARAMETER: return "SearchParameter";
             case SERVICEREQUEST: return "ServiceRequest";
@@ -5114,18 +5164,19 @@ The primary difference between a medication statement and a medication administr
             case STRUCTUREMAP: return "StructureMap";
             case SUBSCRIPTION: return "Subscription";
             case SUBSTANCE: return "Substance";
+            case SUBSTANCEDEFINITION: return "SubstanceDefinition";
             case SUBSTANCENUCLEICACID: return "SubstanceNucleicAcid";
             case SUBSTANCEPOLYMER: return "SubstancePolymer";
             case SUBSTANCEPROTEIN: return "SubstanceProtein";
             case SUBSTANCEREFERENCEINFORMATION: return "SubstanceReferenceInformation";
             case SUBSTANCESOURCEMATERIAL: return "SubstanceSourceMaterial";
-            case SUBSTANCESPECIFICATION: return "SubstanceSpecification";
             case SUPPLYDELIVERY: return "SupplyDelivery";
             case SUPPLYREQUEST: return "SupplyRequest";
             case TASK: return "Task";
             case TERMINOLOGYCAPABILITIES: return "TerminologyCapabilities";
             case TESTREPORT: return "TestReport";
             case TESTSCRIPT: return "TestScript";
+            case TOPIC: return "Topic";
             case VALUESET: return "ValueSet";
             case VERIFICATIONRESULT: return "VerificationResult";
             case VISIONPRESCRIPTION: return "VisionPrescription";
@@ -5193,6 +5244,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.MONEYQUANTITY;
         if ("Narrative".equals(codeString))
           return FHIRAllTypes.NARRATIVE;
+        if ("OrderedDistribution".equals(codeString))
+          return FHIRAllTypes.ORDEREDDISTRIBUTION;
         if ("ParameterDefinition".equals(codeString))
           return FHIRAllTypes.PARAMETERDEFINITION;
         if ("Period".equals(codeString))
@@ -5219,6 +5272,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.SIGNATURE;
         if ("SimpleQuantity".equals(codeString))
           return FHIRAllTypes.SIMPLEQUANTITY;
+        if ("Statistic".equals(codeString))
+          return FHIRAllTypes.STATISTIC;
         if ("SubstanceAmount".equals(codeString))
           return FHIRAllTypes.SUBSTANCEAMOUNT;
         if ("Timing".equals(codeString))
@@ -5293,6 +5348,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.BUNDLE;
         if ("CapabilityStatement".equals(codeString))
           return FHIRAllTypes.CAPABILITYSTATEMENT;
+        if ("CapabilityStatement2".equals(codeString))
+          return FHIRAllTypes.CAPABILITYSTATEMENT2;
         if ("CarePlan".equals(codeString))
           return FHIRAllTypes.CAREPLAN;
         if ("CareTeam".equals(codeString))
@@ -5309,6 +5366,10 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.CLAIMRESPONSE;
         if ("ClinicalImpression".equals(codeString))
           return FHIRAllTypes.CLINICALIMPRESSION;
+        if ("ClinicalProfile".equals(codeString))
+          return FHIRAllTypes.CLINICALPROFILE;
+        if ("ClinicalUseIssue".equals(codeString))
+          return FHIRAllTypes.CLINICALUSEISSUE;
         if ("CodeSystem".equals(codeString))
           return FHIRAllTypes.CODESYSTEM;
         if ("Communication".equals(codeString))
@@ -5323,6 +5384,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.CONCEPTMAP;
         if ("Condition".equals(codeString))
           return FHIRAllTypes.CONDITION;
+        if ("ConditionDefinition".equals(codeString))
+          return FHIRAllTypes.CONDITIONDEFINITION;
         if ("Consent".equals(codeString))
           return FHIRAllTypes.CONSENT;
         if ("Contract".equals(codeString))
@@ -5353,8 +5416,6 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.DOCUMENTREFERENCE;
         if ("DomainResource".equals(codeString))
           return FHIRAllTypes.DOMAINRESOURCE;
-        if ("EffectEvidenceSynthesis".equals(codeString))
-          return FHIRAllTypes.EFFECTEVIDENCESYNTHESIS;
         if ("Encounter".equals(codeString))
           return FHIRAllTypes.ENCOUNTER;
         if ("Endpoint".equals(codeString))
@@ -5399,6 +5460,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.IMMUNIZATIONRECOMMENDATION;
         if ("ImplementationGuide".equals(codeString))
           return FHIRAllTypes.IMPLEMENTATIONGUIDE;
+        if ("Ingredient".equals(codeString))
+          return FHIRAllTypes.INGREDIENT;
         if ("InsurancePlan".equals(codeString))
           return FHIRAllTypes.INSURANCEPLAN;
         if ("Invoice".equals(codeString))
@@ -5427,28 +5490,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.MEDICATIONKNOWLEDGE;
         if ("MedicationRequest".equals(codeString))
           return FHIRAllTypes.MEDICATIONREQUEST;
-        if ("MedicationStatement".equals(codeString))
-          return FHIRAllTypes.MEDICATIONSTATEMENT;
-        if ("MedicinalProduct".equals(codeString))
-          return FHIRAllTypes.MEDICINALPRODUCT;
-        if ("MedicinalProductAuthorization".equals(codeString))
-          return FHIRAllTypes.MEDICINALPRODUCTAUTHORIZATION;
-        if ("MedicinalProductContraindication".equals(codeString))
-          return FHIRAllTypes.MEDICINALPRODUCTCONTRAINDICATION;
-        if ("MedicinalProductIndication".equals(codeString))
-          return FHIRAllTypes.MEDICINALPRODUCTINDICATION;
-        if ("MedicinalProductIngredient".equals(codeString))
-          return FHIRAllTypes.MEDICINALPRODUCTINGREDIENT;
-        if ("MedicinalProductInteraction".equals(codeString))
-          return FHIRAllTypes.MEDICINALPRODUCTINTERACTION;
-        if ("MedicinalProductManufactured".equals(codeString))
-          return FHIRAllTypes.MEDICINALPRODUCTMANUFACTURED;
-        if ("MedicinalProductPackaged".equals(codeString))
-          return FHIRAllTypes.MEDICINALPRODUCTPACKAGED;
-        if ("MedicinalProductPharmaceutical".equals(codeString))
-          return FHIRAllTypes.MEDICINALPRODUCTPHARMACEUTICAL;
-        if ("MedicinalProductUndesirableEffect".equals(codeString))
-          return FHIRAllTypes.MEDICINALPRODUCTUNDESIRABLEEFFECT;
+        if ("MedicationUsage".equals(codeString))
+          return FHIRAllTypes.MEDICATIONUSAGE;
         if ("MessageDefinition".equals(codeString))
           return FHIRAllTypes.MESSAGEDEFINITION;
         if ("MessageHeader".equals(codeString))
@@ -5495,14 +5538,20 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.QUESTIONNAIRE;
         if ("QuestionnaireResponse".equals(codeString))
           return FHIRAllTypes.QUESTIONNAIRERESPONSE;
+        if ("RegulatedAdministrableProduct".equals(codeString))
+          return FHIRAllTypes.REGULATEDADMINISTRABLEPRODUCT;
+        if ("RegulatedAuthorization".equals(codeString))
+          return FHIRAllTypes.REGULATEDAUTHORIZATION;
+        if ("RegulatedManufacturedItem".equals(codeString))
+          return FHIRAllTypes.REGULATEDMANUFACTUREDITEM;
+        if ("RegulatedMedicinalProduct".equals(codeString))
+          return FHIRAllTypes.REGULATEDMEDICINALPRODUCT;
+        if ("RegulatedPackagedProduct".equals(codeString))
+          return FHIRAllTypes.REGULATEDPACKAGEDPRODUCT;
         if ("RelatedPerson".equals(codeString))
           return FHIRAllTypes.RELATEDPERSON;
         if ("RequestGroup".equals(codeString))
           return FHIRAllTypes.REQUESTGROUP;
-        if ("ResearchDefinition".equals(codeString))
-          return FHIRAllTypes.RESEARCHDEFINITION;
-        if ("ResearchElementDefinition".equals(codeString))
-          return FHIRAllTypes.RESEARCHELEMENTDEFINITION;
         if ("ResearchStudy".equals(codeString))
           return FHIRAllTypes.RESEARCHSTUDY;
         if ("ResearchSubject".equals(codeString))
@@ -5511,8 +5560,6 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.RESOURCE;
         if ("RiskAssessment".equals(codeString))
           return FHIRAllTypes.RISKASSESSMENT;
-        if ("RiskEvidenceSynthesis".equals(codeString))
-          return FHIRAllTypes.RISKEVIDENCESYNTHESIS;
         if ("Schedule".equals(codeString))
           return FHIRAllTypes.SCHEDULE;
         if ("SearchParameter".equals(codeString))
@@ -5533,6 +5580,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.SUBSCRIPTION;
         if ("Substance".equals(codeString))
           return FHIRAllTypes.SUBSTANCE;
+        if ("SubstanceDefinition".equals(codeString))
+          return FHIRAllTypes.SUBSTANCEDEFINITION;
         if ("SubstanceNucleicAcid".equals(codeString))
           return FHIRAllTypes.SUBSTANCENUCLEICACID;
         if ("SubstancePolymer".equals(codeString))
@@ -5543,8 +5592,6 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.SUBSTANCEREFERENCEINFORMATION;
         if ("SubstanceSourceMaterial".equals(codeString))
           return FHIRAllTypes.SUBSTANCESOURCEMATERIAL;
-        if ("SubstanceSpecification".equals(codeString))
-          return FHIRAllTypes.SUBSTANCESPECIFICATION;
         if ("SupplyDelivery".equals(codeString))
           return FHIRAllTypes.SUPPLYDELIVERY;
         if ("SupplyRequest".equals(codeString))
@@ -5557,6 +5604,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRAllTypes.TESTREPORT;
         if ("TestScript".equals(codeString))
           return FHIRAllTypes.TESTSCRIPT;
+        if ("Topic".equals(codeString))
+          return FHIRAllTypes.TOPIC;
         if ("ValueSet".equals(codeString))
           return FHIRAllTypes.VALUESET;
         if ("VerificationResult".equals(codeString))
@@ -5629,6 +5678,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MONEYQUANTITY);
         if ("Narrative".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.NARRATIVE);
+        if ("OrderedDistribution".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.ORDEREDDISTRIBUTION);
         if ("ParameterDefinition".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.PARAMETERDEFINITION);
         if ("Period".equals(codeString))
@@ -5655,6 +5706,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.SIGNATURE);
         if ("SimpleQuantity".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.SIMPLEQUANTITY);
+        if ("Statistic".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.STATISTIC);
         if ("SubstanceAmount".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.SUBSTANCEAMOUNT);
         if ("Timing".equals(codeString))
@@ -5729,6 +5782,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.BUNDLE);
         if ("CapabilityStatement".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.CAPABILITYSTATEMENT);
+        if ("CapabilityStatement2".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.CAPABILITYSTATEMENT2);
         if ("CarePlan".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.CAREPLAN);
         if ("CareTeam".equals(codeString))
@@ -5745,6 +5800,10 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.CLAIMRESPONSE);
         if ("ClinicalImpression".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.CLINICALIMPRESSION);
+        if ("ClinicalProfile".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.CLINICALPROFILE);
+        if ("ClinicalUseIssue".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.CLINICALUSEISSUE);
         if ("CodeSystem".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.CODESYSTEM);
         if ("Communication".equals(codeString))
@@ -5759,6 +5818,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.CONCEPTMAP);
         if ("Condition".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.CONDITION);
+        if ("ConditionDefinition".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.CONDITIONDEFINITION);
         if ("Consent".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.CONSENT);
         if ("Contract".equals(codeString))
@@ -5789,8 +5850,6 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.DOCUMENTREFERENCE);
         if ("DomainResource".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.DOMAINRESOURCE);
-        if ("EffectEvidenceSynthesis".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.EFFECTEVIDENCESYNTHESIS);
         if ("Encounter".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.ENCOUNTER);
         if ("Endpoint".equals(codeString))
@@ -5835,6 +5894,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.IMMUNIZATIONRECOMMENDATION);
         if ("ImplementationGuide".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.IMPLEMENTATIONGUIDE);
+        if ("Ingredient".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.INGREDIENT);
         if ("InsurancePlan".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.INSURANCEPLAN);
         if ("Invoice".equals(codeString))
@@ -5863,28 +5924,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICATIONKNOWLEDGE);
         if ("MedicationRequest".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICATIONREQUEST);
-        if ("MedicationStatement".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICATIONSTATEMENT);
-        if ("MedicinalProduct".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICINALPRODUCT);
-        if ("MedicinalProductAuthorization".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICINALPRODUCTAUTHORIZATION);
-        if ("MedicinalProductContraindication".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICINALPRODUCTCONTRAINDICATION);
-        if ("MedicinalProductIndication".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICINALPRODUCTINDICATION);
-        if ("MedicinalProductIngredient".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICINALPRODUCTINGREDIENT);
-        if ("MedicinalProductInteraction".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICINALPRODUCTINTERACTION);
-        if ("MedicinalProductManufactured".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICINALPRODUCTMANUFACTURED);
-        if ("MedicinalProductPackaged".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICINALPRODUCTPACKAGED);
-        if ("MedicinalProductPharmaceutical".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICINALPRODUCTPHARMACEUTICAL);
-        if ("MedicinalProductUndesirableEffect".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICINALPRODUCTUNDESIRABLEEFFECT);
+        if ("MedicationUsage".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MEDICATIONUSAGE);
         if ("MessageDefinition".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.MESSAGEDEFINITION);
         if ("MessageHeader".equals(codeString))
@@ -5931,14 +5972,20 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.QUESTIONNAIRE);
         if ("QuestionnaireResponse".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.QUESTIONNAIRERESPONSE);
+        if ("RegulatedAdministrableProduct".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.REGULATEDADMINISTRABLEPRODUCT);
+        if ("RegulatedAuthorization".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.REGULATEDAUTHORIZATION);
+        if ("RegulatedManufacturedItem".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.REGULATEDMANUFACTUREDITEM);
+        if ("RegulatedMedicinalProduct".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.REGULATEDMEDICINALPRODUCT);
+        if ("RegulatedPackagedProduct".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.REGULATEDPACKAGEDPRODUCT);
         if ("RelatedPerson".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.RELATEDPERSON);
         if ("RequestGroup".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.REQUESTGROUP);
-        if ("ResearchDefinition".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.RESEARCHDEFINITION);
-        if ("ResearchElementDefinition".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.RESEARCHELEMENTDEFINITION);
         if ("ResearchStudy".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.RESEARCHSTUDY);
         if ("ResearchSubject".equals(codeString))
@@ -5947,8 +5994,6 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.RESOURCE);
         if ("RiskAssessment".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.RISKASSESSMENT);
-        if ("RiskEvidenceSynthesis".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.RISKEVIDENCESYNTHESIS);
         if ("Schedule".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.SCHEDULE);
         if ("SearchParameter".equals(codeString))
@@ -5969,6 +6014,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.SUBSCRIPTION);
         if ("Substance".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.SUBSTANCE);
+        if ("SubstanceDefinition".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.SUBSTANCEDEFINITION);
         if ("SubstanceNucleicAcid".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.SUBSTANCENUCLEICACID);
         if ("SubstancePolymer".equals(codeString))
@@ -5979,8 +6026,6 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.SUBSTANCEREFERENCEINFORMATION);
         if ("SubstanceSourceMaterial".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.SUBSTANCESOURCEMATERIAL);
-        if ("SubstanceSpecification".equals(codeString))
-          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.SUBSTANCESPECIFICATION);
         if ("SupplyDelivery".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.SUPPLYDELIVERY);
         if ("SupplyRequest".equals(codeString))
@@ -5993,6 +6038,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.TESTREPORT);
         if ("TestScript".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.TESTSCRIPT);
+        if ("Topic".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.TOPIC);
         if ("ValueSet".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.VALUESET);
         if ("VerificationResult".equals(codeString))
@@ -6058,6 +6105,8 @@ The primary difference between a medication statement and a medication administr
         return "MoneyQuantity";
       if (code == FHIRAllTypes.NARRATIVE)
         return "Narrative";
+      if (code == FHIRAllTypes.ORDEREDDISTRIBUTION)
+        return "OrderedDistribution";
       if (code == FHIRAllTypes.PARAMETERDEFINITION)
         return "ParameterDefinition";
       if (code == FHIRAllTypes.PERIOD)
@@ -6084,6 +6133,8 @@ The primary difference between a medication statement and a medication administr
         return "Signature";
       if (code == FHIRAllTypes.SIMPLEQUANTITY)
         return "SimpleQuantity";
+      if (code == FHIRAllTypes.STATISTIC)
+        return "Statistic";
       if (code == FHIRAllTypes.SUBSTANCEAMOUNT)
         return "SubstanceAmount";
       if (code == FHIRAllTypes.TIMING)
@@ -6158,6 +6209,8 @@ The primary difference between a medication statement and a medication administr
         return "Bundle";
       if (code == FHIRAllTypes.CAPABILITYSTATEMENT)
         return "CapabilityStatement";
+      if (code == FHIRAllTypes.CAPABILITYSTATEMENT2)
+        return "CapabilityStatement2";
       if (code == FHIRAllTypes.CAREPLAN)
         return "CarePlan";
       if (code == FHIRAllTypes.CARETEAM)
@@ -6174,6 +6227,10 @@ The primary difference between a medication statement and a medication administr
         return "ClaimResponse";
       if (code == FHIRAllTypes.CLINICALIMPRESSION)
         return "ClinicalImpression";
+      if (code == FHIRAllTypes.CLINICALPROFILE)
+        return "ClinicalProfile";
+      if (code == FHIRAllTypes.CLINICALUSEISSUE)
+        return "ClinicalUseIssue";
       if (code == FHIRAllTypes.CODESYSTEM)
         return "CodeSystem";
       if (code == FHIRAllTypes.COMMUNICATION)
@@ -6188,6 +6245,8 @@ The primary difference between a medication statement and a medication administr
         return "ConceptMap";
       if (code == FHIRAllTypes.CONDITION)
         return "Condition";
+      if (code == FHIRAllTypes.CONDITIONDEFINITION)
+        return "ConditionDefinition";
       if (code == FHIRAllTypes.CONSENT)
         return "Consent";
       if (code == FHIRAllTypes.CONTRACT)
@@ -6218,8 +6277,6 @@ The primary difference between a medication statement and a medication administr
         return "DocumentReference";
       if (code == FHIRAllTypes.DOMAINRESOURCE)
         return "DomainResource";
-      if (code == FHIRAllTypes.EFFECTEVIDENCESYNTHESIS)
-        return "EffectEvidenceSynthesis";
       if (code == FHIRAllTypes.ENCOUNTER)
         return "Encounter";
       if (code == FHIRAllTypes.ENDPOINT)
@@ -6264,6 +6321,8 @@ The primary difference between a medication statement and a medication administr
         return "ImmunizationRecommendation";
       if (code == FHIRAllTypes.IMPLEMENTATIONGUIDE)
         return "ImplementationGuide";
+      if (code == FHIRAllTypes.INGREDIENT)
+        return "Ingredient";
       if (code == FHIRAllTypes.INSURANCEPLAN)
         return "InsurancePlan";
       if (code == FHIRAllTypes.INVOICE)
@@ -6292,28 +6351,8 @@ The primary difference between a medication statement and a medication administr
         return "MedicationKnowledge";
       if (code == FHIRAllTypes.MEDICATIONREQUEST)
         return "MedicationRequest";
-      if (code == FHIRAllTypes.MEDICATIONSTATEMENT)
-        return "MedicationStatement";
-      if (code == FHIRAllTypes.MEDICINALPRODUCT)
-        return "MedicinalProduct";
-      if (code == FHIRAllTypes.MEDICINALPRODUCTAUTHORIZATION)
-        return "MedicinalProductAuthorization";
-      if (code == FHIRAllTypes.MEDICINALPRODUCTCONTRAINDICATION)
-        return "MedicinalProductContraindication";
-      if (code == FHIRAllTypes.MEDICINALPRODUCTINDICATION)
-        return "MedicinalProductIndication";
-      if (code == FHIRAllTypes.MEDICINALPRODUCTINGREDIENT)
-        return "MedicinalProductIngredient";
-      if (code == FHIRAllTypes.MEDICINALPRODUCTINTERACTION)
-        return "MedicinalProductInteraction";
-      if (code == FHIRAllTypes.MEDICINALPRODUCTMANUFACTURED)
-        return "MedicinalProductManufactured";
-      if (code == FHIRAllTypes.MEDICINALPRODUCTPACKAGED)
-        return "MedicinalProductPackaged";
-      if (code == FHIRAllTypes.MEDICINALPRODUCTPHARMACEUTICAL)
-        return "MedicinalProductPharmaceutical";
-      if (code == FHIRAllTypes.MEDICINALPRODUCTUNDESIRABLEEFFECT)
-        return "MedicinalProductUndesirableEffect";
+      if (code == FHIRAllTypes.MEDICATIONUSAGE)
+        return "MedicationUsage";
       if (code == FHIRAllTypes.MESSAGEDEFINITION)
         return "MessageDefinition";
       if (code == FHIRAllTypes.MESSAGEHEADER)
@@ -6360,14 +6399,20 @@ The primary difference between a medication statement and a medication administr
         return "Questionnaire";
       if (code == FHIRAllTypes.QUESTIONNAIRERESPONSE)
         return "QuestionnaireResponse";
+      if (code == FHIRAllTypes.REGULATEDADMINISTRABLEPRODUCT)
+        return "RegulatedAdministrableProduct";
+      if (code == FHIRAllTypes.REGULATEDAUTHORIZATION)
+        return "RegulatedAuthorization";
+      if (code == FHIRAllTypes.REGULATEDMANUFACTUREDITEM)
+        return "RegulatedManufacturedItem";
+      if (code == FHIRAllTypes.REGULATEDMEDICINALPRODUCT)
+        return "RegulatedMedicinalProduct";
+      if (code == FHIRAllTypes.REGULATEDPACKAGEDPRODUCT)
+        return "RegulatedPackagedProduct";
       if (code == FHIRAllTypes.RELATEDPERSON)
         return "RelatedPerson";
       if (code == FHIRAllTypes.REQUESTGROUP)
         return "RequestGroup";
-      if (code == FHIRAllTypes.RESEARCHDEFINITION)
-        return "ResearchDefinition";
-      if (code == FHIRAllTypes.RESEARCHELEMENTDEFINITION)
-        return "ResearchElementDefinition";
       if (code == FHIRAllTypes.RESEARCHSTUDY)
         return "ResearchStudy";
       if (code == FHIRAllTypes.RESEARCHSUBJECT)
@@ -6376,8 +6421,6 @@ The primary difference between a medication statement and a medication administr
         return "Resource";
       if (code == FHIRAllTypes.RISKASSESSMENT)
         return "RiskAssessment";
-      if (code == FHIRAllTypes.RISKEVIDENCESYNTHESIS)
-        return "RiskEvidenceSynthesis";
       if (code == FHIRAllTypes.SCHEDULE)
         return "Schedule";
       if (code == FHIRAllTypes.SEARCHPARAMETER)
@@ -6398,6 +6441,8 @@ The primary difference between a medication statement and a medication administr
         return "Subscription";
       if (code == FHIRAllTypes.SUBSTANCE)
         return "Substance";
+      if (code == FHIRAllTypes.SUBSTANCEDEFINITION)
+        return "SubstanceDefinition";
       if (code == FHIRAllTypes.SUBSTANCENUCLEICACID)
         return "SubstanceNucleicAcid";
       if (code == FHIRAllTypes.SUBSTANCEPOLYMER)
@@ -6408,8 +6453,6 @@ The primary difference between a medication statement and a medication administr
         return "SubstanceReferenceInformation";
       if (code == FHIRAllTypes.SUBSTANCESOURCEMATERIAL)
         return "SubstanceSourceMaterial";
-      if (code == FHIRAllTypes.SUBSTANCESPECIFICATION)
-        return "SubstanceSpecification";
       if (code == FHIRAllTypes.SUPPLYDELIVERY)
         return "SupplyDelivery";
       if (code == FHIRAllTypes.SUPPLYREQUEST)
@@ -6422,6 +6465,8 @@ The primary difference between a medication statement and a medication administr
         return "TestReport";
       if (code == FHIRAllTypes.TESTSCRIPT)
         return "TestScript";
+      if (code == FHIRAllTypes.TOPIC)
+        return "Topic";
       if (code == FHIRAllTypes.VALUESET)
         return "ValueSet";
       if (code == FHIRAllTypes.VERIFICATIONRESULT)
@@ -6545,6 +6590,10 @@ The primary difference between a medication statement and a medication administr
          */
         NARRATIVE, 
         /**
+         * An ordered list (distribution) of statistics.
+         */
+        ORDEREDDISTRIBUTION, 
+        /**
          * The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
          */
         PARAMETERDEFINITION, 
@@ -6596,6 +6645,10 @@ The primary difference between a medication statement and a medication administr
          * null
          */
         SIMPLEQUANTITY, 
+        /**
+         * A fact or piece of data from a  study of a large quantity of numerical data.  A mathematical or quantified characteristic of a group of observations.
+         */
+        STATISTIC, 
         /**
          * Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.
          */
@@ -6701,7 +6754,7 @@ The primary difference between a medication statement and a medication administr
          */
         ACTIVITYDEFINITION, 
         /**
-         * Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
+         * An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.
          */
         ADVERSEEVENT, 
         /**
@@ -6717,7 +6770,7 @@ The primary difference between a medication statement and a medication administr
          */
         APPOINTMENTRESPONSE, 
         /**
-         * A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
+         * A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.
          */
         AUDITEVENT, 
         /**
@@ -6746,11 +6799,15 @@ into another (possibly the same) biological entity.
          */
         CAPABILITYSTATEMENT, 
         /**
+         * A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+         */
+        CAPABILITYSTATEMENT2, 
+        /**
          * Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
          */
         CAREPLAN, 
         /**
-         * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.
+         * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care.
          */
         CARETEAM, 
         /**
@@ -6778,11 +6835,19 @@ into another (possibly the same) biological entity.
          */
         CLINICALIMPRESSION, 
         /**
+         * Clinical Profiles summarize and demonstrate the features of a population.
+         */
+        CLINICALPROFILE, 
+        /**
+         * A single item of clinical particulars - an indication, contraindication, interaction etc. for a medicinal product.
+         */
+        CLINICALUSEISSUE, 
+        /**
          * The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
          */
         CODESYSTEM, 
         /**
-         * An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency that was notified about a reportable condition.
+         * An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency communication to a provider/reporter in response to a case report for a reportable condition.
          */
         COMMUNICATION, 
         /**
@@ -6805,6 +6870,10 @@ into another (possibly the same) biological entity.
          * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
          */
         CONDITION, 
+        /**
+         * A definition of a condition and information relevant to managing it.
+         */
+        CONDITIONDEFINITION, 
         /**
          * A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
          */
@@ -6866,10 +6935,6 @@ into another (possibly the same) biological entity.
          */
         DOMAINRESOURCE, 
         /**
-         * The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
-         */
-        EFFECTEVIDENCESYNTHESIS, 
-        /**
          * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
          */
         ENCOUNTER, 
@@ -6894,7 +6959,7 @@ into another (possibly the same) biological entity.
          */
         EVENTDEFINITION, 
         /**
-         * The Evidence resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.
+         * This represents statistics, certainty, both the intended and actual population, and evidence variables.
          */
         EVIDENCE, 
         /**
@@ -6958,6 +7023,10 @@ into another (possibly the same) biological entity.
          */
         IMPLEMENTATIONGUIDE, 
         /**
+         * An ingredient of a manufactured item or pharmaceutical product.
+         */
+        INGREDIENT, 
+        /**
          * Details of a Health Insurance product/plan provided by an organization.
          */
         INSURANCEPLAN, 
@@ -7014,51 +7083,11 @@ into another (possibly the same) biological entity.
          */
         MEDICATIONREQUEST, 
         /**
-         * A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
+         * A record of a medication that is being consumed by a patient.   A MedicationUsage may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
 
-The primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
+The primary difference between a medicationusage and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationusage is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Usage information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
          */
-        MEDICATIONSTATEMENT, 
-        /**
-         * Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
-         */
-        MEDICINALPRODUCT, 
-        /**
-         * The regulatory authorization of a medicinal product.
-         */
-        MEDICINALPRODUCTAUTHORIZATION, 
-        /**
-         * The clinical particulars - indications, contraindications etc. of a medicinal product, including for regulatory purposes.
-         */
-        MEDICINALPRODUCTCONTRAINDICATION, 
-        /**
-         * Indication for the Medicinal Product.
-         */
-        MEDICINALPRODUCTINDICATION, 
-        /**
-         * An ingredient of a manufactured item or pharmaceutical product.
-         */
-        MEDICINALPRODUCTINGREDIENT, 
-        /**
-         * The interactions of the medicinal product with other medicinal products, or other forms of interactions.
-         */
-        MEDICINALPRODUCTINTERACTION, 
-        /**
-         * The manufactured item as contained in the packaged medicinal product.
-         */
-        MEDICINALPRODUCTMANUFACTURED, 
-        /**
-         * A medicinal product in a container or package.
-         */
-        MEDICINALPRODUCTPACKAGED, 
-        /**
-         * A pharmaceutical product described in terms of its composition and dose form.
-         */
-        MEDICINALPRODUCTPHARMACEUTICAL, 
-        /**
-         * Describe the undesirable effects of the medicinal product.
-         */
-        MEDICINALPRODUCTUNDESIRABLEEFFECT, 
+        MEDICATIONUSAGE, 
         /**
          * Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
          */
@@ -7152,6 +7181,26 @@ The primary difference between a medication statement and a medication administr
          */
         QUESTIONNAIRERESPONSE, 
         /**
+         * A pharmaceutical product described in terms of its composition and dose form.
+         */
+        REGULATEDADMINISTRABLEPRODUCT, 
+        /**
+         * The regulatory authorization of a medicinal product.
+         */
+        REGULATEDAUTHORIZATION, 
+        /**
+         * The manufactured item as contained in the packaged medicinal product.
+         */
+        REGULATEDMANUFACTUREDITEM, 
+        /**
+         * Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
+         */
+        REGULATEDMEDICINALPRODUCT, 
+        /**
+         * A medicinal product in a container or package.
+         */
+        REGULATEDPACKAGEDPRODUCT, 
+        /**
          * Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.
          */
         RELATEDPERSON, 
@@ -7159,14 +7208,6 @@ The primary difference between a medication statement and a medication administr
          * A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
          */
         REQUESTGROUP, 
-        /**
-         * The ResearchDefinition resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.
-         */
-        RESEARCHDEFINITION, 
-        /**
-         * The ResearchElementDefinition resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
-         */
-        RESEARCHELEMENTDEFINITION, 
         /**
          * A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques.  A ResearchStudy involves the gathering of information about human or animal subjects.
          */
@@ -7183,10 +7224,6 @@ The primary difference between a medication statement and a medication administr
          * An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
          */
         RISKASSESSMENT, 
-        /**
-         * The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.
-         */
-        RISKEVIDENCESYNTHESIS, 
         /**
          * A container for slots of time that may be available for booking appointments.
          */
@@ -7228,6 +7265,10 @@ The primary difference between a medication statement and a medication administr
          */
         SUBSTANCE, 
         /**
+         * The detailed description of a substance, typically at a level beyond what is used for prescribing.
+         */
+        SUBSTANCEDEFINITION, 
+        /**
          * Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
          */
         SUBSTANCENUCLEICACID, 
@@ -7248,10 +7289,6 @@ The primary difference between a medication statement and a medication administr
          */
         SUBSTANCESOURCEMATERIAL, 
         /**
-         * The detailed description of a substance, typically at a level beyond what is used for prescribing.
-         */
-        SUBSTANCESPECIFICATION, 
-        /**
          * Record of delivery of what is supplied.
          */
         SUPPLYDELIVERY, 
@@ -7264,7 +7301,7 @@ The primary difference between a medication statement and a medication administr
          */
         TASK, 
         /**
-         * A Terminology Capabilities documents a set of capabilities (behaviors) of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+         * A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
          */
         TERMINOLOGYCAPABILITIES, 
         /**
@@ -7275,6 +7312,10 @@ The primary difference between a medication statement and a medication administr
          * A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
          */
         TESTSCRIPT, 
+        /**
+         * Describes a stream of resource state changes identified by trigger criteria and annotated with labels useful to filter projections from this topic.
+         */
+        TOPIC, 
         /**
          * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).
          */
@@ -7346,6 +7387,8 @@ The primary difference between a medication statement and a medication administr
           return MONEYQUANTITY;
         if ("Narrative".equals(codeString))
           return NARRATIVE;
+        if ("OrderedDistribution".equals(codeString))
+          return ORDEREDDISTRIBUTION;
         if ("ParameterDefinition".equals(codeString))
           return PARAMETERDEFINITION;
         if ("Period".equals(codeString))
@@ -7372,6 +7415,8 @@ The primary difference between a medication statement and a medication administr
           return SIGNATURE;
         if ("SimpleQuantity".equals(codeString))
           return SIMPLEQUANTITY;
+        if ("Statistic".equals(codeString))
+          return STATISTIC;
         if ("SubstanceAmount".equals(codeString))
           return SUBSTANCEAMOUNT;
         if ("Timing".equals(codeString))
@@ -7446,6 +7491,8 @@ The primary difference between a medication statement and a medication administr
           return BUNDLE;
         if ("CapabilityStatement".equals(codeString))
           return CAPABILITYSTATEMENT;
+        if ("CapabilityStatement2".equals(codeString))
+          return CAPABILITYSTATEMENT2;
         if ("CarePlan".equals(codeString))
           return CAREPLAN;
         if ("CareTeam".equals(codeString))
@@ -7462,6 +7509,10 @@ The primary difference between a medication statement and a medication administr
           return CLAIMRESPONSE;
         if ("ClinicalImpression".equals(codeString))
           return CLINICALIMPRESSION;
+        if ("ClinicalProfile".equals(codeString))
+          return CLINICALPROFILE;
+        if ("ClinicalUseIssue".equals(codeString))
+          return CLINICALUSEISSUE;
         if ("CodeSystem".equals(codeString))
           return CODESYSTEM;
         if ("Communication".equals(codeString))
@@ -7476,6 +7527,8 @@ The primary difference between a medication statement and a medication administr
           return CONCEPTMAP;
         if ("Condition".equals(codeString))
           return CONDITION;
+        if ("ConditionDefinition".equals(codeString))
+          return CONDITIONDEFINITION;
         if ("Consent".equals(codeString))
           return CONSENT;
         if ("Contract".equals(codeString))
@@ -7506,8 +7559,6 @@ The primary difference between a medication statement and a medication administr
           return DOCUMENTREFERENCE;
         if ("DomainResource".equals(codeString))
           return DOMAINRESOURCE;
-        if ("EffectEvidenceSynthesis".equals(codeString))
-          return EFFECTEVIDENCESYNTHESIS;
         if ("Encounter".equals(codeString))
           return ENCOUNTER;
         if ("Endpoint".equals(codeString))
@@ -7552,6 +7603,8 @@ The primary difference between a medication statement and a medication administr
           return IMMUNIZATIONRECOMMENDATION;
         if ("ImplementationGuide".equals(codeString))
           return IMPLEMENTATIONGUIDE;
+        if ("Ingredient".equals(codeString))
+          return INGREDIENT;
         if ("InsurancePlan".equals(codeString))
           return INSURANCEPLAN;
         if ("Invoice".equals(codeString))
@@ -7580,28 +7633,8 @@ The primary difference between a medication statement and a medication administr
           return MEDICATIONKNOWLEDGE;
         if ("MedicationRequest".equals(codeString))
           return MEDICATIONREQUEST;
-        if ("MedicationStatement".equals(codeString))
-          return MEDICATIONSTATEMENT;
-        if ("MedicinalProduct".equals(codeString))
-          return MEDICINALPRODUCT;
-        if ("MedicinalProductAuthorization".equals(codeString))
-          return MEDICINALPRODUCTAUTHORIZATION;
-        if ("MedicinalProductContraindication".equals(codeString))
-          return MEDICINALPRODUCTCONTRAINDICATION;
-        if ("MedicinalProductIndication".equals(codeString))
-          return MEDICINALPRODUCTINDICATION;
-        if ("MedicinalProductIngredient".equals(codeString))
-          return MEDICINALPRODUCTINGREDIENT;
-        if ("MedicinalProductInteraction".equals(codeString))
-          return MEDICINALPRODUCTINTERACTION;
-        if ("MedicinalProductManufactured".equals(codeString))
-          return MEDICINALPRODUCTMANUFACTURED;
-        if ("MedicinalProductPackaged".equals(codeString))
-          return MEDICINALPRODUCTPACKAGED;
-        if ("MedicinalProductPharmaceutical".equals(codeString))
-          return MEDICINALPRODUCTPHARMACEUTICAL;
-        if ("MedicinalProductUndesirableEffect".equals(codeString))
-          return MEDICINALPRODUCTUNDESIRABLEEFFECT;
+        if ("MedicationUsage".equals(codeString))
+          return MEDICATIONUSAGE;
         if ("MessageDefinition".equals(codeString))
           return MESSAGEDEFINITION;
         if ("MessageHeader".equals(codeString))
@@ -7648,14 +7681,20 @@ The primary difference between a medication statement and a medication administr
           return QUESTIONNAIRE;
         if ("QuestionnaireResponse".equals(codeString))
           return QUESTIONNAIRERESPONSE;
+        if ("RegulatedAdministrableProduct".equals(codeString))
+          return REGULATEDADMINISTRABLEPRODUCT;
+        if ("RegulatedAuthorization".equals(codeString))
+          return REGULATEDAUTHORIZATION;
+        if ("RegulatedManufacturedItem".equals(codeString))
+          return REGULATEDMANUFACTUREDITEM;
+        if ("RegulatedMedicinalProduct".equals(codeString))
+          return REGULATEDMEDICINALPRODUCT;
+        if ("RegulatedPackagedProduct".equals(codeString))
+          return REGULATEDPACKAGEDPRODUCT;
         if ("RelatedPerson".equals(codeString))
           return RELATEDPERSON;
         if ("RequestGroup".equals(codeString))
           return REQUESTGROUP;
-        if ("ResearchDefinition".equals(codeString))
-          return RESEARCHDEFINITION;
-        if ("ResearchElementDefinition".equals(codeString))
-          return RESEARCHELEMENTDEFINITION;
         if ("ResearchStudy".equals(codeString))
           return RESEARCHSTUDY;
         if ("ResearchSubject".equals(codeString))
@@ -7664,8 +7703,6 @@ The primary difference between a medication statement and a medication administr
           return RESOURCE;
         if ("RiskAssessment".equals(codeString))
           return RISKASSESSMENT;
-        if ("RiskEvidenceSynthesis".equals(codeString))
-          return RISKEVIDENCESYNTHESIS;
         if ("Schedule".equals(codeString))
           return SCHEDULE;
         if ("SearchParameter".equals(codeString))
@@ -7686,6 +7723,8 @@ The primary difference between a medication statement and a medication administr
           return SUBSCRIPTION;
         if ("Substance".equals(codeString))
           return SUBSTANCE;
+        if ("SubstanceDefinition".equals(codeString))
+          return SUBSTANCEDEFINITION;
         if ("SubstanceNucleicAcid".equals(codeString))
           return SUBSTANCENUCLEICACID;
         if ("SubstancePolymer".equals(codeString))
@@ -7696,8 +7735,6 @@ The primary difference between a medication statement and a medication administr
           return SUBSTANCEREFERENCEINFORMATION;
         if ("SubstanceSourceMaterial".equals(codeString))
           return SUBSTANCESOURCEMATERIAL;
-        if ("SubstanceSpecification".equals(codeString))
-          return SUBSTANCESPECIFICATION;
         if ("SupplyDelivery".equals(codeString))
           return SUPPLYDELIVERY;
         if ("SupplyRequest".equals(codeString))
@@ -7710,6 +7747,8 @@ The primary difference between a medication statement and a medication administr
           return TESTREPORT;
         if ("TestScript".equals(codeString))
           return TESTSCRIPT;
+        if ("Topic".equals(codeString))
+          return TOPIC;
         if ("ValueSet".equals(codeString))
           return VALUESET;
         if ("VerificationResult".equals(codeString))
@@ -7746,6 +7785,7 @@ The primary difference between a medication statement and a medication administr
             case MONEY: return "Money";
             case MONEYQUANTITY: return "MoneyQuantity";
             case NARRATIVE: return "Narrative";
+            case ORDEREDDISTRIBUTION: return "OrderedDistribution";
             case PARAMETERDEFINITION: return "ParameterDefinition";
             case PERIOD: return "Period";
             case POPULATION: return "Population";
@@ -7759,6 +7799,7 @@ The primary difference between a medication statement and a medication administr
             case SAMPLEDDATA: return "SampledData";
             case SIGNATURE: return "Signature";
             case SIMPLEQUANTITY: return "SimpleQuantity";
+            case STATISTIC: return "Statistic";
             case SUBSTANCEAMOUNT: return "SubstanceAmount";
             case TIMING: return "Timing";
             case TRIGGERDEFINITION: return "TriggerDefinition";
@@ -7796,6 +7837,7 @@ The primary difference between a medication statement and a medication administr
             case BODYSTRUCTURE: return "BodyStructure";
             case BUNDLE: return "Bundle";
             case CAPABILITYSTATEMENT: return "CapabilityStatement";
+            case CAPABILITYSTATEMENT2: return "CapabilityStatement2";
             case CAREPLAN: return "CarePlan";
             case CARETEAM: return "CareTeam";
             case CATALOGENTRY: return "CatalogEntry";
@@ -7804,6 +7846,8 @@ The primary difference between a medication statement and a medication administr
             case CLAIM: return "Claim";
             case CLAIMRESPONSE: return "ClaimResponse";
             case CLINICALIMPRESSION: return "ClinicalImpression";
+            case CLINICALPROFILE: return "ClinicalProfile";
+            case CLINICALUSEISSUE: return "ClinicalUseIssue";
             case CODESYSTEM: return "CodeSystem";
             case COMMUNICATION: return "Communication";
             case COMMUNICATIONREQUEST: return "CommunicationRequest";
@@ -7811,6 +7855,7 @@ The primary difference between a medication statement and a medication administr
             case COMPOSITION: return "Composition";
             case CONCEPTMAP: return "ConceptMap";
             case CONDITION: return "Condition";
+            case CONDITIONDEFINITION: return "ConditionDefinition";
             case CONSENT: return "Consent";
             case CONTRACT: return "Contract";
             case COVERAGE: return "Coverage";
@@ -7826,7 +7871,6 @@ The primary difference between a medication statement and a medication administr
             case DOCUMENTMANIFEST: return "DocumentManifest";
             case DOCUMENTREFERENCE: return "DocumentReference";
             case DOMAINRESOURCE: return "DomainResource";
-            case EFFECTEVIDENCESYNTHESIS: return "EffectEvidenceSynthesis";
             case ENCOUNTER: return "Encounter";
             case ENDPOINT: return "Endpoint";
             case ENROLLMENTREQUEST: return "EnrollmentRequest";
@@ -7849,6 +7893,7 @@ The primary difference between a medication statement and a medication administr
             case IMMUNIZATIONEVALUATION: return "ImmunizationEvaluation";
             case IMMUNIZATIONRECOMMENDATION: return "ImmunizationRecommendation";
             case IMPLEMENTATIONGUIDE: return "ImplementationGuide";
+            case INGREDIENT: return "Ingredient";
             case INSURANCEPLAN: return "InsurancePlan";
             case INVOICE: return "Invoice";
             case LIBRARY: return "Library";
@@ -7863,17 +7908,7 @@ The primary difference between a medication statement and a medication administr
             case MEDICATIONDISPENSE: return "MedicationDispense";
             case MEDICATIONKNOWLEDGE: return "MedicationKnowledge";
             case MEDICATIONREQUEST: return "MedicationRequest";
-            case MEDICATIONSTATEMENT: return "MedicationStatement";
-            case MEDICINALPRODUCT: return "MedicinalProduct";
-            case MEDICINALPRODUCTAUTHORIZATION: return "MedicinalProductAuthorization";
-            case MEDICINALPRODUCTCONTRAINDICATION: return "MedicinalProductContraindication";
-            case MEDICINALPRODUCTINDICATION: return "MedicinalProductIndication";
-            case MEDICINALPRODUCTINGREDIENT: return "MedicinalProductIngredient";
-            case MEDICINALPRODUCTINTERACTION: return "MedicinalProductInteraction";
-            case MEDICINALPRODUCTMANUFACTURED: return "MedicinalProductManufactured";
-            case MEDICINALPRODUCTPACKAGED: return "MedicinalProductPackaged";
-            case MEDICINALPRODUCTPHARMACEUTICAL: return "MedicinalProductPharmaceutical";
-            case MEDICINALPRODUCTUNDESIRABLEEFFECT: return "MedicinalProductUndesirableEffect";
+            case MEDICATIONUSAGE: return "MedicationUsage";
             case MESSAGEDEFINITION: return "MessageDefinition";
             case MESSAGEHEADER: return "MessageHeader";
             case MOLECULARSEQUENCE: return "MolecularSequence";
@@ -7897,15 +7932,17 @@ The primary difference between a medication statement and a medication administr
             case PROVENANCE: return "Provenance";
             case QUESTIONNAIRE: return "Questionnaire";
             case QUESTIONNAIRERESPONSE: return "QuestionnaireResponse";
+            case REGULATEDADMINISTRABLEPRODUCT: return "RegulatedAdministrableProduct";
+            case REGULATEDAUTHORIZATION: return "RegulatedAuthorization";
+            case REGULATEDMANUFACTUREDITEM: return "RegulatedManufacturedItem";
+            case REGULATEDMEDICINALPRODUCT: return "RegulatedMedicinalProduct";
+            case REGULATEDPACKAGEDPRODUCT: return "RegulatedPackagedProduct";
             case RELATEDPERSON: return "RelatedPerson";
             case REQUESTGROUP: return "RequestGroup";
-            case RESEARCHDEFINITION: return "ResearchDefinition";
-            case RESEARCHELEMENTDEFINITION: return "ResearchElementDefinition";
             case RESEARCHSTUDY: return "ResearchStudy";
             case RESEARCHSUBJECT: return "ResearchSubject";
             case RESOURCE: return "Resource";
             case RISKASSESSMENT: return "RiskAssessment";
-            case RISKEVIDENCESYNTHESIS: return "RiskEvidenceSynthesis";
             case SCHEDULE: return "Schedule";
             case SEARCHPARAMETER: return "SearchParameter";
             case SERVICEREQUEST: return "ServiceRequest";
@@ -7916,18 +7953,19 @@ The primary difference between a medication statement and a medication administr
             case STRUCTUREMAP: return "StructureMap";
             case SUBSCRIPTION: return "Subscription";
             case SUBSTANCE: return "Substance";
+            case SUBSTANCEDEFINITION: return "SubstanceDefinition";
             case SUBSTANCENUCLEICACID: return "SubstanceNucleicAcid";
             case SUBSTANCEPOLYMER: return "SubstancePolymer";
             case SUBSTANCEPROTEIN: return "SubstanceProtein";
             case SUBSTANCEREFERENCEINFORMATION: return "SubstanceReferenceInformation";
             case SUBSTANCESOURCEMATERIAL: return "SubstanceSourceMaterial";
-            case SUBSTANCESPECIFICATION: return "SubstanceSpecification";
             case SUPPLYDELIVERY: return "SupplyDelivery";
             case SUPPLYREQUEST: return "SupplyRequest";
             case TASK: return "Task";
             case TERMINOLOGYCAPABILITIES: return "TerminologyCapabilities";
             case TESTREPORT: return "TestReport";
             case TESTSCRIPT: return "TestScript";
+            case TOPIC: return "Topic";
             case VALUESET: return "ValueSet";
             case VERIFICATIONRESULT: return "VerificationResult";
             case VISIONPRESCRIPTION: return "VisionPrescription";
@@ -7962,6 +8000,7 @@ The primary difference between a medication statement and a medication administr
             case MONEY: return "http://hl7.org/fhir/data-types";
             case MONEYQUANTITY: return "http://hl7.org/fhir/data-types";
             case NARRATIVE: return "http://hl7.org/fhir/data-types";
+            case ORDEREDDISTRIBUTION: return "http://hl7.org/fhir/data-types";
             case PARAMETERDEFINITION: return "http://hl7.org/fhir/data-types";
             case PERIOD: return "http://hl7.org/fhir/data-types";
             case POPULATION: return "http://hl7.org/fhir/data-types";
@@ -7975,6 +8014,7 @@ The primary difference between a medication statement and a medication administr
             case SAMPLEDDATA: return "http://hl7.org/fhir/data-types";
             case SIGNATURE: return "http://hl7.org/fhir/data-types";
             case SIMPLEQUANTITY: return "http://hl7.org/fhir/data-types";
+            case STATISTIC: return "http://hl7.org/fhir/data-types";
             case SUBSTANCEAMOUNT: return "http://hl7.org/fhir/data-types";
             case TIMING: return "http://hl7.org/fhir/data-types";
             case TRIGGERDEFINITION: return "http://hl7.org/fhir/data-types";
@@ -8012,6 +8052,7 @@ The primary difference between a medication statement and a medication administr
             case BODYSTRUCTURE: return "http://hl7.org/fhir/resource-types";
             case BUNDLE: return "http://hl7.org/fhir/resource-types";
             case CAPABILITYSTATEMENT: return "http://hl7.org/fhir/resource-types";
+            case CAPABILITYSTATEMENT2: return "http://hl7.org/fhir/resource-types";
             case CAREPLAN: return "http://hl7.org/fhir/resource-types";
             case CARETEAM: return "http://hl7.org/fhir/resource-types";
             case CATALOGENTRY: return "http://hl7.org/fhir/resource-types";
@@ -8020,6 +8061,8 @@ The primary difference between a medication statement and a medication administr
             case CLAIM: return "http://hl7.org/fhir/resource-types";
             case CLAIMRESPONSE: return "http://hl7.org/fhir/resource-types";
             case CLINICALIMPRESSION: return "http://hl7.org/fhir/resource-types";
+            case CLINICALPROFILE: return "http://hl7.org/fhir/resource-types";
+            case CLINICALUSEISSUE: return "http://hl7.org/fhir/resource-types";
             case CODESYSTEM: return "http://hl7.org/fhir/resource-types";
             case COMMUNICATION: return "http://hl7.org/fhir/resource-types";
             case COMMUNICATIONREQUEST: return "http://hl7.org/fhir/resource-types";
@@ -8027,6 +8070,7 @@ The primary difference between a medication statement and a medication administr
             case COMPOSITION: return "http://hl7.org/fhir/resource-types";
             case CONCEPTMAP: return "http://hl7.org/fhir/resource-types";
             case CONDITION: return "http://hl7.org/fhir/resource-types";
+            case CONDITIONDEFINITION: return "http://hl7.org/fhir/resource-types";
             case CONSENT: return "http://hl7.org/fhir/resource-types";
             case CONTRACT: return "http://hl7.org/fhir/resource-types";
             case COVERAGE: return "http://hl7.org/fhir/resource-types";
@@ -8042,7 +8086,6 @@ The primary difference between a medication statement and a medication administr
             case DOCUMENTMANIFEST: return "http://hl7.org/fhir/resource-types";
             case DOCUMENTREFERENCE: return "http://hl7.org/fhir/resource-types";
             case DOMAINRESOURCE: return "http://hl7.org/fhir/resource-types";
-            case EFFECTEVIDENCESYNTHESIS: return "http://hl7.org/fhir/resource-types";
             case ENCOUNTER: return "http://hl7.org/fhir/resource-types";
             case ENDPOINT: return "http://hl7.org/fhir/resource-types";
             case ENROLLMENTREQUEST: return "http://hl7.org/fhir/resource-types";
@@ -8065,6 +8108,7 @@ The primary difference between a medication statement and a medication administr
             case IMMUNIZATIONEVALUATION: return "http://hl7.org/fhir/resource-types";
             case IMMUNIZATIONRECOMMENDATION: return "http://hl7.org/fhir/resource-types";
             case IMPLEMENTATIONGUIDE: return "http://hl7.org/fhir/resource-types";
+            case INGREDIENT: return "http://hl7.org/fhir/resource-types";
             case INSURANCEPLAN: return "http://hl7.org/fhir/resource-types";
             case INVOICE: return "http://hl7.org/fhir/resource-types";
             case LIBRARY: return "http://hl7.org/fhir/resource-types";
@@ -8079,17 +8123,7 @@ The primary difference between a medication statement and a medication administr
             case MEDICATIONDISPENSE: return "http://hl7.org/fhir/resource-types";
             case MEDICATIONKNOWLEDGE: return "http://hl7.org/fhir/resource-types";
             case MEDICATIONREQUEST: return "http://hl7.org/fhir/resource-types";
-            case MEDICATIONSTATEMENT: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCT: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTAUTHORIZATION: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTCONTRAINDICATION: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTINDICATION: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTINGREDIENT: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTINTERACTION: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTMANUFACTURED: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTPACKAGED: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTPHARMACEUTICAL: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTUNDESIRABLEEFFECT: return "http://hl7.org/fhir/resource-types";
+            case MEDICATIONUSAGE: return "http://hl7.org/fhir/resource-types";
             case MESSAGEDEFINITION: return "http://hl7.org/fhir/resource-types";
             case MESSAGEHEADER: return "http://hl7.org/fhir/resource-types";
             case MOLECULARSEQUENCE: return "http://hl7.org/fhir/resource-types";
@@ -8113,15 +8147,17 @@ The primary difference between a medication statement and a medication administr
             case PROVENANCE: return "http://hl7.org/fhir/resource-types";
             case QUESTIONNAIRE: return "http://hl7.org/fhir/resource-types";
             case QUESTIONNAIRERESPONSE: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDADMINISTRABLEPRODUCT: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDAUTHORIZATION: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDMANUFACTUREDITEM: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDMEDICINALPRODUCT: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDPACKAGEDPRODUCT: return "http://hl7.org/fhir/resource-types";
             case RELATEDPERSON: return "http://hl7.org/fhir/resource-types";
             case REQUESTGROUP: return "http://hl7.org/fhir/resource-types";
-            case RESEARCHDEFINITION: return "http://hl7.org/fhir/resource-types";
-            case RESEARCHELEMENTDEFINITION: return "http://hl7.org/fhir/resource-types";
             case RESEARCHSTUDY: return "http://hl7.org/fhir/resource-types";
             case RESEARCHSUBJECT: return "http://hl7.org/fhir/resource-types";
             case RESOURCE: return "http://hl7.org/fhir/resource-types";
             case RISKASSESSMENT: return "http://hl7.org/fhir/resource-types";
-            case RISKEVIDENCESYNTHESIS: return "http://hl7.org/fhir/resource-types";
             case SCHEDULE: return "http://hl7.org/fhir/resource-types";
             case SEARCHPARAMETER: return "http://hl7.org/fhir/resource-types";
             case SERVICEREQUEST: return "http://hl7.org/fhir/resource-types";
@@ -8132,18 +8168,19 @@ The primary difference between a medication statement and a medication administr
             case STRUCTUREMAP: return "http://hl7.org/fhir/resource-types";
             case SUBSCRIPTION: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCE: return "http://hl7.org/fhir/resource-types";
+            case SUBSTANCEDEFINITION: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCENUCLEICACID: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCEPOLYMER: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCEPROTEIN: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCEREFERENCEINFORMATION: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCESOURCEMATERIAL: return "http://hl7.org/fhir/resource-types";
-            case SUBSTANCESPECIFICATION: return "http://hl7.org/fhir/resource-types";
             case SUPPLYDELIVERY: return "http://hl7.org/fhir/resource-types";
             case SUPPLYREQUEST: return "http://hl7.org/fhir/resource-types";
             case TASK: return "http://hl7.org/fhir/resource-types";
             case TERMINOLOGYCAPABILITIES: return "http://hl7.org/fhir/resource-types";
             case TESTREPORT: return "http://hl7.org/fhir/resource-types";
             case TESTSCRIPT: return "http://hl7.org/fhir/resource-types";
+            case TOPIC: return "http://hl7.org/fhir/resource-types";
             case VALUESET: return "http://hl7.org/fhir/resource-types";
             case VERIFICATIONRESULT: return "http://hl7.org/fhir/resource-types";
             case VISIONPRESCRIPTION: return "http://hl7.org/fhir/resource-types";
@@ -8178,6 +8215,7 @@ The primary difference between a medication statement and a medication administr
             case MONEY: return "An amount of economic utility in some recognized currency.";
             case MONEYQUANTITY: return "";
             case NARRATIVE: return "A human-readable summary of the resource conveying the essential clinical and business information for the resource.";
+            case ORDEREDDISTRIBUTION: return "An ordered list (distribution) of statistics.";
             case PARAMETERDEFINITION: return "The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.";
             case PERIOD: return "A time period defined by a start and end date and optionally time.";
             case POPULATION: return "A populatioof people with some set of grouping criteria.";
@@ -8191,6 +8229,7 @@ The primary difference between a medication statement and a medication administr
             case SAMPLEDDATA: return "A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.";
             case SIGNATURE: return "A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.";
             case SIMPLEQUANTITY: return "";
+            case STATISTIC: return "A fact or piece of data from a  study of a large quantity of numerical data.  A mathematical or quantified characteristic of a group of observations.";
             case SUBSTANCEAMOUNT: return "Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.";
             case TIMING: return "Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.";
             case TRIGGERDEFINITION: return "A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.";
@@ -8217,32 +8256,36 @@ The primary difference between a medication statement and a medication administr
             case XHTML: return "XHTML format, as defined by W3C, but restricted usage (mainly, no active content)";
             case ACCOUNT: return "A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.";
             case ACTIVITYDEFINITION: return "This resource allows for the definition of some activity to be performed, independent of a particular patient, practitioner, or other performance context.";
-            case ADVERSEEVENT: return "Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.";
+            case ADVERSEEVENT: return "An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.";
             case ALLERGYINTOLERANCE: return "Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.";
             case APPOINTMENT: return "A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).";
             case APPOINTMENTRESPONSE: return "A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.";
-            case AUDITEVENT: return "A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.";
+            case AUDITEVENT: return "A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.";
             case BASIC: return "Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.";
             case BINARY: return "A resource that represents the data of a single raw artifact as digital content accessible in its native format.  A Binary resource can contain any content, whether text, image, pdf, zip archive, etc.";
             case BIOLOGICALLYDERIVEDPRODUCT: return "A material substance originating from a biological entity intended to be transplanted or infused\ninto another (possibly the same) biological entity.";
             case BODYSTRUCTURE: return "Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.";
             case BUNDLE: return "A container for a collection of resources.";
             case CAPABILITYSTATEMENT: return "A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.";
+            case CAPABILITYSTATEMENT2: return "A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.";
             case CAREPLAN: return "Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.";
-            case CARETEAM: return "The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.";
+            case CARETEAM: return "The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care.";
             case CATALOGENTRY: return "Catalog entries are wrappers that contextualize items included in a catalog.";
             case CHARGEITEM: return "The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.";
             case CHARGEITEMDEFINITION: return "The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.";
             case CLAIM: return "A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.";
             case CLAIMRESPONSE: return "This resource provides the adjudication details from the processing of a Claim resource.";
             case CLINICALIMPRESSION: return "A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter,  but this varies greatly depending on the clinical workflow. This resource is called \"ClinicalImpression\" rather than \"ClinicalAssessment\" to avoid confusion with the recording of assessment tools such as Apgar score.";
+	    case CLINICALPROFILE: return "Clinical Profiles summarize and demonstrate the features of a population.";
+            case CLINICALUSEISSUE: return "A single item of clinical particulars - an indication, contraindication, interaction etc. for a medicinal product.";
             case CODESYSTEM: return "The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.";
-            case COMMUNICATION: return "An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency that was notified about a reportable condition.";
+            case COMMUNICATION: return "An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency communication to a provider/reporter in response to a case report for a reportable condition.";
             case COMMUNICATIONREQUEST: return "A request to convey information; e.g. the CDS system proposes that an alert be sent to a responsible provider, the CDS system proposes that the public health agency be notified about a reportable condition.";
             case COMPARTMENTDEFINITION: return "A compartment definition that defines how resources are accessed on a server.";
             case COMPOSITION: return "A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).";
             case CONCEPTMAP: return "A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.";
             case CONDITION: return "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.";
+            case CONDITIONDEFINITION: return "A definition of a condition and information relevant to managing it.";
             case CONSENT: return "A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.";
             case CONTRACT: return "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.";
             case COVERAGE: return "Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.";
@@ -8258,14 +8301,13 @@ The primary difference between a medication statement and a medication administr
             case DOCUMENTMANIFEST: return "A collection of documents compiled for a purpose together with metadata that applies to the collection.";
             case DOCUMENTREFERENCE: return "A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed. The scope of a document is any seralized object with a mime-type, so includes formal patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.";
             case DOMAINRESOURCE: return "A resource that includes narrative, extensions, and contained resources.";
-            case EFFECTEVIDENCESYNTHESIS: return "The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.";
             case ENCOUNTER: return "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.";
             case ENDPOINT: return "The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information.";
             case ENROLLMENTREQUEST: return "This resource provides the insurance enrollment details to the insurer regarding a specified coverage.";
             case ENROLLMENTRESPONSE: return "This resource provides enrollment and plan details from the processing of an EnrollmentRequest resource.";
             case EPISODEOFCARE: return "An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.";
             case EVENTDEFINITION: return "The EventDefinition resource provides a reusable description of when a particular event can occur.";
-            case EVIDENCE: return "The Evidence resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.";
+            case EVIDENCE: return "This represents statistics, certainty, both the intended and actual population, and evidence variables.";
             case EVIDENCEVARIABLE: return "The EvidenceVariable resource describes a \"PICO\" element that knowledge (evidence, assertion, recommendation) is about.";
             case EXAMPLESCENARIO: return "Example of workflow instance.";
             case EXPLANATIONOFBENEFIT: return "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.";
@@ -8281,6 +8323,7 @@ The primary difference between a medication statement and a medication administr
             case IMMUNIZATIONEVALUATION: return "Describes a comparison of an immunization event against published recommendations to determine if the administration is \"valid\" in relation to those  recommendations.";
             case IMMUNIZATIONRECOMMENDATION: return "A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.";
             case IMPLEMENTATIONGUIDE: return "A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.";
+            case INGREDIENT: return "An ingredient of a manufactured item or pharmaceutical product.";
             case INSURANCEPLAN: return "Details of a Health Insurance product/plan provided by an organization.";
             case INVOICE: return "Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.";
             case LIBRARY: return "The Library resource is a general-purpose container for knowledge asset definitions. It can be used to describe and expose existing knowledge assets such as logic libraries and information model descriptions, as well as to describe a collection of knowledge assets.";
@@ -8295,17 +8338,7 @@ The primary difference between a medication statement and a medication administr
             case MEDICATIONDISPENSE: return "Indicates that a medication product is to be or has been dispensed for a named person/patient.  This includes a description of the medication product (supply) provided and the instructions for administering the medication.  The medication dispense is the result of a pharmacy system responding to a medication order.";
             case MEDICATIONKNOWLEDGE: return "Information about a medication that is used to support knowledge.";
             case MEDICATIONREQUEST: return "An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called \"MedicationRequest\" rather than \"MedicationPrescription\" or \"MedicationOrder\" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.";
-            case MEDICATIONSTATEMENT: return "A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. \n\nThe primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.";
-            case MEDICINALPRODUCT: return "Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).";
-            case MEDICINALPRODUCTAUTHORIZATION: return "The regulatory authorization of a medicinal product.";
-            case MEDICINALPRODUCTCONTRAINDICATION: return "The clinical particulars - indications, contraindications etc. of a medicinal product, including for regulatory purposes.";
-            case MEDICINALPRODUCTINDICATION: return "Indication for the Medicinal Product.";
-            case MEDICINALPRODUCTINGREDIENT: return "An ingredient of a manufactured item or pharmaceutical product.";
-            case MEDICINALPRODUCTINTERACTION: return "The interactions of the medicinal product with other medicinal products, or other forms of interactions.";
-            case MEDICINALPRODUCTMANUFACTURED: return "The manufactured item as contained in the packaged medicinal product.";
-            case MEDICINALPRODUCTPACKAGED: return "A medicinal product in a container or package.";
-            case MEDICINALPRODUCTPHARMACEUTICAL: return "A pharmaceutical product described in terms of its composition and dose form.";
-            case MEDICINALPRODUCTUNDESIRABLEEFFECT: return "Describe the undesirable effects of the medicinal product.";
+            case MEDICATIONUSAGE: return "A record of a medication that is being consumed by a patient.   A MedicationUsage may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. \n\nThe primary difference between a medicationusage and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationusage is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Usage information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.";
             case MESSAGEDEFINITION: return "Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.";
             case MESSAGEHEADER: return "The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.";
             case MOLECULARSEQUENCE: return "Raw data describing a biological sequence.";
@@ -8329,15 +8362,17 @@ The primary difference between a medication statement and a medication administr
             case PROVENANCE: return "Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.";
             case QUESTIONNAIRE: return "A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.";
             case QUESTIONNAIRERESPONSE: return "A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.";
+            case REGULATEDADMINISTRABLEPRODUCT: return "A pharmaceutical product described in terms of its composition and dose form.";
+            case REGULATEDAUTHORIZATION: return "The regulatory authorization of a medicinal product.";
+            case REGULATEDMANUFACTUREDITEM: return "The manufactured item as contained in the packaged medicinal product.";
+            case REGULATEDMEDICINALPRODUCT: return "Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).";
+            case REGULATEDPACKAGEDPRODUCT: return "A medicinal product in a container or package.";
             case RELATEDPERSON: return "Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.";
             case REQUESTGROUP: return "A group of related requests that can be used to capture intended activities that have inter-dependencies such as \"give this medication after that one\".";
-            case RESEARCHDEFINITION: return "The ResearchDefinition resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.";
-            case RESEARCHELEMENTDEFINITION: return "The ResearchElementDefinition resource describes a \"PICO\" element that knowledge (evidence, assertion, recommendation) is about.";
             case RESEARCHSTUDY: return "A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques.  A ResearchStudy involves the gathering of information about human or animal subjects.";
             case RESEARCHSUBJECT: return "A physical entity which is the primary unit of operational and/or administrative interest in a study.";
             case RESOURCE: return "This is the base resource type for everything.";
             case RISKASSESSMENT: return "An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.";
-            case RISKEVIDENCESYNTHESIS: return "The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.";
             case SCHEDULE: return "A container for slots of time that may be available for booking appointments.";
             case SEARCHPARAMETER: return "A search parameter that defines a named search item that can be used to search/filter on a resource.";
             case SERVICEREQUEST: return "A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.";
@@ -8348,18 +8383,19 @@ The primary difference between a medication statement and a medication administr
             case STRUCTUREMAP: return "A Map of relationships between 2 structures that can be used to transform data.";
             case SUBSCRIPTION: return "The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined \"channel\" so that another system can take an appropriate action.";
             case SUBSTANCE: return "A homogeneous material with a definite composition.";
+            case SUBSTANCEDEFINITION: return "The detailed description of a substance, typically at a level beyond what is used for prescribing.";
             case SUBSTANCENUCLEICACID: return "Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.";
             case SUBSTANCEPOLYMER: return "Todo.";
             case SUBSTANCEPROTEIN: return "A SubstanceProtein is defined as a single unit of a linear amino acid sequence, or a combination of subunits that are either covalently linked or have a defined invariant stoichiometric relationship. This includes all synthetic, recombinant and purified SubstanceProteins of defined sequence, whether the use is therapeutic or prophylactic. This set of elements will be used to describe albumins, coagulation factors, cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant vaccines, and immunomodulators.";
             case SUBSTANCEREFERENCEINFORMATION: return "Todo.";
             case SUBSTANCESOURCEMATERIAL: return "Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.";
-            case SUBSTANCESPECIFICATION: return "The detailed description of a substance, typically at a level beyond what is used for prescribing.";
             case SUPPLYDELIVERY: return "Record of delivery of what is supplied.";
             case SUPPLYREQUEST: return "A record of a request for a medication, substance or device used in the healthcare setting.";
             case TASK: return "A task to be performed.";
-            case TERMINOLOGYCAPABILITIES: return "A Terminology Capabilities documents a set of capabilities (behaviors) of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.";
+            case TERMINOLOGYCAPABILITIES: return "A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.";
             case TESTREPORT: return "A summary of information based on the results of executing a TestScript.";
             case TESTSCRIPT: return "A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.";
+            case TOPIC: return "Describes a stream of resource state changes identified by trigger criteria and annotated with labels useful to filter projections from this topic.";
             case VALUESET: return "A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).";
             case VERIFICATIONRESULT: return "Describes validation requirements, source(s), status and dates for one or more elements.";
             case VISIONPRESCRIPTION: return "An authorization for the provision of glasses and/or contact lenses to a patient.";
@@ -8394,6 +8430,7 @@ The primary difference between a medication statement and a medication administr
             case MONEY: return "Money";
             case MONEYQUANTITY: return "MoneyQuantity";
             case NARRATIVE: return "Narrative";
+            case ORDEREDDISTRIBUTION: return "OrderedDistribution";
             case PARAMETERDEFINITION: return "ParameterDefinition";
             case PERIOD: return "Period";
             case POPULATION: return "Population";
@@ -8407,6 +8444,7 @@ The primary difference between a medication statement and a medication administr
             case SAMPLEDDATA: return "SampledData";
             case SIGNATURE: return "Signature";
             case SIMPLEQUANTITY: return "SimpleQuantity";
+            case STATISTIC: return "Statistic";
             case SUBSTANCEAMOUNT: return "SubstanceAmount";
             case TIMING: return "Timing";
             case TRIGGERDEFINITION: return "TriggerDefinition";
@@ -8444,6 +8482,7 @@ The primary difference between a medication statement and a medication administr
             case BODYSTRUCTURE: return "BodyStructure";
             case BUNDLE: return "Bundle";
             case CAPABILITYSTATEMENT: return "CapabilityStatement";
+            case CAPABILITYSTATEMENT2: return "CapabilityStatement2";
             case CAREPLAN: return "CarePlan";
             case CARETEAM: return "CareTeam";
             case CATALOGENTRY: return "CatalogEntry";
@@ -8452,6 +8491,8 @@ The primary difference between a medication statement and a medication administr
             case CLAIM: return "Claim";
             case CLAIMRESPONSE: return "ClaimResponse";
             case CLINICALIMPRESSION: return "ClinicalImpression";
+            case CLINICALPROFILE: return "ClinicalProfile";
+            case CLINICALUSEISSUE: return "ClinicalUseIssue";
             case CODESYSTEM: return "CodeSystem";
             case COMMUNICATION: return "Communication";
             case COMMUNICATIONREQUEST: return "CommunicationRequest";
@@ -8459,6 +8500,7 @@ The primary difference between a medication statement and a medication administr
             case COMPOSITION: return "Composition";
             case CONCEPTMAP: return "ConceptMap";
             case CONDITION: return "Condition";
+            case CONDITIONDEFINITION: return "ConditionDefinition";
             case CONSENT: return "Consent";
             case CONTRACT: return "Contract";
             case COVERAGE: return "Coverage";
@@ -8474,7 +8516,6 @@ The primary difference between a medication statement and a medication administr
             case DOCUMENTMANIFEST: return "DocumentManifest";
             case DOCUMENTREFERENCE: return "DocumentReference";
             case DOMAINRESOURCE: return "DomainResource";
-            case EFFECTEVIDENCESYNTHESIS: return "EffectEvidenceSynthesis";
             case ENCOUNTER: return "Encounter";
             case ENDPOINT: return "Endpoint";
             case ENROLLMENTREQUEST: return "EnrollmentRequest";
@@ -8497,6 +8538,7 @@ The primary difference between a medication statement and a medication administr
             case IMMUNIZATIONEVALUATION: return "ImmunizationEvaluation";
             case IMMUNIZATIONRECOMMENDATION: return "ImmunizationRecommendation";
             case IMPLEMENTATIONGUIDE: return "ImplementationGuide";
+            case INGREDIENT: return "Ingredient";
             case INSURANCEPLAN: return "InsurancePlan";
             case INVOICE: return "Invoice";
             case LIBRARY: return "Library";
@@ -8511,17 +8553,7 @@ The primary difference between a medication statement and a medication administr
             case MEDICATIONDISPENSE: return "MedicationDispense";
             case MEDICATIONKNOWLEDGE: return "MedicationKnowledge";
             case MEDICATIONREQUEST: return "MedicationRequest";
-            case MEDICATIONSTATEMENT: return "MedicationStatement";
-            case MEDICINALPRODUCT: return "MedicinalProduct";
-            case MEDICINALPRODUCTAUTHORIZATION: return "MedicinalProductAuthorization";
-            case MEDICINALPRODUCTCONTRAINDICATION: return "MedicinalProductContraindication";
-            case MEDICINALPRODUCTINDICATION: return "MedicinalProductIndication";
-            case MEDICINALPRODUCTINGREDIENT: return "MedicinalProductIngredient";
-            case MEDICINALPRODUCTINTERACTION: return "MedicinalProductInteraction";
-            case MEDICINALPRODUCTMANUFACTURED: return "MedicinalProductManufactured";
-            case MEDICINALPRODUCTPACKAGED: return "MedicinalProductPackaged";
-            case MEDICINALPRODUCTPHARMACEUTICAL: return "MedicinalProductPharmaceutical";
-            case MEDICINALPRODUCTUNDESIRABLEEFFECT: return "MedicinalProductUndesirableEffect";
+            case MEDICATIONUSAGE: return "MedicationUsage";
             case MESSAGEDEFINITION: return "MessageDefinition";
             case MESSAGEHEADER: return "MessageHeader";
             case MOLECULARSEQUENCE: return "MolecularSequence";
@@ -8545,15 +8577,17 @@ The primary difference between a medication statement and a medication administr
             case PROVENANCE: return "Provenance";
             case QUESTIONNAIRE: return "Questionnaire";
             case QUESTIONNAIRERESPONSE: return "QuestionnaireResponse";
+            case REGULATEDADMINISTRABLEPRODUCT: return "RegulatedAdministrableProduct";
+            case REGULATEDAUTHORIZATION: return "RegulatedAuthorization";
+            case REGULATEDMANUFACTUREDITEM: return "RegulatedManufacturedItem";
+            case REGULATEDMEDICINALPRODUCT: return "RegulatedMedicinalProduct";
+            case REGULATEDPACKAGEDPRODUCT: return "RegulatedPackagedProduct";
             case RELATEDPERSON: return "RelatedPerson";
             case REQUESTGROUP: return "RequestGroup";
-            case RESEARCHDEFINITION: return "ResearchDefinition";
-            case RESEARCHELEMENTDEFINITION: return "ResearchElementDefinition";
             case RESEARCHSTUDY: return "ResearchStudy";
             case RESEARCHSUBJECT: return "ResearchSubject";
             case RESOURCE: return "Resource";
             case RISKASSESSMENT: return "RiskAssessment";
-            case RISKEVIDENCESYNTHESIS: return "RiskEvidenceSynthesis";
             case SCHEDULE: return "Schedule";
             case SEARCHPARAMETER: return "SearchParameter";
             case SERVICEREQUEST: return "ServiceRequest";
@@ -8564,18 +8598,19 @@ The primary difference between a medication statement and a medication administr
             case STRUCTUREMAP: return "StructureMap";
             case SUBSCRIPTION: return "Subscription";
             case SUBSTANCE: return "Substance";
+            case SUBSTANCEDEFINITION: return "SubstanceDefinition";
             case SUBSTANCENUCLEICACID: return "SubstanceNucleicAcid";
             case SUBSTANCEPOLYMER: return "SubstancePolymer";
             case SUBSTANCEPROTEIN: return "SubstanceProtein";
             case SUBSTANCEREFERENCEINFORMATION: return "SubstanceReferenceInformation";
             case SUBSTANCESOURCEMATERIAL: return "SubstanceSourceMaterial";
-            case SUBSTANCESPECIFICATION: return "SubstanceSpecification";
             case SUPPLYDELIVERY: return "SupplyDelivery";
             case SUPPLYREQUEST: return "SupplyRequest";
             case TASK: return "Task";
             case TERMINOLOGYCAPABILITIES: return "TerminologyCapabilities";
             case TESTREPORT: return "TestReport";
             case TESTSCRIPT: return "TestScript";
+            case TOPIC: return "Topic";
             case VALUESET: return "ValueSet";
             case VERIFICATIONRESULT: return "VerificationResult";
             case VISIONPRESCRIPTION: return "VisionPrescription";
@@ -8641,6 +8676,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.MONEYQUANTITY;
         if ("Narrative".equals(codeString))
           return FHIRDefinedType.NARRATIVE;
+        if ("OrderedDistribution".equals(codeString))
+          return FHIRDefinedType.ORDEREDDISTRIBUTION;
         if ("ParameterDefinition".equals(codeString))
           return FHIRDefinedType.PARAMETERDEFINITION;
         if ("Period".equals(codeString))
@@ -8667,6 +8704,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.SIGNATURE;
         if ("SimpleQuantity".equals(codeString))
           return FHIRDefinedType.SIMPLEQUANTITY;
+        if ("Statistic".equals(codeString))
+          return FHIRDefinedType.STATISTIC;
         if ("SubstanceAmount".equals(codeString))
           return FHIRDefinedType.SUBSTANCEAMOUNT;
         if ("Timing".equals(codeString))
@@ -8741,6 +8780,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.BUNDLE;
         if ("CapabilityStatement".equals(codeString))
           return FHIRDefinedType.CAPABILITYSTATEMENT;
+        if ("CapabilityStatement2".equals(codeString))
+          return FHIRDefinedType.CAPABILITYSTATEMENT2;
         if ("CarePlan".equals(codeString))
           return FHIRDefinedType.CAREPLAN;
         if ("CareTeam".equals(codeString))
@@ -8757,6 +8798,10 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.CLAIMRESPONSE;
         if ("ClinicalImpression".equals(codeString))
           return FHIRDefinedType.CLINICALIMPRESSION;
+        if ("ClinicalProfile".equals(codeString))
+          return FHIRDefinedType.CLINICALPROFILE;
+        if ("ClinicalUseIssue".equals(codeString))
+          return FHIRDefinedType.CLINICALUSEISSUE;
         if ("CodeSystem".equals(codeString))
           return FHIRDefinedType.CODESYSTEM;
         if ("Communication".equals(codeString))
@@ -8771,6 +8816,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.CONCEPTMAP;
         if ("Condition".equals(codeString))
           return FHIRDefinedType.CONDITION;
+        if ("ConditionDefinition".equals(codeString))
+          return FHIRDefinedType.CONDITIONDEFINITION;
         if ("Consent".equals(codeString))
           return FHIRDefinedType.CONSENT;
         if ("Contract".equals(codeString))
@@ -8801,8 +8848,6 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.DOCUMENTREFERENCE;
         if ("DomainResource".equals(codeString))
           return FHIRDefinedType.DOMAINRESOURCE;
-        if ("EffectEvidenceSynthesis".equals(codeString))
-          return FHIRDefinedType.EFFECTEVIDENCESYNTHESIS;
         if ("Encounter".equals(codeString))
           return FHIRDefinedType.ENCOUNTER;
         if ("Endpoint".equals(codeString))
@@ -8847,6 +8892,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.IMMUNIZATIONRECOMMENDATION;
         if ("ImplementationGuide".equals(codeString))
           return FHIRDefinedType.IMPLEMENTATIONGUIDE;
+        if ("Ingredient".equals(codeString))
+          return FHIRDefinedType.INGREDIENT;
         if ("InsurancePlan".equals(codeString))
           return FHIRDefinedType.INSURANCEPLAN;
         if ("Invoice".equals(codeString))
@@ -8875,28 +8922,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.MEDICATIONKNOWLEDGE;
         if ("MedicationRequest".equals(codeString))
           return FHIRDefinedType.MEDICATIONREQUEST;
-        if ("MedicationStatement".equals(codeString))
-          return FHIRDefinedType.MEDICATIONSTATEMENT;
-        if ("MedicinalProduct".equals(codeString))
-          return FHIRDefinedType.MEDICINALPRODUCT;
-        if ("MedicinalProductAuthorization".equals(codeString))
-          return FHIRDefinedType.MEDICINALPRODUCTAUTHORIZATION;
-        if ("MedicinalProductContraindication".equals(codeString))
-          return FHIRDefinedType.MEDICINALPRODUCTCONTRAINDICATION;
-        if ("MedicinalProductIndication".equals(codeString))
-          return FHIRDefinedType.MEDICINALPRODUCTINDICATION;
-        if ("MedicinalProductIngredient".equals(codeString))
-          return FHIRDefinedType.MEDICINALPRODUCTINGREDIENT;
-        if ("MedicinalProductInteraction".equals(codeString))
-          return FHIRDefinedType.MEDICINALPRODUCTINTERACTION;
-        if ("MedicinalProductManufactured".equals(codeString))
-          return FHIRDefinedType.MEDICINALPRODUCTMANUFACTURED;
-        if ("MedicinalProductPackaged".equals(codeString))
-          return FHIRDefinedType.MEDICINALPRODUCTPACKAGED;
-        if ("MedicinalProductPharmaceutical".equals(codeString))
-          return FHIRDefinedType.MEDICINALPRODUCTPHARMACEUTICAL;
-        if ("MedicinalProductUndesirableEffect".equals(codeString))
-          return FHIRDefinedType.MEDICINALPRODUCTUNDESIRABLEEFFECT;
+        if ("MedicationUsage".equals(codeString))
+          return FHIRDefinedType.MEDICATIONUSAGE;
         if ("MessageDefinition".equals(codeString))
           return FHIRDefinedType.MESSAGEDEFINITION;
         if ("MessageHeader".equals(codeString))
@@ -8943,14 +8970,20 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.QUESTIONNAIRE;
         if ("QuestionnaireResponse".equals(codeString))
           return FHIRDefinedType.QUESTIONNAIRERESPONSE;
+        if ("RegulatedAdministrableProduct".equals(codeString))
+          return FHIRDefinedType.REGULATEDADMINISTRABLEPRODUCT;
+        if ("RegulatedAuthorization".equals(codeString))
+          return FHIRDefinedType.REGULATEDAUTHORIZATION;
+        if ("RegulatedManufacturedItem".equals(codeString))
+          return FHIRDefinedType.REGULATEDMANUFACTUREDITEM;
+        if ("RegulatedMedicinalProduct".equals(codeString))
+          return FHIRDefinedType.REGULATEDMEDICINALPRODUCT;
+        if ("RegulatedPackagedProduct".equals(codeString))
+          return FHIRDefinedType.REGULATEDPACKAGEDPRODUCT;
         if ("RelatedPerson".equals(codeString))
           return FHIRDefinedType.RELATEDPERSON;
         if ("RequestGroup".equals(codeString))
           return FHIRDefinedType.REQUESTGROUP;
-        if ("ResearchDefinition".equals(codeString))
-          return FHIRDefinedType.RESEARCHDEFINITION;
-        if ("ResearchElementDefinition".equals(codeString))
-          return FHIRDefinedType.RESEARCHELEMENTDEFINITION;
         if ("ResearchStudy".equals(codeString))
           return FHIRDefinedType.RESEARCHSTUDY;
         if ("ResearchSubject".equals(codeString))
@@ -8959,8 +8992,6 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.RESOURCE;
         if ("RiskAssessment".equals(codeString))
           return FHIRDefinedType.RISKASSESSMENT;
-        if ("RiskEvidenceSynthesis".equals(codeString))
-          return FHIRDefinedType.RISKEVIDENCESYNTHESIS;
         if ("Schedule".equals(codeString))
           return FHIRDefinedType.SCHEDULE;
         if ("SearchParameter".equals(codeString))
@@ -8981,6 +9012,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.SUBSCRIPTION;
         if ("Substance".equals(codeString))
           return FHIRDefinedType.SUBSTANCE;
+        if ("SubstanceDefinition".equals(codeString))
+          return FHIRDefinedType.SUBSTANCEDEFINITION;
         if ("SubstanceNucleicAcid".equals(codeString))
           return FHIRDefinedType.SUBSTANCENUCLEICACID;
         if ("SubstancePolymer".equals(codeString))
@@ -8991,8 +9024,6 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.SUBSTANCEREFERENCEINFORMATION;
         if ("SubstanceSourceMaterial".equals(codeString))
           return FHIRDefinedType.SUBSTANCESOURCEMATERIAL;
-        if ("SubstanceSpecification".equals(codeString))
-          return FHIRDefinedType.SUBSTANCESPECIFICATION;
         if ("SupplyDelivery".equals(codeString))
           return FHIRDefinedType.SUPPLYDELIVERY;
         if ("SupplyRequest".equals(codeString))
@@ -9005,6 +9036,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRDefinedType.TESTREPORT;
         if ("TestScript".equals(codeString))
           return FHIRDefinedType.TESTSCRIPT;
+        if ("Topic".equals(codeString))
+          return FHIRDefinedType.TOPIC;
         if ("ValueSet".equals(codeString))
           return FHIRDefinedType.VALUESET;
         if ("VerificationResult".equals(codeString))
@@ -9073,6 +9106,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MONEYQUANTITY);
         if ("Narrative".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.NARRATIVE);
+        if ("OrderedDistribution".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.ORDEREDDISTRIBUTION);
         if ("ParameterDefinition".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.PARAMETERDEFINITION);
         if ("Period".equals(codeString))
@@ -9099,6 +9134,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.SIGNATURE);
         if ("SimpleQuantity".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.SIMPLEQUANTITY);
+        if ("Statistic".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.STATISTIC);
         if ("SubstanceAmount".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.SUBSTANCEAMOUNT);
         if ("Timing".equals(codeString))
@@ -9173,6 +9210,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.BUNDLE);
         if ("CapabilityStatement".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.CAPABILITYSTATEMENT);
+        if ("CapabilityStatement2".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.CAPABILITYSTATEMENT2);
         if ("CarePlan".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.CAREPLAN);
         if ("CareTeam".equals(codeString))
@@ -9189,6 +9228,10 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.CLAIMRESPONSE);
         if ("ClinicalImpression".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.CLINICALIMPRESSION);
+        if ("ClinicalProfile".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.CLINICALPROFILE);
+        if ("ClinicalUseIssue".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.CLINICALUSEISSUE);
         if ("CodeSystem".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.CODESYSTEM);
         if ("Communication".equals(codeString))
@@ -9203,6 +9246,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.CONCEPTMAP);
         if ("Condition".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.CONDITION);
+        if ("ConditionDefinition".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.CONDITIONDEFINITION);
         if ("Consent".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.CONSENT);
         if ("Contract".equals(codeString))
@@ -9233,8 +9278,6 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.DOCUMENTREFERENCE);
         if ("DomainResource".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.DOMAINRESOURCE);
-        if ("EffectEvidenceSynthesis".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.EFFECTEVIDENCESYNTHESIS);
         if ("Encounter".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.ENCOUNTER);
         if ("Endpoint".equals(codeString))
@@ -9279,6 +9322,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.IMMUNIZATIONRECOMMENDATION);
         if ("ImplementationGuide".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.IMPLEMENTATIONGUIDE);
+        if ("Ingredient".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.INGREDIENT);
         if ("InsurancePlan".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.INSURANCEPLAN);
         if ("Invoice".equals(codeString))
@@ -9307,28 +9352,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICATIONKNOWLEDGE);
         if ("MedicationRequest".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICATIONREQUEST);
-        if ("MedicationStatement".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICATIONSTATEMENT);
-        if ("MedicinalProduct".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICINALPRODUCT);
-        if ("MedicinalProductAuthorization".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICINALPRODUCTAUTHORIZATION);
-        if ("MedicinalProductContraindication".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICINALPRODUCTCONTRAINDICATION);
-        if ("MedicinalProductIndication".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICINALPRODUCTINDICATION);
-        if ("MedicinalProductIngredient".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICINALPRODUCTINGREDIENT);
-        if ("MedicinalProductInteraction".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICINALPRODUCTINTERACTION);
-        if ("MedicinalProductManufactured".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICINALPRODUCTMANUFACTURED);
-        if ("MedicinalProductPackaged".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICINALPRODUCTPACKAGED);
-        if ("MedicinalProductPharmaceutical".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICINALPRODUCTPHARMACEUTICAL);
-        if ("MedicinalProductUndesirableEffect".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICINALPRODUCTUNDESIRABLEEFFECT);
+        if ("MedicationUsage".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MEDICATIONUSAGE);
         if ("MessageDefinition".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.MESSAGEDEFINITION);
         if ("MessageHeader".equals(codeString))
@@ -9375,14 +9400,20 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.QUESTIONNAIRE);
         if ("QuestionnaireResponse".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.QUESTIONNAIRERESPONSE);
+        if ("RegulatedAdministrableProduct".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.REGULATEDADMINISTRABLEPRODUCT);
+        if ("RegulatedAuthorization".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.REGULATEDAUTHORIZATION);
+        if ("RegulatedManufacturedItem".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.REGULATEDMANUFACTUREDITEM);
+        if ("RegulatedMedicinalProduct".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.REGULATEDMEDICINALPRODUCT);
+        if ("RegulatedPackagedProduct".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.REGULATEDPACKAGEDPRODUCT);
         if ("RelatedPerson".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.RELATEDPERSON);
         if ("RequestGroup".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.REQUESTGROUP);
-        if ("ResearchDefinition".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.RESEARCHDEFINITION);
-        if ("ResearchElementDefinition".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.RESEARCHELEMENTDEFINITION);
         if ("ResearchStudy".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.RESEARCHSTUDY);
         if ("ResearchSubject".equals(codeString))
@@ -9391,8 +9422,6 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.RESOURCE);
         if ("RiskAssessment".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.RISKASSESSMENT);
-        if ("RiskEvidenceSynthesis".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.RISKEVIDENCESYNTHESIS);
         if ("Schedule".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.SCHEDULE);
         if ("SearchParameter".equals(codeString))
@@ -9413,6 +9442,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.SUBSCRIPTION);
         if ("Substance".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.SUBSTANCE);
+        if ("SubstanceDefinition".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.SUBSTANCEDEFINITION);
         if ("SubstanceNucleicAcid".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.SUBSTANCENUCLEICACID);
         if ("SubstancePolymer".equals(codeString))
@@ -9423,8 +9454,6 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.SUBSTANCEREFERENCEINFORMATION);
         if ("SubstanceSourceMaterial".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.SUBSTANCESOURCEMATERIAL);
-        if ("SubstanceSpecification".equals(codeString))
-          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.SUBSTANCESPECIFICATION);
         if ("SupplyDelivery".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.SUPPLYDELIVERY);
         if ("SupplyRequest".equals(codeString))
@@ -9437,6 +9466,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.TESTREPORT);
         if ("TestScript".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.TESTSCRIPT);
+        if ("Topic".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.TOPIC);
         if ("ValueSet".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.VALUESET);
         if ("VerificationResult".equals(codeString))
@@ -9498,6 +9529,8 @@ The primary difference between a medication statement and a medication administr
         return "MoneyQuantity";
       if (code == FHIRDefinedType.NARRATIVE)
         return "Narrative";
+      if (code == FHIRDefinedType.ORDEREDDISTRIBUTION)
+        return "OrderedDistribution";
       if (code == FHIRDefinedType.PARAMETERDEFINITION)
         return "ParameterDefinition";
       if (code == FHIRDefinedType.PERIOD)
@@ -9524,6 +9557,8 @@ The primary difference between a medication statement and a medication administr
         return "Signature";
       if (code == FHIRDefinedType.SIMPLEQUANTITY)
         return "SimpleQuantity";
+      if (code == FHIRDefinedType.STATISTIC)
+        return "Statistic";
       if (code == FHIRDefinedType.SUBSTANCEAMOUNT)
         return "SubstanceAmount";
       if (code == FHIRDefinedType.TIMING)
@@ -9598,6 +9633,8 @@ The primary difference between a medication statement and a medication administr
         return "Bundle";
       if (code == FHIRDefinedType.CAPABILITYSTATEMENT)
         return "CapabilityStatement";
+      if (code == FHIRDefinedType.CAPABILITYSTATEMENT2)
+        return "CapabilityStatement2";
       if (code == FHIRDefinedType.CAREPLAN)
         return "CarePlan";
       if (code == FHIRDefinedType.CARETEAM)
@@ -9614,6 +9651,10 @@ The primary difference between a medication statement and a medication administr
         return "ClaimResponse";
       if (code == FHIRDefinedType.CLINICALIMPRESSION)
         return "ClinicalImpression";
+      if (code == FHIRDefinedType.CLINICALPROFILE)
+        return "ClinicalProfile";
+      if (code == FHIRDefinedType.CLINICALUSEISSUE)
+        return "ClinicalUseIssue";
       if (code == FHIRDefinedType.CODESYSTEM)
         return "CodeSystem";
       if (code == FHIRDefinedType.COMMUNICATION)
@@ -9628,6 +9669,8 @@ The primary difference between a medication statement and a medication administr
         return "ConceptMap";
       if (code == FHIRDefinedType.CONDITION)
         return "Condition";
+      if (code == FHIRDefinedType.CONDITIONDEFINITION)
+        return "ConditionDefinition";
       if (code == FHIRDefinedType.CONSENT)
         return "Consent";
       if (code == FHIRDefinedType.CONTRACT)
@@ -9658,8 +9701,6 @@ The primary difference between a medication statement and a medication administr
         return "DocumentReference";
       if (code == FHIRDefinedType.DOMAINRESOURCE)
         return "DomainResource";
-      if (code == FHIRDefinedType.EFFECTEVIDENCESYNTHESIS)
-        return "EffectEvidenceSynthesis";
       if (code == FHIRDefinedType.ENCOUNTER)
         return "Encounter";
       if (code == FHIRDefinedType.ENDPOINT)
@@ -9704,6 +9745,8 @@ The primary difference between a medication statement and a medication administr
         return "ImmunizationRecommendation";
       if (code == FHIRDefinedType.IMPLEMENTATIONGUIDE)
         return "ImplementationGuide";
+      if (code == FHIRDefinedType.INGREDIENT)
+        return "Ingredient";
       if (code == FHIRDefinedType.INSURANCEPLAN)
         return "InsurancePlan";
       if (code == FHIRDefinedType.INVOICE)
@@ -9732,28 +9775,8 @@ The primary difference between a medication statement and a medication administr
         return "MedicationKnowledge";
       if (code == FHIRDefinedType.MEDICATIONREQUEST)
         return "MedicationRequest";
-      if (code == FHIRDefinedType.MEDICATIONSTATEMENT)
-        return "MedicationStatement";
-      if (code == FHIRDefinedType.MEDICINALPRODUCT)
-        return "MedicinalProduct";
-      if (code == FHIRDefinedType.MEDICINALPRODUCTAUTHORIZATION)
-        return "MedicinalProductAuthorization";
-      if (code == FHIRDefinedType.MEDICINALPRODUCTCONTRAINDICATION)
-        return "MedicinalProductContraindication";
-      if (code == FHIRDefinedType.MEDICINALPRODUCTINDICATION)
-        return "MedicinalProductIndication";
-      if (code == FHIRDefinedType.MEDICINALPRODUCTINGREDIENT)
-        return "MedicinalProductIngredient";
-      if (code == FHIRDefinedType.MEDICINALPRODUCTINTERACTION)
-        return "MedicinalProductInteraction";
-      if (code == FHIRDefinedType.MEDICINALPRODUCTMANUFACTURED)
-        return "MedicinalProductManufactured";
-      if (code == FHIRDefinedType.MEDICINALPRODUCTPACKAGED)
-        return "MedicinalProductPackaged";
-      if (code == FHIRDefinedType.MEDICINALPRODUCTPHARMACEUTICAL)
-        return "MedicinalProductPharmaceutical";
-      if (code == FHIRDefinedType.MEDICINALPRODUCTUNDESIRABLEEFFECT)
-        return "MedicinalProductUndesirableEffect";
+      if (code == FHIRDefinedType.MEDICATIONUSAGE)
+        return "MedicationUsage";
       if (code == FHIRDefinedType.MESSAGEDEFINITION)
         return "MessageDefinition";
       if (code == FHIRDefinedType.MESSAGEHEADER)
@@ -9800,14 +9823,20 @@ The primary difference between a medication statement and a medication administr
         return "Questionnaire";
       if (code == FHIRDefinedType.QUESTIONNAIRERESPONSE)
         return "QuestionnaireResponse";
+      if (code == FHIRDefinedType.REGULATEDADMINISTRABLEPRODUCT)
+        return "RegulatedAdministrableProduct";
+      if (code == FHIRDefinedType.REGULATEDAUTHORIZATION)
+        return "RegulatedAuthorization";
+      if (code == FHIRDefinedType.REGULATEDMANUFACTUREDITEM)
+        return "RegulatedManufacturedItem";
+      if (code == FHIRDefinedType.REGULATEDMEDICINALPRODUCT)
+        return "RegulatedMedicinalProduct";
+      if (code == FHIRDefinedType.REGULATEDPACKAGEDPRODUCT)
+        return "RegulatedPackagedProduct";
       if (code == FHIRDefinedType.RELATEDPERSON)
         return "RelatedPerson";
       if (code == FHIRDefinedType.REQUESTGROUP)
         return "RequestGroup";
-      if (code == FHIRDefinedType.RESEARCHDEFINITION)
-        return "ResearchDefinition";
-      if (code == FHIRDefinedType.RESEARCHELEMENTDEFINITION)
-        return "ResearchElementDefinition";
       if (code == FHIRDefinedType.RESEARCHSTUDY)
         return "ResearchStudy";
       if (code == FHIRDefinedType.RESEARCHSUBJECT)
@@ -9816,8 +9845,6 @@ The primary difference between a medication statement and a medication administr
         return "Resource";
       if (code == FHIRDefinedType.RISKASSESSMENT)
         return "RiskAssessment";
-      if (code == FHIRDefinedType.RISKEVIDENCESYNTHESIS)
-        return "RiskEvidenceSynthesis";
       if (code == FHIRDefinedType.SCHEDULE)
         return "Schedule";
       if (code == FHIRDefinedType.SEARCHPARAMETER)
@@ -9838,6 +9865,8 @@ The primary difference between a medication statement and a medication administr
         return "Subscription";
       if (code == FHIRDefinedType.SUBSTANCE)
         return "Substance";
+      if (code == FHIRDefinedType.SUBSTANCEDEFINITION)
+        return "SubstanceDefinition";
       if (code == FHIRDefinedType.SUBSTANCENUCLEICACID)
         return "SubstanceNucleicAcid";
       if (code == FHIRDefinedType.SUBSTANCEPOLYMER)
@@ -9848,8 +9877,6 @@ The primary difference between a medication statement and a medication administr
         return "SubstanceReferenceInformation";
       if (code == FHIRDefinedType.SUBSTANCESOURCEMATERIAL)
         return "SubstanceSourceMaterial";
-      if (code == FHIRDefinedType.SUBSTANCESPECIFICATION)
-        return "SubstanceSpecification";
       if (code == FHIRDefinedType.SUPPLYDELIVERY)
         return "SupplyDelivery";
       if (code == FHIRDefinedType.SUPPLYREQUEST)
@@ -9862,6 +9889,8 @@ The primary difference between a medication statement and a medication administr
         return "TestReport";
       if (code == FHIRDefinedType.TESTSCRIPT)
         return "TestScript";
+      if (code == FHIRDefinedType.TOPIC)
+        return "Topic";
       if (code == FHIRDefinedType.VALUESET)
         return "ValueSet";
       if (code == FHIRDefinedType.VERIFICATIONRESULT)
@@ -9961,9 +9990,12 @@ The primary difference between a medication statement and a medication administr
          */
         _4_0_0, 
         /**
-         * added to help the parsers
+         * Current build after R4.
          */
         _4_1_0, 
+        /**
+         * added to help the parsers
+         */
         NULL;
         public static FHIRVersion fromCode(String codeString) throws FHIRException {
             if (codeString == null || "".equals(codeString))
@@ -10013,10 +10045,6 @@ The primary difference between a medication statement and a medication administr
         if ("4.1.0".equals(codeString))
           return _4_1_0;
         throw new FHIRException("Unknown FHIRVersion code '"+codeString+"'");
-        }
-        @Override
-        public String toString() {
-          return toCode();
         }
         public String toCode() {
           switch (this) {
@@ -10095,6 +10123,7 @@ The primary difference between a medication statement and a medication administr
             case _3_3_0: return "R4 Ballot #1.";
             case _3_5_0: return "R4 Ballot #2.";
             case _4_0_0: return "FHIR Release 4 (Normative + STU).";
+            case _4_1_0: return "Current build after R4.";
             default: return "?";
           }
         }
@@ -10121,14 +10150,9 @@ The primary difference between a medication statement and a medication administr
             case _3_3_0: return "3.3.0";
             case _3_5_0: return "3.5.0";
             case _4_0_0: return "4.0.0";
+            case _4_1_0: return "4.1.0";
             default: return "?";
           }
-        }
-        public String toCode(int len) {
-          return toCode().substring(0, len);
-        }
-        public static boolean isR4Plus(String version) {
-          return false;
         }
     }
 
@@ -10179,6 +10203,8 @@ The primary difference between a medication statement and a medication administr
           return FHIRVersion._3_5_0;
         if ("4.0.0".equals(codeString))
           return FHIRVersion._4_0_0;
+        if ("4.1.0".equals(codeString))
+          return FHIRVersion._4_1_0;
         throw new IllegalArgumentException("Unknown FHIRVersion code '"+codeString+"'");
         }
         public Enumeration<FHIRVersion> fromType(Base code) throws FHIRException {
@@ -10231,6 +10257,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<FHIRVersion>(this, FHIRVersion._3_5_0);
         if ("4.0.0".equals(codeString))
           return new Enumeration<FHIRVersion>(this, FHIRVersion._4_0_0);
+        if ("4.1.0".equals(codeString))
+          return new Enumeration<FHIRVersion>(this, FHIRVersion._4_1_0);
         throw new FHIRException("Unknown FHIRVersion code '"+codeString+"'");
         }
     public String toCode(FHIRVersion code) {
@@ -10276,6 +10304,8 @@ The primary difference between a medication statement and a medication administr
         return "3.5.0";
       if (code == FHIRVersion._4_0_0)
         return "4.0.0";
+      if (code == FHIRVersion._4_1_0)
+        return "4.1.0";
       return "?";
       }
     public String toSystem(FHIRVersion code) {
@@ -11195,7 +11225,7 @@ The primary difference between a medication statement and a medication administr
          */
         ACTIVITYDEFINITION, 
         /**
-         * Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
+         * An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.
          */
         ADVERSEEVENT, 
         /**
@@ -11211,7 +11241,7 @@ The primary difference between a medication statement and a medication administr
          */
         APPOINTMENTRESPONSE, 
         /**
-         * A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
+         * A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.
          */
         AUDITEVENT, 
         /**
@@ -11240,11 +11270,15 @@ into another (possibly the same) biological entity.
          */
         CAPABILITYSTATEMENT, 
         /**
+         * A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+         */
+        CAPABILITYSTATEMENT2, 
+        /**
          * Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
          */
         CAREPLAN, 
         /**
-         * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.
+         * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care.
          */
         CARETEAM, 
         /**
@@ -11271,12 +11305,20 @@ into another (possibly the same) biological entity.
          * A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter,  but this varies greatly depending on the clinical workflow. This resource is called "ClinicalImpression" rather than "ClinicalAssessment" to avoid confusion with the recording of assessment tools such as Apgar score.
          */
         CLINICALIMPRESSION, 
+ 	/**
+         * Clinical Profiles summarize and demonstrate the features of a population.
+         */
+        CLINICALPROFILE, 
+        /**
+         * A single item of clinical particulars - an indication, contraindication, interaction etc. for a medicinal product.
+         */
+        CLINICALUSEISSUE, 
         /**
          * The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
          */
         CODESYSTEM, 
         /**
-         * An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency that was notified about a reportable condition.
+         * An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency communication to a provider/reporter in response to a case report for a reportable condition.
          */
         COMMUNICATION, 
         /**
@@ -11299,6 +11341,10 @@ into another (possibly the same) biological entity.
          * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
          */
         CONDITION, 
+        /**
+         * A definition of a condition and information relevant to managing it.
+         */
+        CONDITIONDEFINITION, 
         /**
          * A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
          */
@@ -11360,10 +11406,6 @@ into another (possibly the same) biological entity.
          */
         DOMAINRESOURCE, 
         /**
-         * The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
-         */
-        EFFECTEVIDENCESYNTHESIS, 
-        /**
          * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
          */
         ENCOUNTER, 
@@ -11388,7 +11430,7 @@ into another (possibly the same) biological entity.
          */
         EVENTDEFINITION, 
         /**
-         * The Evidence resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.
+         * This represents statistics, certainty, both the intended and actual population, and evidence variables.
          */
         EVIDENCE, 
         /**
@@ -11452,6 +11494,10 @@ into another (possibly the same) biological entity.
          */
         IMPLEMENTATIONGUIDE, 
         /**
+         * An ingredient of a manufactured item or pharmaceutical product.
+         */
+        INGREDIENT, 
+        /**
          * Details of a Health Insurance product/plan provided by an organization.
          */
         INSURANCEPLAN, 
@@ -11508,51 +11554,11 @@ into another (possibly the same) biological entity.
          */
         MEDICATIONREQUEST, 
         /**
-         * A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
+         * A record of a medication that is being consumed by a patient.   A MedicationUsage may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. 
 
-The primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
+The primary difference between a medicationusage and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationusage is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Usage information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
          */
-        MEDICATIONSTATEMENT, 
-        /**
-         * Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
-         */
-        MEDICINALPRODUCT, 
-        /**
-         * The regulatory authorization of a medicinal product.
-         */
-        MEDICINALPRODUCTAUTHORIZATION, 
-        /**
-         * The clinical particulars - indications, contraindications etc. of a medicinal product, including for regulatory purposes.
-         */
-        MEDICINALPRODUCTCONTRAINDICATION, 
-        /**
-         * Indication for the Medicinal Product.
-         */
-        MEDICINALPRODUCTINDICATION, 
-        /**
-         * An ingredient of a manufactured item or pharmaceutical product.
-         */
-        MEDICINALPRODUCTINGREDIENT, 
-        /**
-         * The interactions of the medicinal product with other medicinal products, or other forms of interactions.
-         */
-        MEDICINALPRODUCTINTERACTION, 
-        /**
-         * The manufactured item as contained in the packaged medicinal product.
-         */
-        MEDICINALPRODUCTMANUFACTURED, 
-        /**
-         * A medicinal product in a container or package.
-         */
-        MEDICINALPRODUCTPACKAGED, 
-        /**
-         * A pharmaceutical product described in terms of its composition and dose form.
-         */
-        MEDICINALPRODUCTPHARMACEUTICAL, 
-        /**
-         * Describe the undesirable effects of the medicinal product.
-         */
-        MEDICINALPRODUCTUNDESIRABLEEFFECT, 
+        MEDICATIONUSAGE, 
         /**
          * Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
          */
@@ -11646,6 +11652,26 @@ The primary difference between a medication statement and a medication administr
          */
         QUESTIONNAIRERESPONSE, 
         /**
+         * A pharmaceutical product described in terms of its composition and dose form.
+         */
+        REGULATEDADMINISTRABLEPRODUCT, 
+        /**
+         * The regulatory authorization of a medicinal product.
+         */
+        REGULATEDAUTHORIZATION, 
+        /**
+         * The manufactured item as contained in the packaged medicinal product.
+         */
+        REGULATEDMANUFACTUREDITEM, 
+        /**
+         * Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
+         */
+        REGULATEDMEDICINALPRODUCT, 
+        /**
+         * A medicinal product in a container or package.
+         */
+        REGULATEDPACKAGEDPRODUCT, 
+        /**
          * Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.
          */
         RELATEDPERSON, 
@@ -11653,14 +11679,6 @@ The primary difference between a medication statement and a medication administr
          * A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
          */
         REQUESTGROUP, 
-        /**
-         * The ResearchDefinition resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.
-         */
-        RESEARCHDEFINITION, 
-        /**
-         * The ResearchElementDefinition resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
-         */
-        RESEARCHELEMENTDEFINITION, 
         /**
          * A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques.  A ResearchStudy involves the gathering of information about human or animal subjects.
          */
@@ -11677,10 +11695,6 @@ The primary difference between a medication statement and a medication administr
          * An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
          */
         RISKASSESSMENT, 
-        /**
-         * The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.
-         */
-        RISKEVIDENCESYNTHESIS, 
         /**
          * A container for slots of time that may be available for booking appointments.
          */
@@ -11722,6 +11736,10 @@ The primary difference between a medication statement and a medication administr
          */
         SUBSTANCE, 
         /**
+         * The detailed description of a substance, typically at a level beyond what is used for prescribing.
+         */
+        SUBSTANCEDEFINITION, 
+        /**
          * Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
          */
         SUBSTANCENUCLEICACID, 
@@ -11742,10 +11760,6 @@ The primary difference between a medication statement and a medication administr
          */
         SUBSTANCESOURCEMATERIAL, 
         /**
-         * The detailed description of a substance, typically at a level beyond what is used for prescribing.
-         */
-        SUBSTANCESPECIFICATION, 
-        /**
          * Record of delivery of what is supplied.
          */
         SUPPLYDELIVERY, 
@@ -11758,7 +11772,7 @@ The primary difference between a medication statement and a medication administr
          */
         TASK, 
         /**
-         * A Terminology Capabilities documents a set of capabilities (behaviors) of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+         * A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
          */
         TERMINOLOGYCAPABILITIES, 
         /**
@@ -11769,6 +11783,10 @@ The primary difference between a medication statement and a medication administr
          * A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
          */
         TESTSCRIPT, 
+        /**
+         * Describes a stream of resource state changes identified by trigger criteria and annotated with labels useful to filter projections from this topic.
+         */
+        TOPIC, 
         /**
          * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).
          */
@@ -11814,6 +11832,8 @@ The primary difference between a medication statement and a medication administr
           return BUNDLE;
         if ("CapabilityStatement".equals(codeString))
           return CAPABILITYSTATEMENT;
+        if ("CapabilityStatement2".equals(codeString))
+          return CAPABILITYSTATEMENT2;
         if ("CarePlan".equals(codeString))
           return CAREPLAN;
         if ("CareTeam".equals(codeString))
@@ -11830,6 +11850,10 @@ The primary difference between a medication statement and a medication administr
           return CLAIMRESPONSE;
         if ("ClinicalImpression".equals(codeString))
           return CLINICALIMPRESSION;
+        if ("ClinicalProfile".equals(codeString))
+          return CLINICALPROFILE;
+        if ("ClinicalUseIssue".equals(codeString))
+          return CLINICALUSEISSUE;
         if ("CodeSystem".equals(codeString))
           return CODESYSTEM;
         if ("Communication".equals(codeString))
@@ -11844,6 +11868,8 @@ The primary difference between a medication statement and a medication administr
           return CONCEPTMAP;
         if ("Condition".equals(codeString))
           return CONDITION;
+        if ("ConditionDefinition".equals(codeString))
+          return CONDITIONDEFINITION;
         if ("Consent".equals(codeString))
           return CONSENT;
         if ("Contract".equals(codeString))
@@ -11874,8 +11900,6 @@ The primary difference between a medication statement and a medication administr
           return DOCUMENTREFERENCE;
         if ("DomainResource".equals(codeString))
           return DOMAINRESOURCE;
-        if ("EffectEvidenceSynthesis".equals(codeString))
-          return EFFECTEVIDENCESYNTHESIS;
         if ("Encounter".equals(codeString))
           return ENCOUNTER;
         if ("Endpoint".equals(codeString))
@@ -11920,6 +11944,8 @@ The primary difference between a medication statement and a medication administr
           return IMMUNIZATIONRECOMMENDATION;
         if ("ImplementationGuide".equals(codeString))
           return IMPLEMENTATIONGUIDE;
+        if ("Ingredient".equals(codeString))
+          return INGREDIENT;
         if ("InsurancePlan".equals(codeString))
           return INSURANCEPLAN;
         if ("Invoice".equals(codeString))
@@ -11948,28 +11974,8 @@ The primary difference between a medication statement and a medication administr
           return MEDICATIONKNOWLEDGE;
         if ("MedicationRequest".equals(codeString))
           return MEDICATIONREQUEST;
-        if ("MedicationStatement".equals(codeString))
-          return MEDICATIONSTATEMENT;
-        if ("MedicinalProduct".equals(codeString))
-          return MEDICINALPRODUCT;
-        if ("MedicinalProductAuthorization".equals(codeString))
-          return MEDICINALPRODUCTAUTHORIZATION;
-        if ("MedicinalProductContraindication".equals(codeString))
-          return MEDICINALPRODUCTCONTRAINDICATION;
-        if ("MedicinalProductIndication".equals(codeString))
-          return MEDICINALPRODUCTINDICATION;
-        if ("MedicinalProductIngredient".equals(codeString))
-          return MEDICINALPRODUCTINGREDIENT;
-        if ("MedicinalProductInteraction".equals(codeString))
-          return MEDICINALPRODUCTINTERACTION;
-        if ("MedicinalProductManufactured".equals(codeString))
-          return MEDICINALPRODUCTMANUFACTURED;
-        if ("MedicinalProductPackaged".equals(codeString))
-          return MEDICINALPRODUCTPACKAGED;
-        if ("MedicinalProductPharmaceutical".equals(codeString))
-          return MEDICINALPRODUCTPHARMACEUTICAL;
-        if ("MedicinalProductUndesirableEffect".equals(codeString))
-          return MEDICINALPRODUCTUNDESIRABLEEFFECT;
+        if ("MedicationUsage".equals(codeString))
+          return MEDICATIONUSAGE;
         if ("MessageDefinition".equals(codeString))
           return MESSAGEDEFINITION;
         if ("MessageHeader".equals(codeString))
@@ -12016,14 +12022,20 @@ The primary difference between a medication statement and a medication administr
           return QUESTIONNAIRE;
         if ("QuestionnaireResponse".equals(codeString))
           return QUESTIONNAIRERESPONSE;
+        if ("RegulatedAdministrableProduct".equals(codeString))
+          return REGULATEDADMINISTRABLEPRODUCT;
+        if ("RegulatedAuthorization".equals(codeString))
+          return REGULATEDAUTHORIZATION;
+        if ("RegulatedManufacturedItem".equals(codeString))
+          return REGULATEDMANUFACTUREDITEM;
+        if ("RegulatedMedicinalProduct".equals(codeString))
+          return REGULATEDMEDICINALPRODUCT;
+        if ("RegulatedPackagedProduct".equals(codeString))
+          return REGULATEDPACKAGEDPRODUCT;
         if ("RelatedPerson".equals(codeString))
           return RELATEDPERSON;
         if ("RequestGroup".equals(codeString))
           return REQUESTGROUP;
-        if ("ResearchDefinition".equals(codeString))
-          return RESEARCHDEFINITION;
-        if ("ResearchElementDefinition".equals(codeString))
-          return RESEARCHELEMENTDEFINITION;
         if ("ResearchStudy".equals(codeString))
           return RESEARCHSTUDY;
         if ("ResearchSubject".equals(codeString))
@@ -12032,8 +12044,6 @@ The primary difference between a medication statement and a medication administr
           return RESOURCE;
         if ("RiskAssessment".equals(codeString))
           return RISKASSESSMENT;
-        if ("RiskEvidenceSynthesis".equals(codeString))
-          return RISKEVIDENCESYNTHESIS;
         if ("Schedule".equals(codeString))
           return SCHEDULE;
         if ("SearchParameter".equals(codeString))
@@ -12054,6 +12064,8 @@ The primary difference between a medication statement and a medication administr
           return SUBSCRIPTION;
         if ("Substance".equals(codeString))
           return SUBSTANCE;
+        if ("SubstanceDefinition".equals(codeString))
+          return SUBSTANCEDEFINITION;
         if ("SubstanceNucleicAcid".equals(codeString))
           return SUBSTANCENUCLEICACID;
         if ("SubstancePolymer".equals(codeString))
@@ -12064,8 +12076,6 @@ The primary difference between a medication statement and a medication administr
           return SUBSTANCEREFERENCEINFORMATION;
         if ("SubstanceSourceMaterial".equals(codeString))
           return SUBSTANCESOURCEMATERIAL;
-        if ("SubstanceSpecification".equals(codeString))
-          return SUBSTANCESPECIFICATION;
         if ("SupplyDelivery".equals(codeString))
           return SUPPLYDELIVERY;
         if ("SupplyRequest".equals(codeString))
@@ -12078,6 +12088,8 @@ The primary difference between a medication statement and a medication administr
           return TESTREPORT;
         if ("TestScript".equals(codeString))
           return TESTSCRIPT;
+        if ("Topic".equals(codeString))
+          return TOPIC;
         if ("ValueSet".equals(codeString))
           return VALUESET;
         if ("VerificationResult".equals(codeString))
@@ -12101,6 +12113,7 @@ The primary difference between a medication statement and a medication administr
             case BODYSTRUCTURE: return "BodyStructure";
             case BUNDLE: return "Bundle";
             case CAPABILITYSTATEMENT: return "CapabilityStatement";
+            case CAPABILITYSTATEMENT2: return "CapabilityStatement2";
             case CAREPLAN: return "CarePlan";
             case CARETEAM: return "CareTeam";
             case CATALOGENTRY: return "CatalogEntry";
@@ -12109,6 +12122,8 @@ The primary difference between a medication statement and a medication administr
             case CLAIM: return "Claim";
             case CLAIMRESPONSE: return "ClaimResponse";
             case CLINICALIMPRESSION: return "ClinicalImpression";
+            case CLINICALPROFILE: return "ClinicalProfile";
+            case CLINICALUSEISSUE: return "ClinicalUseIssue";
             case CODESYSTEM: return "CodeSystem";
             case COMMUNICATION: return "Communication";
             case COMMUNICATIONREQUEST: return "CommunicationRequest";
@@ -12116,6 +12131,7 @@ The primary difference between a medication statement and a medication administr
             case COMPOSITION: return "Composition";
             case CONCEPTMAP: return "ConceptMap";
             case CONDITION: return "Condition";
+            case CONDITIONDEFINITION: return "ConditionDefinition";
             case CONSENT: return "Consent";
             case CONTRACT: return "Contract";
             case COVERAGE: return "Coverage";
@@ -12131,7 +12147,6 @@ The primary difference between a medication statement and a medication administr
             case DOCUMENTMANIFEST: return "DocumentManifest";
             case DOCUMENTREFERENCE: return "DocumentReference";
             case DOMAINRESOURCE: return "DomainResource";
-            case EFFECTEVIDENCESYNTHESIS: return "EffectEvidenceSynthesis";
             case ENCOUNTER: return "Encounter";
             case ENDPOINT: return "Endpoint";
             case ENROLLMENTREQUEST: return "EnrollmentRequest";
@@ -12154,6 +12169,7 @@ The primary difference between a medication statement and a medication administr
             case IMMUNIZATIONEVALUATION: return "ImmunizationEvaluation";
             case IMMUNIZATIONRECOMMENDATION: return "ImmunizationRecommendation";
             case IMPLEMENTATIONGUIDE: return "ImplementationGuide";
+            case INGREDIENT: return "Ingredient";
             case INSURANCEPLAN: return "InsurancePlan";
             case INVOICE: return "Invoice";
             case LIBRARY: return "Library";
@@ -12168,17 +12184,7 @@ The primary difference between a medication statement and a medication administr
             case MEDICATIONDISPENSE: return "MedicationDispense";
             case MEDICATIONKNOWLEDGE: return "MedicationKnowledge";
             case MEDICATIONREQUEST: return "MedicationRequest";
-            case MEDICATIONSTATEMENT: return "MedicationStatement";
-            case MEDICINALPRODUCT: return "MedicinalProduct";
-            case MEDICINALPRODUCTAUTHORIZATION: return "MedicinalProductAuthorization";
-            case MEDICINALPRODUCTCONTRAINDICATION: return "MedicinalProductContraindication";
-            case MEDICINALPRODUCTINDICATION: return "MedicinalProductIndication";
-            case MEDICINALPRODUCTINGREDIENT: return "MedicinalProductIngredient";
-            case MEDICINALPRODUCTINTERACTION: return "MedicinalProductInteraction";
-            case MEDICINALPRODUCTMANUFACTURED: return "MedicinalProductManufactured";
-            case MEDICINALPRODUCTPACKAGED: return "MedicinalProductPackaged";
-            case MEDICINALPRODUCTPHARMACEUTICAL: return "MedicinalProductPharmaceutical";
-            case MEDICINALPRODUCTUNDESIRABLEEFFECT: return "MedicinalProductUndesirableEffect";
+            case MEDICATIONUSAGE: return "MedicationUsage";
             case MESSAGEDEFINITION: return "MessageDefinition";
             case MESSAGEHEADER: return "MessageHeader";
             case MOLECULARSEQUENCE: return "MolecularSequence";
@@ -12202,15 +12208,17 @@ The primary difference between a medication statement and a medication administr
             case PROVENANCE: return "Provenance";
             case QUESTIONNAIRE: return "Questionnaire";
             case QUESTIONNAIRERESPONSE: return "QuestionnaireResponse";
+            case REGULATEDADMINISTRABLEPRODUCT: return "RegulatedAdministrableProduct";
+            case REGULATEDAUTHORIZATION: return "RegulatedAuthorization";
+            case REGULATEDMANUFACTUREDITEM: return "RegulatedManufacturedItem";
+            case REGULATEDMEDICINALPRODUCT: return "RegulatedMedicinalProduct";
+            case REGULATEDPACKAGEDPRODUCT: return "RegulatedPackagedProduct";
             case RELATEDPERSON: return "RelatedPerson";
             case REQUESTGROUP: return "RequestGroup";
-            case RESEARCHDEFINITION: return "ResearchDefinition";
-            case RESEARCHELEMENTDEFINITION: return "ResearchElementDefinition";
             case RESEARCHSTUDY: return "ResearchStudy";
             case RESEARCHSUBJECT: return "ResearchSubject";
             case RESOURCE: return "Resource";
             case RISKASSESSMENT: return "RiskAssessment";
-            case RISKEVIDENCESYNTHESIS: return "RiskEvidenceSynthesis";
             case SCHEDULE: return "Schedule";
             case SEARCHPARAMETER: return "SearchParameter";
             case SERVICEREQUEST: return "ServiceRequest";
@@ -12221,18 +12229,19 @@ The primary difference between a medication statement and a medication administr
             case STRUCTUREMAP: return "StructureMap";
             case SUBSCRIPTION: return "Subscription";
             case SUBSTANCE: return "Substance";
+            case SUBSTANCEDEFINITION: return "SubstanceDefinition";
             case SUBSTANCENUCLEICACID: return "SubstanceNucleicAcid";
             case SUBSTANCEPOLYMER: return "SubstancePolymer";
             case SUBSTANCEPROTEIN: return "SubstanceProtein";
             case SUBSTANCEREFERENCEINFORMATION: return "SubstanceReferenceInformation";
             case SUBSTANCESOURCEMATERIAL: return "SubstanceSourceMaterial";
-            case SUBSTANCESPECIFICATION: return "SubstanceSpecification";
             case SUPPLYDELIVERY: return "SupplyDelivery";
             case SUPPLYREQUEST: return "SupplyRequest";
             case TASK: return "Task";
             case TERMINOLOGYCAPABILITIES: return "TerminologyCapabilities";
             case TESTREPORT: return "TestReport";
             case TESTSCRIPT: return "TestScript";
+            case TOPIC: return "Topic";
             case VALUESET: return "ValueSet";
             case VERIFICATIONRESULT: return "VerificationResult";
             case VISIONPRESCRIPTION: return "VisionPrescription";
@@ -12254,6 +12263,7 @@ The primary difference between a medication statement and a medication administr
             case BODYSTRUCTURE: return "http://hl7.org/fhir/resource-types";
             case BUNDLE: return "http://hl7.org/fhir/resource-types";
             case CAPABILITYSTATEMENT: return "http://hl7.org/fhir/resource-types";
+            case CAPABILITYSTATEMENT2: return "http://hl7.org/fhir/resource-types";
             case CAREPLAN: return "http://hl7.org/fhir/resource-types";
             case CARETEAM: return "http://hl7.org/fhir/resource-types";
             case CATALOGENTRY: return "http://hl7.org/fhir/resource-types";
@@ -12262,6 +12272,8 @@ The primary difference between a medication statement and a medication administr
             case CLAIM: return "http://hl7.org/fhir/resource-types";
             case CLAIMRESPONSE: return "http://hl7.org/fhir/resource-types";
             case CLINICALIMPRESSION: return "http://hl7.org/fhir/resource-types";
+            case CLINICALPROFILE: return "http://hl7.org/fhir/resource-types";
+            case CLINICALUSEISSUE: return "http://hl7.org/fhir/resource-types";
             case CODESYSTEM: return "http://hl7.org/fhir/resource-types";
             case COMMUNICATION: return "http://hl7.org/fhir/resource-types";
             case COMMUNICATIONREQUEST: return "http://hl7.org/fhir/resource-types";
@@ -12269,6 +12281,7 @@ The primary difference between a medication statement and a medication administr
             case COMPOSITION: return "http://hl7.org/fhir/resource-types";
             case CONCEPTMAP: return "http://hl7.org/fhir/resource-types";
             case CONDITION: return "http://hl7.org/fhir/resource-types";
+            case CONDITIONDEFINITION: return "http://hl7.org/fhir/resource-types";
             case CONSENT: return "http://hl7.org/fhir/resource-types";
             case CONTRACT: return "http://hl7.org/fhir/resource-types";
             case COVERAGE: return "http://hl7.org/fhir/resource-types";
@@ -12284,7 +12297,6 @@ The primary difference between a medication statement and a medication administr
             case DOCUMENTMANIFEST: return "http://hl7.org/fhir/resource-types";
             case DOCUMENTREFERENCE: return "http://hl7.org/fhir/resource-types";
             case DOMAINRESOURCE: return "http://hl7.org/fhir/resource-types";
-            case EFFECTEVIDENCESYNTHESIS: return "http://hl7.org/fhir/resource-types";
             case ENCOUNTER: return "http://hl7.org/fhir/resource-types";
             case ENDPOINT: return "http://hl7.org/fhir/resource-types";
             case ENROLLMENTREQUEST: return "http://hl7.org/fhir/resource-types";
@@ -12307,6 +12319,7 @@ The primary difference between a medication statement and a medication administr
             case IMMUNIZATIONEVALUATION: return "http://hl7.org/fhir/resource-types";
             case IMMUNIZATIONRECOMMENDATION: return "http://hl7.org/fhir/resource-types";
             case IMPLEMENTATIONGUIDE: return "http://hl7.org/fhir/resource-types";
+            case INGREDIENT: return "http://hl7.org/fhir/resource-types";
             case INSURANCEPLAN: return "http://hl7.org/fhir/resource-types";
             case INVOICE: return "http://hl7.org/fhir/resource-types";
             case LIBRARY: return "http://hl7.org/fhir/resource-types";
@@ -12321,17 +12334,7 @@ The primary difference between a medication statement and a medication administr
             case MEDICATIONDISPENSE: return "http://hl7.org/fhir/resource-types";
             case MEDICATIONKNOWLEDGE: return "http://hl7.org/fhir/resource-types";
             case MEDICATIONREQUEST: return "http://hl7.org/fhir/resource-types";
-            case MEDICATIONSTATEMENT: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCT: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTAUTHORIZATION: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTCONTRAINDICATION: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTINDICATION: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTINGREDIENT: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTINTERACTION: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTMANUFACTURED: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTPACKAGED: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTPHARMACEUTICAL: return "http://hl7.org/fhir/resource-types";
-            case MEDICINALPRODUCTUNDESIRABLEEFFECT: return "http://hl7.org/fhir/resource-types";
+            case MEDICATIONUSAGE: return "http://hl7.org/fhir/resource-types";
             case MESSAGEDEFINITION: return "http://hl7.org/fhir/resource-types";
             case MESSAGEHEADER: return "http://hl7.org/fhir/resource-types";
             case MOLECULARSEQUENCE: return "http://hl7.org/fhir/resource-types";
@@ -12355,15 +12358,17 @@ The primary difference between a medication statement and a medication administr
             case PROVENANCE: return "http://hl7.org/fhir/resource-types";
             case QUESTIONNAIRE: return "http://hl7.org/fhir/resource-types";
             case QUESTIONNAIRERESPONSE: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDADMINISTRABLEPRODUCT: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDAUTHORIZATION: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDMANUFACTUREDITEM: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDMEDICINALPRODUCT: return "http://hl7.org/fhir/resource-types";
+            case REGULATEDPACKAGEDPRODUCT: return "http://hl7.org/fhir/resource-types";
             case RELATEDPERSON: return "http://hl7.org/fhir/resource-types";
             case REQUESTGROUP: return "http://hl7.org/fhir/resource-types";
-            case RESEARCHDEFINITION: return "http://hl7.org/fhir/resource-types";
-            case RESEARCHELEMENTDEFINITION: return "http://hl7.org/fhir/resource-types";
             case RESEARCHSTUDY: return "http://hl7.org/fhir/resource-types";
             case RESEARCHSUBJECT: return "http://hl7.org/fhir/resource-types";
             case RESOURCE: return "http://hl7.org/fhir/resource-types";
             case RISKASSESSMENT: return "http://hl7.org/fhir/resource-types";
-            case RISKEVIDENCESYNTHESIS: return "http://hl7.org/fhir/resource-types";
             case SCHEDULE: return "http://hl7.org/fhir/resource-types";
             case SEARCHPARAMETER: return "http://hl7.org/fhir/resource-types";
             case SERVICEREQUEST: return "http://hl7.org/fhir/resource-types";
@@ -12374,18 +12379,19 @@ The primary difference between a medication statement and a medication administr
             case STRUCTUREMAP: return "http://hl7.org/fhir/resource-types";
             case SUBSCRIPTION: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCE: return "http://hl7.org/fhir/resource-types";
+            case SUBSTANCEDEFINITION: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCENUCLEICACID: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCEPOLYMER: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCEPROTEIN: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCEREFERENCEINFORMATION: return "http://hl7.org/fhir/resource-types";
             case SUBSTANCESOURCEMATERIAL: return "http://hl7.org/fhir/resource-types";
-            case SUBSTANCESPECIFICATION: return "http://hl7.org/fhir/resource-types";
             case SUPPLYDELIVERY: return "http://hl7.org/fhir/resource-types";
             case SUPPLYREQUEST: return "http://hl7.org/fhir/resource-types";
             case TASK: return "http://hl7.org/fhir/resource-types";
             case TERMINOLOGYCAPABILITIES: return "http://hl7.org/fhir/resource-types";
             case TESTREPORT: return "http://hl7.org/fhir/resource-types";
             case TESTSCRIPT: return "http://hl7.org/fhir/resource-types";
+            case TOPIC: return "http://hl7.org/fhir/resource-types";
             case VALUESET: return "http://hl7.org/fhir/resource-types";
             case VERIFICATIONRESULT: return "http://hl7.org/fhir/resource-types";
             case VISIONPRESCRIPTION: return "http://hl7.org/fhir/resource-types";
@@ -12396,32 +12402,36 @@ The primary difference between a medication statement and a medication administr
           switch (this) {
             case ACCOUNT: return "A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.";
             case ACTIVITYDEFINITION: return "This resource allows for the definition of some activity to be performed, independent of a particular patient, practitioner, or other performance context.";
-            case ADVERSEEVENT: return "Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.";
+            case ADVERSEEVENT: return "An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.";
             case ALLERGYINTOLERANCE: return "Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.";
             case APPOINTMENT: return "A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).";
             case APPOINTMENTRESPONSE: return "A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.";
-            case AUDITEVENT: return "A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.";
+            case AUDITEVENT: return "A record of an event relevant for purposes such as operations, privacy, security, maintenance, and performance analysis.";
             case BASIC: return "Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.";
             case BINARY: return "A resource that represents the data of a single raw artifact as digital content accessible in its native format.  A Binary resource can contain any content, whether text, image, pdf, zip archive, etc.";
             case BIOLOGICALLYDERIVEDPRODUCT: return "A material substance originating from a biological entity intended to be transplanted or infused\ninto another (possibly the same) biological entity.";
             case BODYSTRUCTURE: return "Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.";
             case BUNDLE: return "A container for a collection of resources.";
             case CAPABILITYSTATEMENT: return "A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.";
+            case CAPABILITYSTATEMENT2: return "A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.";
             case CAREPLAN: return "Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.";
-            case CARETEAM: return "The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.";
+            case CARETEAM: return "The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care.";
             case CATALOGENTRY: return "Catalog entries are wrappers that contextualize items included in a catalog.";
             case CHARGEITEM: return "The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.";
             case CHARGEITEMDEFINITION: return "The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.";
             case CLAIM: return "A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.";
             case CLAIMRESPONSE: return "This resource provides the adjudication details from the processing of a Claim resource.";
             case CLINICALIMPRESSION: return "A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter,  but this varies greatly depending on the clinical workflow. This resource is called \"ClinicalImpression\" rather than \"ClinicalAssessment\" to avoid confusion with the recording of assessment tools such as Apgar score.";
+            case CLINICALPROFILE: return "Clinical Profiles summarize and demonstrate the features of a population.";
+            case CLINICALUSEISSUE: return "A single item of clinical particulars - an indication, contraindication, interaction etc. for a medicinal product.";
             case CODESYSTEM: return "The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.";
-            case COMMUNICATION: return "An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency that was notified about a reportable condition.";
+            case COMMUNICATION: return "An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency communication to a provider/reporter in response to a case report for a reportable condition.";
             case COMMUNICATIONREQUEST: return "A request to convey information; e.g. the CDS system proposes that an alert be sent to a responsible provider, the CDS system proposes that the public health agency be notified about a reportable condition.";
             case COMPARTMENTDEFINITION: return "A compartment definition that defines how resources are accessed on a server.";
             case COMPOSITION: return "A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).";
             case CONCEPTMAP: return "A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.";
             case CONDITION: return "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.";
+            case CONDITIONDEFINITION: return "A definition of a condition and information relevant to managing it.";
             case CONSENT: return "A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.";
             case CONTRACT: return "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.";
             case COVERAGE: return "Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.";
@@ -12437,14 +12447,13 @@ The primary difference between a medication statement and a medication administr
             case DOCUMENTMANIFEST: return "A collection of documents compiled for a purpose together with metadata that applies to the collection.";
             case DOCUMENTREFERENCE: return "A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed. The scope of a document is any seralized object with a mime-type, so includes formal patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.";
             case DOMAINRESOURCE: return "A resource that includes narrative, extensions, and contained resources.";
-            case EFFECTEVIDENCESYNTHESIS: return "The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.";
             case ENCOUNTER: return "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.";
             case ENDPOINT: return "The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information.";
             case ENROLLMENTREQUEST: return "This resource provides the insurance enrollment details to the insurer regarding a specified coverage.";
             case ENROLLMENTRESPONSE: return "This resource provides enrollment and plan details from the processing of an EnrollmentRequest resource.";
             case EPISODEOFCARE: return "An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.";
             case EVENTDEFINITION: return "The EventDefinition resource provides a reusable description of when a particular event can occur.";
-            case EVIDENCE: return "The Evidence resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.";
+            case EVIDENCE: return "This represents statistics, certainty, both the intended and actual population, and evidence variables.";
             case EVIDENCEVARIABLE: return "The EvidenceVariable resource describes a \"PICO\" element that knowledge (evidence, assertion, recommendation) is about.";
             case EXAMPLESCENARIO: return "Example of workflow instance.";
             case EXPLANATIONOFBENEFIT: return "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.";
@@ -12460,6 +12469,7 @@ The primary difference between a medication statement and a medication administr
             case IMMUNIZATIONEVALUATION: return "Describes a comparison of an immunization event against published recommendations to determine if the administration is \"valid\" in relation to those  recommendations.";
             case IMMUNIZATIONRECOMMENDATION: return "A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.";
             case IMPLEMENTATIONGUIDE: return "A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.";
+            case INGREDIENT: return "An ingredient of a manufactured item or pharmaceutical product.";
             case INSURANCEPLAN: return "Details of a Health Insurance product/plan provided by an organization.";
             case INVOICE: return "Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.";
             case LIBRARY: return "The Library resource is a general-purpose container for knowledge asset definitions. It can be used to describe and expose existing knowledge assets such as logic libraries and information model descriptions, as well as to describe a collection of knowledge assets.";
@@ -12474,17 +12484,7 @@ The primary difference between a medication statement and a medication administr
             case MEDICATIONDISPENSE: return "Indicates that a medication product is to be or has been dispensed for a named person/patient.  This includes a description of the medication product (supply) provided and the instructions for administering the medication.  The medication dispense is the result of a pharmacy system responding to a medication order.";
             case MEDICATIONKNOWLEDGE: return "Information about a medication that is used to support knowledge.";
             case MEDICATIONREQUEST: return "An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called \"MedicationRequest\" rather than \"MedicationPrescription\" or \"MedicationOrder\" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.";
-            case MEDICATIONSTATEMENT: return "A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. \n\nThe primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.";
-            case MEDICINALPRODUCT: return "Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).";
-            case MEDICINALPRODUCTAUTHORIZATION: return "The regulatory authorization of a medicinal product.";
-            case MEDICINALPRODUCTCONTRAINDICATION: return "The clinical particulars - indications, contraindications etc. of a medicinal product, including for regulatory purposes.";
-            case MEDICINALPRODUCTINDICATION: return "Indication for the Medicinal Product.";
-            case MEDICINALPRODUCTINGREDIENT: return "An ingredient of a manufactured item or pharmaceutical product.";
-            case MEDICINALPRODUCTINTERACTION: return "The interactions of the medicinal product with other medicinal products, or other forms of interactions.";
-            case MEDICINALPRODUCTMANUFACTURED: return "The manufactured item as contained in the packaged medicinal product.";
-            case MEDICINALPRODUCTPACKAGED: return "A medicinal product in a container or package.";
-            case MEDICINALPRODUCTPHARMACEUTICAL: return "A pharmaceutical product described in terms of its composition and dose form.";
-            case MEDICINALPRODUCTUNDESIRABLEEFFECT: return "Describe the undesirable effects of the medicinal product.";
+            case MEDICATIONUSAGE: return "A record of a medication that is being consumed by a patient.   A MedicationUsage may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains. \n\nThe primary difference between a medicationusage and a medicationadministration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medicationusage is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Usage information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.";
             case MESSAGEDEFINITION: return "Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.";
             case MESSAGEHEADER: return "The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.";
             case MOLECULARSEQUENCE: return "Raw data describing a biological sequence.";
@@ -12508,15 +12508,17 @@ The primary difference between a medication statement and a medication administr
             case PROVENANCE: return "Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.";
             case QUESTIONNAIRE: return "A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.";
             case QUESTIONNAIRERESPONSE: return "A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.";
+            case REGULATEDADMINISTRABLEPRODUCT: return "A pharmaceutical product described in terms of its composition and dose form.";
+            case REGULATEDAUTHORIZATION: return "The regulatory authorization of a medicinal product.";
+            case REGULATEDMANUFACTUREDITEM: return "The manufactured item as contained in the packaged medicinal product.";
+            case REGULATEDMEDICINALPRODUCT: return "Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).";
+            case REGULATEDPACKAGEDPRODUCT: return "A medicinal product in a container or package.";
             case RELATEDPERSON: return "Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.";
             case REQUESTGROUP: return "A group of related requests that can be used to capture intended activities that have inter-dependencies such as \"give this medication after that one\".";
-            case RESEARCHDEFINITION: return "The ResearchDefinition resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.";
-            case RESEARCHELEMENTDEFINITION: return "The ResearchElementDefinition resource describes a \"PICO\" element that knowledge (evidence, assertion, recommendation) is about.";
             case RESEARCHSTUDY: return "A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques.  A ResearchStudy involves the gathering of information about human or animal subjects.";
             case RESEARCHSUBJECT: return "A physical entity which is the primary unit of operational and/or administrative interest in a study.";
             case RESOURCE: return "This is the base resource type for everything.";
             case RISKASSESSMENT: return "An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.";
-            case RISKEVIDENCESYNTHESIS: return "The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.";
             case SCHEDULE: return "A container for slots of time that may be available for booking appointments.";
             case SEARCHPARAMETER: return "A search parameter that defines a named search item that can be used to search/filter on a resource.";
             case SERVICEREQUEST: return "A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.";
@@ -12527,18 +12529,19 @@ The primary difference between a medication statement and a medication administr
             case STRUCTUREMAP: return "A Map of relationships between 2 structures that can be used to transform data.";
             case SUBSCRIPTION: return "The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined \"channel\" so that another system can take an appropriate action.";
             case SUBSTANCE: return "A homogeneous material with a definite composition.";
+            case SUBSTANCEDEFINITION: return "The detailed description of a substance, typically at a level beyond what is used for prescribing.";
             case SUBSTANCENUCLEICACID: return "Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.";
             case SUBSTANCEPOLYMER: return "Todo.";
             case SUBSTANCEPROTEIN: return "A SubstanceProtein is defined as a single unit of a linear amino acid sequence, or a combination of subunits that are either covalently linked or have a defined invariant stoichiometric relationship. This includes all synthetic, recombinant and purified SubstanceProteins of defined sequence, whether the use is therapeutic or prophylactic. This set of elements will be used to describe albumins, coagulation factors, cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant vaccines, and immunomodulators.";
             case SUBSTANCEREFERENCEINFORMATION: return "Todo.";
             case SUBSTANCESOURCEMATERIAL: return "Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.";
-            case SUBSTANCESPECIFICATION: return "The detailed description of a substance, typically at a level beyond what is used for prescribing.";
             case SUPPLYDELIVERY: return "Record of delivery of what is supplied.";
             case SUPPLYREQUEST: return "A record of a request for a medication, substance or device used in the healthcare setting.";
             case TASK: return "A task to be performed.";
-            case TERMINOLOGYCAPABILITIES: return "A Terminology Capabilities documents a set of capabilities (behaviors) of a FHIR Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.";
+            case TERMINOLOGYCAPABILITIES: return "A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.";
             case TESTREPORT: return "A summary of information based on the results of executing a TestScript.";
             case TESTSCRIPT: return "A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.";
+            case TOPIC: return "Describes a stream of resource state changes identified by trigger criteria and annotated with labels useful to filter projections from this topic.";
             case VALUESET: return "A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).";
             case VERIFICATIONRESULT: return "Describes validation requirements, source(s), status and dates for one or more elements.";
             case VISIONPRESCRIPTION: return "An authorization for the provision of glasses and/or contact lenses to a patient.";
@@ -12560,6 +12563,7 @@ The primary difference between a medication statement and a medication administr
             case BODYSTRUCTURE: return "BodyStructure";
             case BUNDLE: return "Bundle";
             case CAPABILITYSTATEMENT: return "CapabilityStatement";
+            case CAPABILITYSTATEMENT2: return "CapabilityStatement2";
             case CAREPLAN: return "CarePlan";
             case CARETEAM: return "CareTeam";
             case CATALOGENTRY: return "CatalogEntry";
@@ -12568,6 +12572,8 @@ The primary difference between a medication statement and a medication administr
             case CLAIM: return "Claim";
             case CLAIMRESPONSE: return "ClaimResponse";
             case CLINICALIMPRESSION: return "ClinicalImpression";
+            case CLINICALPROFILE: return "ClinicalProfile";
+            case CLINICALUSEISSUE: return "ClinicalUseIssue";
             case CODESYSTEM: return "CodeSystem";
             case COMMUNICATION: return "Communication";
             case COMMUNICATIONREQUEST: return "CommunicationRequest";
@@ -12575,6 +12581,7 @@ The primary difference between a medication statement and a medication administr
             case COMPOSITION: return "Composition";
             case CONCEPTMAP: return "ConceptMap";
             case CONDITION: return "Condition";
+            case CONDITIONDEFINITION: return "ConditionDefinition";
             case CONSENT: return "Consent";
             case CONTRACT: return "Contract";
             case COVERAGE: return "Coverage";
@@ -12590,7 +12597,6 @@ The primary difference between a medication statement and a medication administr
             case DOCUMENTMANIFEST: return "DocumentManifest";
             case DOCUMENTREFERENCE: return "DocumentReference";
             case DOMAINRESOURCE: return "DomainResource";
-            case EFFECTEVIDENCESYNTHESIS: return "EffectEvidenceSynthesis";
             case ENCOUNTER: return "Encounter";
             case ENDPOINT: return "Endpoint";
             case ENROLLMENTREQUEST: return "EnrollmentRequest";
@@ -12613,6 +12619,7 @@ The primary difference between a medication statement and a medication administr
             case IMMUNIZATIONEVALUATION: return "ImmunizationEvaluation";
             case IMMUNIZATIONRECOMMENDATION: return "ImmunizationRecommendation";
             case IMPLEMENTATIONGUIDE: return "ImplementationGuide";
+            case INGREDIENT: return "Ingredient";
             case INSURANCEPLAN: return "InsurancePlan";
             case INVOICE: return "Invoice";
             case LIBRARY: return "Library";
@@ -12627,17 +12634,7 @@ The primary difference between a medication statement and a medication administr
             case MEDICATIONDISPENSE: return "MedicationDispense";
             case MEDICATIONKNOWLEDGE: return "MedicationKnowledge";
             case MEDICATIONREQUEST: return "MedicationRequest";
-            case MEDICATIONSTATEMENT: return "MedicationStatement";
-            case MEDICINALPRODUCT: return "MedicinalProduct";
-            case MEDICINALPRODUCTAUTHORIZATION: return "MedicinalProductAuthorization";
-            case MEDICINALPRODUCTCONTRAINDICATION: return "MedicinalProductContraindication";
-            case MEDICINALPRODUCTINDICATION: return "MedicinalProductIndication";
-            case MEDICINALPRODUCTINGREDIENT: return "MedicinalProductIngredient";
-            case MEDICINALPRODUCTINTERACTION: return "MedicinalProductInteraction";
-            case MEDICINALPRODUCTMANUFACTURED: return "MedicinalProductManufactured";
-            case MEDICINALPRODUCTPACKAGED: return "MedicinalProductPackaged";
-            case MEDICINALPRODUCTPHARMACEUTICAL: return "MedicinalProductPharmaceutical";
-            case MEDICINALPRODUCTUNDESIRABLEEFFECT: return "MedicinalProductUndesirableEffect";
+            case MEDICATIONUSAGE: return "MedicationUsage";
             case MESSAGEDEFINITION: return "MessageDefinition";
             case MESSAGEHEADER: return "MessageHeader";
             case MOLECULARSEQUENCE: return "MolecularSequence";
@@ -12661,15 +12658,17 @@ The primary difference between a medication statement and a medication administr
             case PROVENANCE: return "Provenance";
             case QUESTIONNAIRE: return "Questionnaire";
             case QUESTIONNAIRERESPONSE: return "QuestionnaireResponse";
+            case REGULATEDADMINISTRABLEPRODUCT: return "RegulatedAdministrableProduct";
+            case REGULATEDAUTHORIZATION: return "RegulatedAuthorization";
+            case REGULATEDMANUFACTUREDITEM: return "RegulatedManufacturedItem";
+            case REGULATEDMEDICINALPRODUCT: return "RegulatedMedicinalProduct";
+            case REGULATEDPACKAGEDPRODUCT: return "RegulatedPackagedProduct";
             case RELATEDPERSON: return "RelatedPerson";
             case REQUESTGROUP: return "RequestGroup";
-            case RESEARCHDEFINITION: return "ResearchDefinition";
-            case RESEARCHELEMENTDEFINITION: return "ResearchElementDefinition";
             case RESEARCHSTUDY: return "ResearchStudy";
             case RESEARCHSUBJECT: return "ResearchSubject";
             case RESOURCE: return "Resource";
             case RISKASSESSMENT: return "RiskAssessment";
-            case RISKEVIDENCESYNTHESIS: return "RiskEvidenceSynthesis";
             case SCHEDULE: return "Schedule";
             case SEARCHPARAMETER: return "SearchParameter";
             case SERVICEREQUEST: return "ServiceRequest";
@@ -12680,18 +12679,19 @@ The primary difference between a medication statement and a medication administr
             case STRUCTUREMAP: return "StructureMap";
             case SUBSCRIPTION: return "Subscription";
             case SUBSTANCE: return "Substance";
+            case SUBSTANCEDEFINITION: return "SubstanceDefinition";
             case SUBSTANCENUCLEICACID: return "SubstanceNucleicAcid";
             case SUBSTANCEPOLYMER: return "SubstancePolymer";
             case SUBSTANCEPROTEIN: return "SubstanceProtein";
             case SUBSTANCEREFERENCEINFORMATION: return "SubstanceReferenceInformation";
             case SUBSTANCESOURCEMATERIAL: return "SubstanceSourceMaterial";
-            case SUBSTANCESPECIFICATION: return "SubstanceSpecification";
             case SUPPLYDELIVERY: return "SupplyDelivery";
             case SUPPLYREQUEST: return "SupplyRequest";
             case TASK: return "Task";
             case TERMINOLOGYCAPABILITIES: return "TerminologyCapabilities";
             case TESTREPORT: return "TestReport";
             case TESTSCRIPT: return "TestScript";
+            case TOPIC: return "Topic";
             case VALUESET: return "ValueSet";
             case VERIFICATIONRESULT: return "VerificationResult";
             case VISIONPRESCRIPTION: return "VisionPrescription";
@@ -12731,6 +12731,8 @@ The primary difference between a medication statement and a medication administr
           return ResourceType.BUNDLE;
         if ("CapabilityStatement".equals(codeString))
           return ResourceType.CAPABILITYSTATEMENT;
+        if ("CapabilityStatement2".equals(codeString))
+          return ResourceType.CAPABILITYSTATEMENT2;
         if ("CarePlan".equals(codeString))
           return ResourceType.CAREPLAN;
         if ("CareTeam".equals(codeString))
@@ -12747,6 +12749,10 @@ The primary difference between a medication statement and a medication administr
           return ResourceType.CLAIMRESPONSE;
         if ("ClinicalImpression".equals(codeString))
           return ResourceType.CLINICALIMPRESSION;
+        if ("ClinicalProfile".equals(codeString))
+          return ResourceType.CLINICALPROFILE;
+        if ("ClinicalUseIssue".equals(codeString))
+          return ResourceType.CLINICALUSEISSUE;
         if ("CodeSystem".equals(codeString))
           return ResourceType.CODESYSTEM;
         if ("Communication".equals(codeString))
@@ -12761,6 +12767,8 @@ The primary difference between a medication statement and a medication administr
           return ResourceType.CONCEPTMAP;
         if ("Condition".equals(codeString))
           return ResourceType.CONDITION;
+        if ("ConditionDefinition".equals(codeString))
+          return ResourceType.CONDITIONDEFINITION;
         if ("Consent".equals(codeString))
           return ResourceType.CONSENT;
         if ("Contract".equals(codeString))
@@ -12791,8 +12799,6 @@ The primary difference between a medication statement and a medication administr
           return ResourceType.DOCUMENTREFERENCE;
         if ("DomainResource".equals(codeString))
           return ResourceType.DOMAINRESOURCE;
-        if ("EffectEvidenceSynthesis".equals(codeString))
-          return ResourceType.EFFECTEVIDENCESYNTHESIS;
         if ("Encounter".equals(codeString))
           return ResourceType.ENCOUNTER;
         if ("Endpoint".equals(codeString))
@@ -12837,6 +12843,8 @@ The primary difference between a medication statement and a medication administr
           return ResourceType.IMMUNIZATIONRECOMMENDATION;
         if ("ImplementationGuide".equals(codeString))
           return ResourceType.IMPLEMENTATIONGUIDE;
+        if ("Ingredient".equals(codeString))
+          return ResourceType.INGREDIENT;
         if ("InsurancePlan".equals(codeString))
           return ResourceType.INSURANCEPLAN;
         if ("Invoice".equals(codeString))
@@ -12865,28 +12873,8 @@ The primary difference between a medication statement and a medication administr
           return ResourceType.MEDICATIONKNOWLEDGE;
         if ("MedicationRequest".equals(codeString))
           return ResourceType.MEDICATIONREQUEST;
-        if ("MedicationStatement".equals(codeString))
-          return ResourceType.MEDICATIONSTATEMENT;
-        if ("MedicinalProduct".equals(codeString))
-          return ResourceType.MEDICINALPRODUCT;
-        if ("MedicinalProductAuthorization".equals(codeString))
-          return ResourceType.MEDICINALPRODUCTAUTHORIZATION;
-        if ("MedicinalProductContraindication".equals(codeString))
-          return ResourceType.MEDICINALPRODUCTCONTRAINDICATION;
-        if ("MedicinalProductIndication".equals(codeString))
-          return ResourceType.MEDICINALPRODUCTINDICATION;
-        if ("MedicinalProductIngredient".equals(codeString))
-          return ResourceType.MEDICINALPRODUCTINGREDIENT;
-        if ("MedicinalProductInteraction".equals(codeString))
-          return ResourceType.MEDICINALPRODUCTINTERACTION;
-        if ("MedicinalProductManufactured".equals(codeString))
-          return ResourceType.MEDICINALPRODUCTMANUFACTURED;
-        if ("MedicinalProductPackaged".equals(codeString))
-          return ResourceType.MEDICINALPRODUCTPACKAGED;
-        if ("MedicinalProductPharmaceutical".equals(codeString))
-          return ResourceType.MEDICINALPRODUCTPHARMACEUTICAL;
-        if ("MedicinalProductUndesirableEffect".equals(codeString))
-          return ResourceType.MEDICINALPRODUCTUNDESIRABLEEFFECT;
+        if ("MedicationUsage".equals(codeString))
+          return ResourceType.MEDICATIONUSAGE;
         if ("MessageDefinition".equals(codeString))
           return ResourceType.MESSAGEDEFINITION;
         if ("MessageHeader".equals(codeString))
@@ -12933,14 +12921,20 @@ The primary difference between a medication statement and a medication administr
           return ResourceType.QUESTIONNAIRE;
         if ("QuestionnaireResponse".equals(codeString))
           return ResourceType.QUESTIONNAIRERESPONSE;
+        if ("RegulatedAdministrableProduct".equals(codeString))
+          return ResourceType.REGULATEDADMINISTRABLEPRODUCT;
+        if ("RegulatedAuthorization".equals(codeString))
+          return ResourceType.REGULATEDAUTHORIZATION;
+        if ("RegulatedManufacturedItem".equals(codeString))
+          return ResourceType.REGULATEDMANUFACTUREDITEM;
+        if ("RegulatedMedicinalProduct".equals(codeString))
+          return ResourceType.REGULATEDMEDICINALPRODUCT;
+        if ("RegulatedPackagedProduct".equals(codeString))
+          return ResourceType.REGULATEDPACKAGEDPRODUCT;
         if ("RelatedPerson".equals(codeString))
           return ResourceType.RELATEDPERSON;
         if ("RequestGroup".equals(codeString))
           return ResourceType.REQUESTGROUP;
-        if ("ResearchDefinition".equals(codeString))
-          return ResourceType.RESEARCHDEFINITION;
-        if ("ResearchElementDefinition".equals(codeString))
-          return ResourceType.RESEARCHELEMENTDEFINITION;
         if ("ResearchStudy".equals(codeString))
           return ResourceType.RESEARCHSTUDY;
         if ("ResearchSubject".equals(codeString))
@@ -12949,8 +12943,6 @@ The primary difference between a medication statement and a medication administr
           return ResourceType.RESOURCE;
         if ("RiskAssessment".equals(codeString))
           return ResourceType.RISKASSESSMENT;
-        if ("RiskEvidenceSynthesis".equals(codeString))
-          return ResourceType.RISKEVIDENCESYNTHESIS;
         if ("Schedule".equals(codeString))
           return ResourceType.SCHEDULE;
         if ("SearchParameter".equals(codeString))
@@ -12971,6 +12963,8 @@ The primary difference between a medication statement and a medication administr
           return ResourceType.SUBSCRIPTION;
         if ("Substance".equals(codeString))
           return ResourceType.SUBSTANCE;
+        if ("SubstanceDefinition".equals(codeString))
+          return ResourceType.SUBSTANCEDEFINITION;
         if ("SubstanceNucleicAcid".equals(codeString))
           return ResourceType.SUBSTANCENUCLEICACID;
         if ("SubstancePolymer".equals(codeString))
@@ -12981,8 +12975,6 @@ The primary difference between a medication statement and a medication administr
           return ResourceType.SUBSTANCEREFERENCEINFORMATION;
         if ("SubstanceSourceMaterial".equals(codeString))
           return ResourceType.SUBSTANCESOURCEMATERIAL;
-        if ("SubstanceSpecification".equals(codeString))
-          return ResourceType.SUBSTANCESPECIFICATION;
         if ("SupplyDelivery".equals(codeString))
           return ResourceType.SUPPLYDELIVERY;
         if ("SupplyRequest".equals(codeString))
@@ -12995,6 +12987,8 @@ The primary difference between a medication statement and a medication administr
           return ResourceType.TESTREPORT;
         if ("TestScript".equals(codeString))
           return ResourceType.TESTSCRIPT;
+        if ("Topic".equals(codeString))
+          return ResourceType.TOPIC;
         if ("ValueSet".equals(codeString))
           return ResourceType.VALUESET;
         if ("VerificationResult".equals(codeString))
@@ -13037,6 +13031,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<ResourceType>(this, ResourceType.BUNDLE);
         if ("CapabilityStatement".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.CAPABILITYSTATEMENT);
+        if ("CapabilityStatement2".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.CAPABILITYSTATEMENT2);
         if ("CarePlan".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.CAREPLAN);
         if ("CareTeam".equals(codeString))
@@ -13053,6 +13049,10 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<ResourceType>(this, ResourceType.CLAIMRESPONSE);
         if ("ClinicalImpression".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.CLINICALIMPRESSION);
+        if ("ClinicalProfile".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.CLINICALPROFILE);
+        if ("ClinicalUseIssue".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.CLINICALUSEISSUE);
         if ("CodeSystem".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.CODESYSTEM);
         if ("Communication".equals(codeString))
@@ -13067,6 +13067,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<ResourceType>(this, ResourceType.CONCEPTMAP);
         if ("Condition".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.CONDITION);
+        if ("ConditionDefinition".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.CONDITIONDEFINITION);
         if ("Consent".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.CONSENT);
         if ("Contract".equals(codeString))
@@ -13097,8 +13099,6 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<ResourceType>(this, ResourceType.DOCUMENTREFERENCE);
         if ("DomainResource".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.DOMAINRESOURCE);
-        if ("EffectEvidenceSynthesis".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.EFFECTEVIDENCESYNTHESIS);
         if ("Encounter".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.ENCOUNTER);
         if ("Endpoint".equals(codeString))
@@ -13143,6 +13143,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<ResourceType>(this, ResourceType.IMMUNIZATIONRECOMMENDATION);
         if ("ImplementationGuide".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.IMPLEMENTATIONGUIDE);
+        if ("Ingredient".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.INGREDIENT);
         if ("InsurancePlan".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.INSURANCEPLAN);
         if ("Invoice".equals(codeString))
@@ -13171,28 +13173,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<ResourceType>(this, ResourceType.MEDICATIONKNOWLEDGE);
         if ("MedicationRequest".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.MEDICATIONREQUEST);
-        if ("MedicationStatement".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.MEDICATIONSTATEMENT);
-        if ("MedicinalProduct".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.MEDICINALPRODUCT);
-        if ("MedicinalProductAuthorization".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.MEDICINALPRODUCTAUTHORIZATION);
-        if ("MedicinalProductContraindication".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.MEDICINALPRODUCTCONTRAINDICATION);
-        if ("MedicinalProductIndication".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.MEDICINALPRODUCTINDICATION);
-        if ("MedicinalProductIngredient".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.MEDICINALPRODUCTINGREDIENT);
-        if ("MedicinalProductInteraction".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.MEDICINALPRODUCTINTERACTION);
-        if ("MedicinalProductManufactured".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.MEDICINALPRODUCTMANUFACTURED);
-        if ("MedicinalProductPackaged".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.MEDICINALPRODUCTPACKAGED);
-        if ("MedicinalProductPharmaceutical".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.MEDICINALPRODUCTPHARMACEUTICAL);
-        if ("MedicinalProductUndesirableEffect".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.MEDICINALPRODUCTUNDESIRABLEEFFECT);
+        if ("MedicationUsage".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.MEDICATIONUSAGE);
         if ("MessageDefinition".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.MESSAGEDEFINITION);
         if ("MessageHeader".equals(codeString))
@@ -13239,14 +13221,20 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<ResourceType>(this, ResourceType.QUESTIONNAIRE);
         if ("QuestionnaireResponse".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.QUESTIONNAIRERESPONSE);
+        if ("RegulatedAdministrableProduct".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.REGULATEDADMINISTRABLEPRODUCT);
+        if ("RegulatedAuthorization".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.REGULATEDAUTHORIZATION);
+        if ("RegulatedManufacturedItem".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.REGULATEDMANUFACTUREDITEM);
+        if ("RegulatedMedicinalProduct".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.REGULATEDMEDICINALPRODUCT);
+        if ("RegulatedPackagedProduct".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.REGULATEDPACKAGEDPRODUCT);
         if ("RelatedPerson".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.RELATEDPERSON);
         if ("RequestGroup".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.REQUESTGROUP);
-        if ("ResearchDefinition".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.RESEARCHDEFINITION);
-        if ("ResearchElementDefinition".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.RESEARCHELEMENTDEFINITION);
         if ("ResearchStudy".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.RESEARCHSTUDY);
         if ("ResearchSubject".equals(codeString))
@@ -13255,8 +13243,6 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<ResourceType>(this, ResourceType.RESOURCE);
         if ("RiskAssessment".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.RISKASSESSMENT);
-        if ("RiskEvidenceSynthesis".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.RISKEVIDENCESYNTHESIS);
         if ("Schedule".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.SCHEDULE);
         if ("SearchParameter".equals(codeString))
@@ -13277,6 +13263,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<ResourceType>(this, ResourceType.SUBSCRIPTION);
         if ("Substance".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.SUBSTANCE);
+        if ("SubstanceDefinition".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.SUBSTANCEDEFINITION);
         if ("SubstanceNucleicAcid".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.SUBSTANCENUCLEICACID);
         if ("SubstancePolymer".equals(codeString))
@@ -13287,8 +13275,6 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<ResourceType>(this, ResourceType.SUBSTANCEREFERENCEINFORMATION);
         if ("SubstanceSourceMaterial".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.SUBSTANCESOURCEMATERIAL);
-        if ("SubstanceSpecification".equals(codeString))
-          return new Enumeration<ResourceType>(this, ResourceType.SUBSTANCESPECIFICATION);
         if ("SupplyDelivery".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.SUPPLYDELIVERY);
         if ("SupplyRequest".equals(codeString))
@@ -13301,6 +13287,8 @@ The primary difference between a medication statement and a medication administr
           return new Enumeration<ResourceType>(this, ResourceType.TESTREPORT);
         if ("TestScript".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.TESTSCRIPT);
+        if ("Topic".equals(codeString))
+          return new Enumeration<ResourceType>(this, ResourceType.TOPIC);
         if ("ValueSet".equals(codeString))
           return new Enumeration<ResourceType>(this, ResourceType.VALUESET);
         if ("VerificationResult".equals(codeString))
@@ -13336,6 +13324,8 @@ The primary difference between a medication statement and a medication administr
         return "Bundle";
       if (code == ResourceType.CAPABILITYSTATEMENT)
         return "CapabilityStatement";
+      if (code == ResourceType.CAPABILITYSTATEMENT2)
+        return "CapabilityStatement2";
       if (code == ResourceType.CAREPLAN)
         return "CarePlan";
       if (code == ResourceType.CARETEAM)
@@ -13352,6 +13342,10 @@ The primary difference between a medication statement and a medication administr
         return "ClaimResponse";
       if (code == ResourceType.CLINICALIMPRESSION)
         return "ClinicalImpression";
+      if (code == ResourceType.CLINICALPROFILE)
+        return "ClinicalProfile";
+      if (code == ResourceType.CLINICALUSEISSUE)
+        return "ClinicalUseIssue";
       if (code == ResourceType.CODESYSTEM)
         return "CodeSystem";
       if (code == ResourceType.COMMUNICATION)
@@ -13366,6 +13360,8 @@ The primary difference between a medication statement and a medication administr
         return "ConceptMap";
       if (code == ResourceType.CONDITION)
         return "Condition";
+      if (code == ResourceType.CONDITIONDEFINITION)
+        return "ConditionDefinition";
       if (code == ResourceType.CONSENT)
         return "Consent";
       if (code == ResourceType.CONTRACT)
@@ -13396,8 +13392,6 @@ The primary difference between a medication statement and a medication administr
         return "DocumentReference";
       if (code == ResourceType.DOMAINRESOURCE)
         return "DomainResource";
-      if (code == ResourceType.EFFECTEVIDENCESYNTHESIS)
-        return "EffectEvidenceSynthesis";
       if (code == ResourceType.ENCOUNTER)
         return "Encounter";
       if (code == ResourceType.ENDPOINT)
@@ -13442,6 +13436,8 @@ The primary difference between a medication statement and a medication administr
         return "ImmunizationRecommendation";
       if (code == ResourceType.IMPLEMENTATIONGUIDE)
         return "ImplementationGuide";
+      if (code == ResourceType.INGREDIENT)
+        return "Ingredient";
       if (code == ResourceType.INSURANCEPLAN)
         return "InsurancePlan";
       if (code == ResourceType.INVOICE)
@@ -13470,28 +13466,8 @@ The primary difference between a medication statement and a medication administr
         return "MedicationKnowledge";
       if (code == ResourceType.MEDICATIONREQUEST)
         return "MedicationRequest";
-      if (code == ResourceType.MEDICATIONSTATEMENT)
-        return "MedicationStatement";
-      if (code == ResourceType.MEDICINALPRODUCT)
-        return "MedicinalProduct";
-      if (code == ResourceType.MEDICINALPRODUCTAUTHORIZATION)
-        return "MedicinalProductAuthorization";
-      if (code == ResourceType.MEDICINALPRODUCTCONTRAINDICATION)
-        return "MedicinalProductContraindication";
-      if (code == ResourceType.MEDICINALPRODUCTINDICATION)
-        return "MedicinalProductIndication";
-      if (code == ResourceType.MEDICINALPRODUCTINGREDIENT)
-        return "MedicinalProductIngredient";
-      if (code == ResourceType.MEDICINALPRODUCTINTERACTION)
-        return "MedicinalProductInteraction";
-      if (code == ResourceType.MEDICINALPRODUCTMANUFACTURED)
-        return "MedicinalProductManufactured";
-      if (code == ResourceType.MEDICINALPRODUCTPACKAGED)
-        return "MedicinalProductPackaged";
-      if (code == ResourceType.MEDICINALPRODUCTPHARMACEUTICAL)
-        return "MedicinalProductPharmaceutical";
-      if (code == ResourceType.MEDICINALPRODUCTUNDESIRABLEEFFECT)
-        return "MedicinalProductUndesirableEffect";
+      if (code == ResourceType.MEDICATIONUSAGE)
+        return "MedicationUsage";
       if (code == ResourceType.MESSAGEDEFINITION)
         return "MessageDefinition";
       if (code == ResourceType.MESSAGEHEADER)
@@ -13538,14 +13514,20 @@ The primary difference between a medication statement and a medication administr
         return "Questionnaire";
       if (code == ResourceType.QUESTIONNAIRERESPONSE)
         return "QuestionnaireResponse";
+      if (code == ResourceType.REGULATEDADMINISTRABLEPRODUCT)
+        return "RegulatedAdministrableProduct";
+      if (code == ResourceType.REGULATEDAUTHORIZATION)
+        return "RegulatedAuthorization";
+      if (code == ResourceType.REGULATEDMANUFACTUREDITEM)
+        return "RegulatedManufacturedItem";
+      if (code == ResourceType.REGULATEDMEDICINALPRODUCT)
+        return "RegulatedMedicinalProduct";
+      if (code == ResourceType.REGULATEDPACKAGEDPRODUCT)
+        return "RegulatedPackagedProduct";
       if (code == ResourceType.RELATEDPERSON)
         return "RelatedPerson";
       if (code == ResourceType.REQUESTGROUP)
         return "RequestGroup";
-      if (code == ResourceType.RESEARCHDEFINITION)
-        return "ResearchDefinition";
-      if (code == ResourceType.RESEARCHELEMENTDEFINITION)
-        return "ResearchElementDefinition";
       if (code == ResourceType.RESEARCHSTUDY)
         return "ResearchStudy";
       if (code == ResourceType.RESEARCHSUBJECT)
@@ -13554,8 +13536,6 @@ The primary difference between a medication statement and a medication administr
         return "Resource";
       if (code == ResourceType.RISKASSESSMENT)
         return "RiskAssessment";
-      if (code == ResourceType.RISKEVIDENCESYNTHESIS)
-        return "RiskEvidenceSynthesis";
       if (code == ResourceType.SCHEDULE)
         return "Schedule";
       if (code == ResourceType.SEARCHPARAMETER)
@@ -13576,6 +13556,8 @@ The primary difference between a medication statement and a medication administr
         return "Subscription";
       if (code == ResourceType.SUBSTANCE)
         return "Substance";
+      if (code == ResourceType.SUBSTANCEDEFINITION)
+        return "SubstanceDefinition";
       if (code == ResourceType.SUBSTANCENUCLEICACID)
         return "SubstanceNucleicAcid";
       if (code == ResourceType.SUBSTANCEPOLYMER)
@@ -13586,8 +13568,6 @@ The primary difference between a medication statement and a medication administr
         return "SubstanceReferenceInformation";
       if (code == ResourceType.SUBSTANCESOURCEMATERIAL)
         return "SubstanceSourceMaterial";
-      if (code == ResourceType.SUBSTANCESPECIFICATION)
-        return "SubstanceSpecification";
       if (code == ResourceType.SUPPLYDELIVERY)
         return "SupplyDelivery";
       if (code == ResourceType.SUPPLYREQUEST)
@@ -13600,6 +13580,8 @@ The primary difference between a medication statement and a medication administr
         return "TestReport";
       if (code == ResourceType.TESTSCRIPT)
         return "TestScript";
+      if (code == ResourceType.TOPIC)
+        return "Topic";
       if (code == ResourceType.VALUESET)
         return "ValueSet";
       if (code == ResourceType.VERIFICATIONRESULT)

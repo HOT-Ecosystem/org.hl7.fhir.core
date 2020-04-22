@@ -39,7 +39,6 @@ public class XhtmlType extends Element {
   }
 
   public XhtmlType() {
-    this(new Narrative());
     // "<div xmlns=\""+FormatUtilities.XHTML_NS+"\"></div>"
   }
 
@@ -73,13 +72,8 @@ public class XhtmlType extends Element {
   @Override
   public Base setProperty(int hash, String name, Base value) throws FHIRException {
     if ("value".equals(name)) {
-      if (value instanceof StringType) {
-        // div is already generated with getValue, we cannot just overwrite it
-        place.getDiv().setValueAsString(((StringType) value).asStringValue());
-      } else {
-        place.setDiv(castToXhtml(value));
-      }
-    	return value;
+      place.setDiv(castToXhtml(value));
+      return value;
     } else
       return super.setProperty(hash, name, value);
   }

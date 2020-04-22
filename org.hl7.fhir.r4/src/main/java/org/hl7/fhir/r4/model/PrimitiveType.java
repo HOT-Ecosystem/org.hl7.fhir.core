@@ -233,10 +233,4 @@ public abstract class PrimitiveType<T> extends Type implements IPrimitiveType<T>
   protected void forceStringValue(String value) {
     myStringValue = value;
   }
-  
-  @Override
-  public boolean hasPrimitiveValue() {
-    return StringUtils.isNotBlank(getValueAsString());
-  }
-
 }

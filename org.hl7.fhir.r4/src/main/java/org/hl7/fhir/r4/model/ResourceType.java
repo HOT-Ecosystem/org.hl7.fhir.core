@@ -9,9 +9,9 @@ package org.hl7.fhir.r4.model;
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -47,6 +47,7 @@ public enum ResourceType {
     Claim,
     ClaimResponse,
     ClinicalImpression,
+    ClinicalProfile,
     CodeSystem,
     Communication,
     CommunicationRequest,
@@ -218,6 +219,8 @@ public enum ResourceType {
       return "claimresponse";
     case ClinicalImpression:
       return "clinicalimpression";
+    case ClinicalProfile:
+      return "clinicalprofile";
     case CodeSystem:
       return "codesystem";
     case Communication:
@@ -516,6 +519,8 @@ public enum ResourceType {
       return ClaimResponse;
     if ("ClinicalImpression".equals(code))
       return ClinicalImpression;
+    if ("ClinicalProfile".equals(code))
+      return ClinicalProfile;
     if ("CodeSystem".equals(code))
       return CodeSystem;
     if ("Communication".equals(code))
