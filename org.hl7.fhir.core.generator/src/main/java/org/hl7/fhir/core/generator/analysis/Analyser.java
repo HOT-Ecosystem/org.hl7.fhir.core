@@ -19,6 +19,7 @@ import org.hl7.fhir.r5.model.Enumerations.ResourceTypeEnum;
 import org.hl7.fhir.r5.model.StructureDefinition.StructureDefinitionKind;
 import org.hl7.fhir.r5.model.ValueSet.ConceptSetComponent;
 import org.hl7.fhir.utilities.Utilities;
+import org.hl7.fhir.utilities.i18n.I18nConstants;
 
 public class Analyser {
 
@@ -46,7 +47,7 @@ public class Analyser {
     sd.setUserData("java.type.info", type);
     
     type.setDefn(sd.getSnapshot().getElementFirstRep());
-    type.setChildren(filterChildren(ProfileUtilities.getChildList(sd, type.getDefn())));
+    type.setChildren(filterChildren(this.getChildList(sd, type.getDefn())));
     type.setInheritedChildren(getAbstractChildren(res.getAncestor()));
     
     for (ElementDefinition e : type.getChildren()) {
@@ -92,7 +93,55 @@ public class Analyser {
     List<ElementDefinition> res = new ArrayList<>();
     StructureDefinition sdb = definitions.getStructures().get(structure.getBaseDefinition());
     res.addAll(getAbstractChildren(sdb));
-    res.addAll(filterChildren(ProfileUtilities.getChildList(structure, structure.getSnapshot().getElementFirstRep())));
+    res.addAll(filterChildren(this.getChildList(structure, structure.getSnapshot().getElementFirstRep())));
+    return res;
+  }
+
+  public List<ElementDefinition> getChildList(StructureDefinition structure, ElementDefinition element) {
+    return getChildList(structure, element.getPath(), element.getId(), false);
+  }
+
+  public List<ElementDefinition> getChildList(StructureDefinition profile, String path, String id, boolean diff) {
+    List<ElementDefinition> res = new ArrayList<ElementDefinition>();
+
+    boolean capturing = id==null;
+    if (id==null && !path.contains("."))
+      capturing = true;
+
+    List<ElementDefinition> list = diff ? profile.getDifferential().getElement() : profile.getSnapshot().getElement();
+    for (ElementDefinition e : list) {
+      if (e == null)
+        //throw new Exception(I18nConstants.ELEMENT__NULL_ + profile.getUrl());
+        System.err.println(I18nConstants.ELEMENT__NULL_ + profile.getUrl());
+      if (e.getId() == null)
+        //throw new Error(context.formatMessage(I18nConstants.ELEMENT_ID__NULL__ON_, e.toString(), profile.getUrl()));
+        System.err.println(I18nConstants.ELEMENT_ID__NULL__ON_ + e.toString() + profile.getUrl());
+      if (!capturing && id!=null && e.getId().equals(id)) {
+        capturing = true;
+      }
+
+      // If our element is a slice, stop capturing children as soon as we see the next slice
+      if (capturing && e.hasId() && id!= null && !e.getId().equals(id) && e.getPath().equals(path))
+        break;
+
+      if (capturing) {
+        String p = e.getPath();
+
+        if (!Utilities.noString(e.getContentReference()) && path.startsWith(p)) {
+          if (path.length() > p.length())
+            return getChildList(profile, e.getContentReference()+"."+path.substring(p.length()+1), null, diff);
+          else
+            return getChildList(profile, e.getContentReference(), null, diff);
+
+        } else if (p.startsWith(path+".") && !p.equals(path)) {
+          String tail = p.substring(path.length()+1);
+          if (!tail.contains(".")) {
+            res.add(e);
+          }
+        }
+      }
+    }
+
     return res;
   }
 
@@ -168,7 +217,7 @@ public class Analyser {
           analysis.getTypeList().add(ctype);          
           ctype.setDefn(e);
           ctype.setAncestorName(e.typeSummary());
-          ctype.setChildren(filterChildren(ProfileUtilities.getChildList(analysis.getStructure(), ctype.getDefn())));
+          ctype.setChildren(filterChildren(this.getChildList(analysis.getStructure(), ctype.getDefn())));
           
           for (ElementDefinition c : ctype.getChildren()) {
             scanNestedTypes(analysis, ctype, cpath, c);

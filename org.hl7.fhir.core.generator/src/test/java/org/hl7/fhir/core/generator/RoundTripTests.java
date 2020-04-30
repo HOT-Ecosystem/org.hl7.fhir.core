@@ -1,4 +1,4 @@
-package org.hl7.fhir.core.generator.tests;
+package org.hl7.fhir.core.generator;
 
 import static org.junit.Assert.*;
 
