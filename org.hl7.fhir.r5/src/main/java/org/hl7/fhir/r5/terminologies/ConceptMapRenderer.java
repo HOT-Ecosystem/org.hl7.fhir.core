@@ -240,7 +240,22 @@ public class ConceptMapRenderer extends TerminologyRenderer {
                 else
                   td.addText(grp.getSource()+" / "+ccl.getCode());
                 display = getDisplayForConcept(grp.getSource(), ccl.getCode());
-                tr.td().style("border-left-width: 0px").tx(display == null ? "" : display);
+                td = tr.td();
+                if (!first)
+                  td.style("border-left-width: 0px; border-top-style: none");
+                else if (!last)
+                  td.style("border-left-width: 0px; border-bottom-style: none");
+                else
+                  td.style("border-left-width: 0px");
+                td.tx(display == null ? "" : display);
+              } else {
+                td = tr.td(); // for display
+                if (!first)
+                  td.style("border-left-width: 0px; border-top-style: none");
+                else if (!last)
+                  td.style("border-left-width: 0px; border-bottom-style: none");
+                else
+                  td.style("border-left-width: 0px");
               }
               for (String s : sources.keySet()) {
                 if (!s.equals("code")) {
@@ -304,10 +319,10 @@ public class ConceptMapRenderer extends TerminologyRenderer {
       return "is related to";
     } else if ("equivalent".equals(code)) {
       return "is equivalent to";
-    } else if ("broader".equals(code)) {
+    } else if ("source-is-narrower-than-target".equals(code)) {
       return "maps to wider concept";
-    } else if ("narrower".equals(code)) {
-      return "maps to narrower concept";
+    } else if ("source-is-broader-than-target".equals(code)) {
+      return "maps to narrower target";
     } else if ("not-related-to".equals(code)) {
       return "is not related to";
     } else {
@@ -326,7 +341,7 @@ public class ConceptMapRenderer extends TerminologyRenderer {
       return "maps to wider concept";
     } else if ("subsumes".equals(code)) {
       return "is subsumed by";
-    } else if ("narrower".equals(code)) {
+    } else if ("source-is-broader-than-target".equals(code)) {
       return "maps to narrower concept";
     } else if ("specializes".equals(code)) {
       return "has specialization";
