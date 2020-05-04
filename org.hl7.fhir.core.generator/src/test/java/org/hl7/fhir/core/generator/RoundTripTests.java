@@ -19,6 +19,7 @@ import org.hl7.fhir.r5.test.utils.TestingUtilities;
 import org.hl7.fhir.utilities.TextFile;
 import org.hl7.fhir.utilities.Utilities;
 import org.hl7.fhir.utilities.xml.XMLUtil;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -54,7 +55,7 @@ public class RoundTripTests {
   public void test() throws FileNotFoundException, IOException {
     byte[] src = TextFile.fileToBytes(Utilities.path(EXAMPLES_DIR, name));
     Resource r = new XmlParser().parse(src);
-    assertNotNull(r);
+    Assert.assertNotNull(r);
     byte[] cnt = new XmlParser().setOutputStyle(OutputStyle.PRETTY).composeBytes(r);
     Utilities.createDirectory(output());
     save(src, Utilities.path(output(), r.fhirType()+"-"+r.getId()+".src.xml"));
@@ -62,14 +63,14 @@ public class RoundTripTests {
     cnt = new JsonParser().setOutputStyle(OutputStyle.PRETTY).composeBytes(r);
     save(cnt, Utilities.path(output(), r.fhirType()+"-"+r.getId()+".cnt.json"));
     Resource rj = new JsonParser().parse(cnt);
-    assertNotNull(rj);
+    Assert.assertNotNull(rj);
     if (r instanceof DomainResource) {
       ((DomainResource) r).setText(null);
     }
     if (rj instanceof DomainResource) {
       ((DomainResource) rj).setText(null);
     }
-    assertTrue(r.equalsDeep(rj));
+    Assert.assertTrue(r.equalsDeep(rj));
   }
 
   private String output() throws IOException {
