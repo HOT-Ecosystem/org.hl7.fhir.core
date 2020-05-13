@@ -1,25 +1,7 @@
 package org.hl7.fhir.r5.model;
 
 
-/*
- * #%L
- * org.hl7.fhir.r5
- * %%
- * Copyright (C) 2014 - 2019 Health Level 7
- * %%
- * Licensed under the Apache License, Version 2.0 (the \"License\");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *      http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an \"AS IS\" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * #L%
- */
+
 
 /*
   Copyright (c) 2011+, HL7, Inc.
@@ -49,7 +31,7 @@ package org.hl7.fhir.r5.model;
   POSSIBILITY OF SUCH DAMAGE.
   */
 
-// Generated on Tue, Dec 31, 2019 12:12+1100 for FHIR vcurrent
+// Generated on Mon, May 11, 2020 09:58+1000 for FHIR vcurrent
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -342,7 +324,8 @@ public class CodeableConcept extends DataType implements ICompositeType {
     super();
     addCoding(code);
   }
-
+  
+  
   public boolean matches(CodeableConcept other) {
     for (Coding c : other.getCoding()) {
       if (hasCoding(c.getSystem(), c.getCode())) {
@@ -355,10 +338,25 @@ public class CodeableConcept extends DataType implements ICompositeType {
   public boolean hasCoding(Coding coding) {
     return hasCoding(coding.getSystem(), coding.getCode());
   }
-  
-  
 
+  public boolean hasCoding(String system) {
+    for (Coding c : getCoding()) {
+      if (system.equals(c.getSystem())) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public String getCode(String system) {
+    for (Coding c : getCoding()) {
+      if (system.equals(c.getSystem())) {
+        return c.getCode();
+      }
+    }
+    return null;
+  }
+  
 // end addition
 
 }
-

@@ -4,25 +4,7 @@ import java.io.IOException;
 
 import org.hl7.fhir.exceptions.FHIRFormatError;
 
-/*-
- * #%L
- * org.hl7.fhir.r4
- * %%
- * Copyright (C) 2014 - 2019 Health Level 7
- * %%
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *      http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * #L%
- */
+
 
 /*
   Copyright (c) 2011+, HL7, Inc.
@@ -15888,7 +15870,7 @@ public class JsonParser extends JsonParserBase {
       }
     };
     if (json.has("status"))
-      res.setStatusElement(parseCode(json.get("status").getAsString()));
+      res.setStatusElement(parseEnumeration(json.get("status").getAsString(), MedicationAdministration.MedicationAdministrationStatus.NULL, new MedicationAdministration.MedicationAdministrationStatusEnumFactory()));
     if (json.has("_status"))
       parseElementProperties(getJObject(json, "_status"), res.getStatusElement());
     if (json.has("statusReason")) {
@@ -16017,7 +15999,7 @@ public class JsonParser extends JsonParserBase {
       }
     };
     if (json.has("status"))
-      res.setStatusElement(parseCode(json.get("status").getAsString()));
+      res.setStatusElement(parseEnumeration(json.get("status").getAsString(), MedicationDispense.MedicationDispenseStatus.NULL, new MedicationDispense.MedicationDispenseStatusEnumFactory()));
     if (json.has("_status"))
       parseElementProperties(getJObject(json, "_status"), res.getStatusElement());
     Type statusReason = parseType("statusReason", json);
@@ -16155,7 +16137,7 @@ public class JsonParser extends JsonParserBase {
     if (json.has("code"))
       res.setCode(parseCodeableConcept(getJObject(json, "code")));
     if (json.has("status"))
-      res.setStatusElement(parseCode(json.get("status").getAsString()));
+      res.setStatusElement(parseEnumeration(json.get("status").getAsString(), MedicationKnowledge.MedicationKnowledgeStatus.NULL, new MedicationKnowledge.MedicationKnowledgeStatusEnumFactory()));
     if (json.has("_status"))
       parseElementProperties(getJObject(json, "_status"), res.getStatusElement());
     if (json.has("manufacturer"))
@@ -45587,8 +45569,8 @@ public class JsonParser extends JsonParserBase {
         closeArray();
       };
       if (element.hasStatusElement()) {
-        composeCodeCore("status", element.getStatusElement(), false);
-        composeCodeExtras("status", element.getStatusElement(), false);
+        composeEnumerationCore("status", element.getStatusElement(), new MedicationAdministration.MedicationAdministrationStatusEnumFactory(), false);
+        composeEnumerationExtras("status", element.getStatusElement(), new MedicationAdministration.MedicationAdministrationStatusEnumFactory(), false);
       }
       if (element.hasStatusReason()) {
         openArray("statusReason");
@@ -45732,8 +45714,8 @@ public class JsonParser extends JsonParserBase {
         closeArray();
       };
       if (element.hasStatusElement()) {
-        composeCodeCore("status", element.getStatusElement(), false);
-        composeCodeExtras("status", element.getStatusElement(), false);
+        composeEnumerationCore("status", element.getStatusElement(), new MedicationDispense.MedicationDispenseStatusEnumFactory(), false);
+        composeEnumerationExtras("status", element.getStatusElement(), new MedicationDispense.MedicationDispenseStatusEnumFactory(), false);
       }
       if (element.hasStatusReason()) {
         composeType("statusReason", element.getStatusReason());
@@ -45888,8 +45870,8 @@ public class JsonParser extends JsonParserBase {
         composeCodeableConcept("code", element.getCode());
       }
       if (element.hasStatusElement()) {
-        composeCodeCore("status", element.getStatusElement(), false);
-        composeCodeExtras("status", element.getStatusElement(), false);
+        composeEnumerationCore("status", element.getStatusElement(), new MedicationKnowledge.MedicationKnowledgeStatusEnumFactory(), false);
+        composeEnumerationExtras("status", element.getStatusElement(), new MedicationKnowledge.MedicationKnowledgeStatusEnumFactory(), false);
       }
       if (element.hasManufacturer()) {
         composeReference("manufacturer", element.getManufacturer());
@@ -58858,4 +58840,3 @@ public class JsonParser extends JsonParserBase {
   }
 
 }
-

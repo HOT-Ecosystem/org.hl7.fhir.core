@@ -5,7 +5,7 @@
     <parent>
         <groupId>ca.uhn.hapi.fhir</groupId>
         <artifactId>org.hl7.fhir.core</artifactId>
-        <version>4.2.25-SNAPSHOT</version>
+        <version>5.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -81,6 +81,12 @@
             <artifactId>xpp3_xpath</artifactId>
         </dependency>
 
+        <!-- JSON Utilities -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
         <!-- JSON Schema -->
         <dependency>
             <groupId>org.everit.json</groupId>
@@ -147,12 +153,14 @@
             <groupId>io.javalin</groupId>
             <artifactId>javalin</artifactId>
             <version>3.8.0</version>
+				<optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.28</version>
-        </dependency>
+				<version>1.7.28</version>
+				<optional>true</optional>
+		  </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

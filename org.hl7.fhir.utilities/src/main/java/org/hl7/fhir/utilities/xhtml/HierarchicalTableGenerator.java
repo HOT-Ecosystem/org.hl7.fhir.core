@@ -1,24 +1,34 @@
 package org.hl7.fhir.utilities.xhtml;
 
-/*-
- * #%L
- * org.hl7.fhir.utilities
- * %%
- * Copyright (C) 2014 - 2019 Health Level 7
- * %%
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *      http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * #L%
+/*
+  Copyright (c) 2011+, HL7, Inc.
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification, 
+  are permitted provided that the following conditions are met:
+    
+   * Redistributions of source code must retain the above copyright notice, this 
+     list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above copyright notice, 
+     this list of conditions and the following disclaimer in the documentation 
+     and/or other materials provided with the distribution.
+   * Neither the name of HL7 nor the names of its contributors may be used to 
+     endorse or promote products derived from this software without specific 
+     prior written permission.
+  
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
+  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+  POSSIBILITY OF SUCH DAMAGE.
+  
  */
+
 
 
 /*
@@ -100,6 +110,10 @@ public class HierarchicalTableGenerator extends TranslatingUtilities {
   private static final String BACKGROUND_ALT_COLOR = "#F7F7F7";
   public static boolean ACTIVE_TABLES = false;
     
+  public enum TextAlignment {
+    LEFT, CENTER, RIGHT;  
+  }
+  
   private static Map<String, String> files = new HashMap<String, String>();
 
   private class Counter {
@@ -199,6 +213,9 @@ public class HierarchicalTableGenerator extends TranslatingUtilities {
   
   public class Cell {
     private List<Piece> pieces = new ArrayList<HierarchicalTableGenerator.Piece>();
+    private String cellStyle;
+    protected int span = 1;
+    private TextAlignment alignment = TextAlignment.LEFT;
 
     public Cell() {
       
@@ -321,9 +338,10 @@ public class HierarchicalTableGenerator extends TranslatingUtilities {
         throw new Error("Unhandled type "+c.getNodeType().toString());
 
     }
-    public void addStyle(String style) {
+    public Cell addStyle(String style) {
       for (Piece p : pieces)
-        p.addStyle(style);      
+        p.addStyle(style);
+      return this;
     }
     public void addToHint(String text) {
       for (Piece p : pieces)
@@ -355,7 +373,24 @@ public class HierarchicalTableGenerator extends TranslatingUtilities {
     }
     @Override
     public String toString() {
-      return text();
+      if (span != 1) {
+        return text()+" {"+span+"}";
+      } else {
+        return text();
+      }
+    }
+    public Cell setStyle(String value) {
+      cellStyle = value;
+      return this;
+    }
+    
+    public Cell span(int value) {
+      span = value;
+      return this;
+    }
+    public Cell center() {
+      alignment = TextAlignment.CENTER;
+      return this;
     }
     
     
@@ -368,6 +403,13 @@ public class HierarchicalTableGenerator extends TranslatingUtilities {
       super(prefix, reference, text, hint, suffix);
       this.width = width;
     }
+
+    public Title(String prefix, String reference, String text, String hint, String suffix, int width, int span) {
+      super(prefix, reference, text, hint, suffix);
+      this.width = width;
+      this.span = span;
+    }
+
   }
   
   public class Row {
@@ -469,6 +511,9 @@ public class HierarchicalTableGenerator extends TranslatingUtilities {
     public boolean isAlternating() {
       return alternating;
     }
+    public void setAlternating(boolean alternating) {
+      this.alternating = alternating;
+    }
     
   }
 
@@ -505,7 +550,7 @@ public class HierarchicalTableGenerator extends TranslatingUtilities {
   public TableModel initNormalTable(String prefix, boolean isLogical, boolean alternating, String id, boolean isActive) {
     TableModel model = new TableModel(id, isActive);
     
-    model.alternating = alternating;
+    model.setAlternating(alternating);
     model.setDocoImg(prefix+"help16.png");
     model.setDocoRef(prefix+"formats.html#table");
     model.getTitles().add(new Title(null, model.getDocoRef(), translate("sd.head", "Name"), translate("sd.hint", "The logical name of the element"), null, 0));
@@ -579,7 +624,7 @@ public class HierarchicalTableGenerator extends TranslatingUtilities {
     String color = "white";
     if (r.getColor() != null)
       color = r.getColor();
-    else if (model.alternating  && counter.isOdd())
+    else if (model.isAlternating()  && counter.isOdd())
       color = BACKGROUND_ALT_COLOR;
     
     tr.setAttribute("style", "border: " + border + "px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: "+color+";");
@@ -610,9 +655,12 @@ public class HierarchicalTableGenerator extends TranslatingUtilities {
   private XhtmlNode renderCell(XhtmlNode tr, Cell c, String name, String icon, String hint, List<Integer> indents, boolean hasChildren, String anchor, String color, int lineColor, String imagePath, int border, Set<String> outputTracker, TableModel table, Row row) throws IOException  {
     XhtmlNode tc = tr.addTag(name);
     tc.setAttribute("class", "hierarchy");
+    if (c.span > 1) {
+      tc.colspan(Integer.toString(c.span));
+    }
     if (indents != null) {
       tc.addTag("img").setAttribute("src", srcFor(imagePath, "tbl_spacer.png")).setAttribute("style", "background-color: inherit").setAttribute("class", "hierarchy").setAttribute("alt", ".");
-      tc.setAttribute("style", "vertical-align: top; text-align : left; background-color: "+color+"; border: "+ border +"px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url("+imagePath+checkExists(indents, hasChildren, lineColor, outputTracker)+")");
+      tc.setAttribute("style", "vertical-align: top; text-align : left; "+(c.cellStyle != null  && c.cellStyle.contains("background-color") ? "" : "background-color: "+color+"; ")+"border: "+ border +"px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url("+imagePath+checkExists(indents, hasChildren, lineColor, outputTracker)+")"+(c.cellStyle != null ? ";"+c.cellStyle : ""));
       for (int i = 0; i < indents.size()-1; i++) {
         switch (indents.get(i)) {
           case NEW_REGULAR:
@@ -664,7 +712,7 @@ public class HierarchicalTableGenerator extends TranslatingUtilities {
       }
     }
     else
-      tc.setAttribute("style", "vertical-align: top; text-align : left; background-color: "+color+"; border: "+ border +"px #F0F0F0 solid; padding:0px 4px 0px 4px");
+      tc.setAttribute("style", "vertical-align: top; text-align : left; "+(c.cellStyle != null  && c.cellStyle.contains("background-color") ? "" : "background-color: "+color+"; ")+"border: "+ border +"px #F0F0F0 solid; padding:0px 4px 0px 4px"+(c.cellStyle != null ? ";"+c.cellStyle : ""));
     if (!Utilities.noString(icon)) {
       XhtmlNode img = tc.addTag("img").setAttribute("src", srcFor(imagePath, icon)).setAttribute("class", "hierarchy").setAttribute("style", "background-color: "+color+"; background-color: inherit").setAttribute("alt", ".");
       if (hint != null)
@@ -740,11 +788,14 @@ public class HierarchicalTableGenerator extends TranslatingUtilities {
   private void checkModel(TableModel model) throws FHIRException  {
     check(!model.getRows().isEmpty(), "Must have rows");
     check(!model.getTitles().isEmpty(), "Must have titles");
-    for (Cell c : model.getTitles())
+    int tc = 0;
+    for (Cell c : model.getTitles()) {
       check(c);
+      tc = tc + c.span;
+    }
     int i = 0;
     for (Row r : model.getRows()) { 
-      check(r, "rows", model.getTitles().size(), "", i, model.getRows().size());
+      check(r, "rows", tc, "", i, model.getRows().size());
       i++;
     }
   }
@@ -767,7 +818,11 @@ public class HierarchicalTableGenerator extends TranslatingUtilities {
     }
     path = path + id;
     r.setId(path);
-    check(r.getCells().size() == size, "All rows must have the same number of columns ("+Integer.toString(size)+") as the titles but row "+path+" doesn't ("+r.getCells().get(0).text()+"): "+r.getCells());
+    int tc = 0;
+    for (Cell c : r.getCells()) {
+      tc = tc + c.span;
+    }
+    check(tc == size, "All rows must have the same number of columns as the titles  ("+Integer.toString(size)+") but row "+path+" doesn't - it has "+tc+" ("+r.getCells().get(0).text()+"): "+r.getCells());
     int i = 0;
     for (Row c : r.getSubRows()) {
       check(c, "rows", size, path, i, r.getSubRows().size());

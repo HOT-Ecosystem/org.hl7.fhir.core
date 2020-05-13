@@ -1,4 +1,4 @@
-package org.hl7.fhir.r5.test;
+package org.hl7.fhir.utilities.tests;
 
 import org.hl7.fhir.utilities.Utilities;
 import org.hl7.fhir.utilities.cache.NpmPackage;
@@ -33,4 +33,3 @@ public class PackageCacheTests {
     Assertions.assertNotNull(npm2);
   }
 }
-

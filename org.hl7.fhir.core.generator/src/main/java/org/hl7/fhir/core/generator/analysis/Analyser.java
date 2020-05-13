@@ -186,7 +186,9 @@ public class Analyser {
           if (inc.hasSystem() && !inc.hasFilter() && !inc.hasConcept() && !(inc.getSystem().startsWith("http://hl7.org/fhir") || inc.getSystem().startsWith("http://terminology.hl7.org")))
             ok = false;
         }
-        if (config.getIni().getBooleanProperty("no-enum", vs.getUrl())) {
+        if (vs == null) {
+          ok = false;
+        } else if (config.getIni().getBooleanProperty("no-enum", vs.getUrl())) {
           ok = false;
         }
       }
