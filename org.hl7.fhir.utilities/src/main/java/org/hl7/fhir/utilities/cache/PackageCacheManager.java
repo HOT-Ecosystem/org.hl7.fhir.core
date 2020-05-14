@@ -186,8 +186,8 @@ public class PackageCacheManager {
     }
   }
 
-  private static final String PRIMARY_SERVER = "http://packages.fhir.org";
-  private static final String SECONDARY_SERVER = "http://packages2.fhir.org/packages";
+  public static final String PRIMARY_SERVER = "http://packages.fhir.org";
+  public static final String SECONDARY_SERVER = "http://packages2.fhir.org/packages";
 //  private static final String SECONDARY_SERVER = "http://local.fhir.org:960/packages";
   public static final String PACKAGE_REGEX = "^[a-z][a-z0-9\\_\\-]*(\\.[a-z0-9\\_\\-]+)+$";
   public static final String PACKAGE_VERSION_REGEX = "^[a-z][a-z0-9\\_\\-]*(\\.[a-z0-9\\_\\-]+)+\\#[a-z0-9\\-\\_]+(\\.[a-z0-9\\-\\_]+)*$";
@@ -329,8 +329,6 @@ public class PackageCacheManager {
   }
 
   private InputStreamWithSrc loadFromPackageServer(String id, String v) {
-    // release hack:
-    if ("4.4.0".equals(v)) {v = "4.2.0"; };
     PackageClient pc = new PackageClient(PRIMARY_SERVER);
     String u = null;
     InputStream stream;
@@ -859,6 +857,16 @@ public class PackageCacheManager {
       return "http://fhir.org/packages/hl7.fhir.xver-extensions";
     }
     return null;
+  }
+
+  public List<String> listPackages() {
+    List<String> res = new ArrayList<>();
+    for (File f : new File(cacheFolder).listFiles()) {
+      if (f.isDirectory() && f.getName().contains("#")) {
+        res.add(f.getName());
+      }
+    }
+    return res;
   }
 
 
