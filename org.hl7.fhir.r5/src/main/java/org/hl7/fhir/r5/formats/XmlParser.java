@@ -10812,6 +10812,32 @@ public class XmlParser extends XmlParserBase {
     return true;
   }
 
+  protected EightBall parseEightBall(XmlPullParser xpp) throws XmlPullParserException, IOException, FHIRFormatError {
+    EightBall res = new EightBall();
+    parseResourceAttributes(xpp, res);
+    next(xpp);
+    int eventType = nextNoWhitespace(xpp);
+    while (eventType != XmlPullParser.END_TAG) {
+      if (!parseEightBallContent(eventType, xpp, res))
+        unknownContent(xpp);
+      eventType = nextNoWhitespace(xpp);
+    }
+    next(xpp);
+    parseElementClose(res);
+    return res;
+  }
+
+  protected boolean parseEightBallContent(int eventType, XmlPullParser xpp, EightBall res) throws XmlPullParserException, IOException, FHIRFormatError {
+    if (eventType == XmlPullParser.START_TAG && xpp.getName().equals("question")) {
+      res.setQuestionElement(parseString(xpp));
+    } else if (eventType == XmlPullParser.START_TAG && xpp.getName().equals("answer")) {
+      res.setAnswer(parseCodeableConcept(xpp));
+    } else if (!parseDomainResourceContent(eventType, xpp, res)){
+      return false;
+    }
+    return true;
+  }
+
   protected Encounter parseEncounter(XmlPullParser xpp) throws XmlPullParserException, IOException, FHIRFormatError {
     Encounter res = new Encounter();
     parseResourceAttributes(xpp, res);
@@ -26444,6 +26470,8 @@ public class XmlParser extends XmlParserBase {
       return parseDocumentManifest(xpp);
     } else if (xpp.getName().equals("DocumentReference")) {
       return parseDocumentReference(xpp);
+    } else if (xpp.getName().equals("EightBall")) {
+      return parseEightBall(xpp);
     } else if (xpp.getName().equals("Encounter")) {
       return parseEncounter(xpp);
     } else if (xpp.getName().equals("Endpoint")) {
@@ -27103,6 +27131,8 @@ public class XmlParser extends XmlParserBase {
       return parseDocumentManifest(xpp);
     } else if (type.equals("DocumentReference")) {
       return parseDocumentReference(xpp);
+    } else if (type.equals("EightBall")) {
+      return parseEightBall(xpp);
     } else if (type.equals("Encounter")) {
       return parseEncounter(xpp);
     } else if (type.equals("Endpoint")) {
@@ -27531,6 +27561,8 @@ public class XmlParser extends XmlParserBase {
     } else if (xpp.getName().equals(prefix+"DocumentManifest")) {
       return true;
     } else if (xpp.getName().equals(prefix+"DocumentReference")) {
+      return true;
+    } else if (xpp.getName().equals(prefix+"EightBall")) {
       return true;
     } else if (xpp.getName().equals(prefix+"Encounter")) {
       return true;
@@ -38452,6 +38484,26 @@ public class XmlParser extends XmlParserBase {
     if (element.hasBasedOn()) { 
       for (Reference e : element.getBasedOn()) 
           composeReference("basedOn", e);
+    }
+  }
+
+  protected void composeEightBall(String name, EightBall element) throws IOException {
+    if (element != null) {
+      composeResourceAttributes(element);
+      xml.enter(FHIR_NS, name);
+      composeEightBallElements(element);
+      composeElementClose(element);
+      xml.exit(FHIR_NS, name);
+    }
+  }
+
+  protected void composeEightBallElements(EightBall element) throws IOException {
+    composeDomainResourceElements(element);
+    if (element.hasQuestionElement()) {
+      composeString("question", element.getQuestionElement());
+    }
+    if (element.hasAnswer()) {
+      composeCodeableConcept("answer", element.getAnswer());
     }
   }
 
@@ -54389,6 +54441,8 @@ public class XmlParser extends XmlParserBase {
       composeDocumentManifest("DocumentManifest", (DocumentManifest)resource);
     } else if (resource instanceof DocumentReference) {
       composeDocumentReference("DocumentReference", (DocumentReference)resource);
+    } else if (resource instanceof EightBall) {
+      composeEightBall("EightBall", (EightBall)resource);
     } else if (resource instanceof Encounter) {
       composeEncounter("Encounter", (Encounter)resource);
     } else if (resource instanceof Endpoint) {
@@ -54694,6 +54748,8 @@ public class XmlParser extends XmlParserBase {
       composeDocumentManifest(name, (DocumentManifest)resource);
     } else if (resource instanceof DocumentReference) {
       composeDocumentReference(name, (DocumentReference)resource);
+    } else if (resource instanceof EightBall) {
+      composeEightBall(name, (EightBall)resource);
     } else if (resource instanceof Encounter) {
       composeEncounter(name, (Encounter)resource);
     } else if (resource instanceof Endpoint) {

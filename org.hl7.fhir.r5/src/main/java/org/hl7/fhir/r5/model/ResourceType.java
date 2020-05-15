@@ -84,6 +84,7 @@ Account,
     DiagnosticReport,
     DocumentManifest,
     DocumentReference,
+    EightBall,
     Encounter,
     Endpoint,
     EnrollmentRequest,
@@ -282,6 +283,8 @@ Account,
       return "documentmanifest";
     case DocumentReference:
       return "documentreference";
+    case EightBall:
+      return "eightball";
     case Encounter:
       return "encounter";
     case Endpoint:
@@ -583,6 +586,8 @@ Account,
       return DocumentManifest;
     if ("DocumentReference".equals(code))
       return DocumentReference;
+    if ("EightBall".equals(code))
+      return EightBall;
     if ("Encounter".equals(code))
       return Encounter;
     if ("Endpoint".equals(code))

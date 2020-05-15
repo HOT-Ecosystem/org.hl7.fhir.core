@@ -1111,7 +1111,11 @@ public class TestScript extends CanonicalResource {
         /**
          * A resource that includes narrative, extensions, and contained resources.
          */
-        DOMAINRESOURCE, 
+        DOMAINRESOURCE,
+        /**
+         * The answer to a question in EightBall.
+         */
+        EIGHTBALL,
         /**
          * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
          */
@@ -1761,6 +1765,8 @@ public class TestScript extends CanonicalResource {
           return DOCUMENTREFERENCE;
         if ("DomainResource".equals(codeString))
           return DOMAINRESOURCE;
+        if ("EightBall".equals(codeString))
+          return EIGHTBALL;
         if ("Encounter".equals(codeString))
           return ENCOUNTER;
         if ("Endpoint".equals(codeString))
@@ -2089,6 +2095,7 @@ public class TestScript extends CanonicalResource {
             case DOCUMENTMANIFEST: return "DocumentManifest";
             case DOCUMENTREFERENCE: return "DocumentReference";
             case DOMAINRESOURCE: return "DomainResource";
+            case EIGHTBALL: return "EightBall";
             case ENCOUNTER: return "Encounter";
             case ENDPOINT: return "Endpoint";
             case ENROLLMENTREQUEST: return "EnrollmentRequest";
@@ -2314,6 +2321,7 @@ public class TestScript extends CanonicalResource {
             case DOCUMENTMANIFEST: return "http://hl7.org/fhir/resource-types";
             case DOCUMENTREFERENCE: return "http://hl7.org/fhir/resource-types";
             case DOMAINRESOURCE: return "http://hl7.org/fhir/resource-types";
+            case EIGHTBALL: return "http://hl7.org/fhir/resource-types";
             case ENCOUNTER: return "http://hl7.org/fhir/resource-types";
             case ENDPOINT: return "http://hl7.org/fhir/resource-types";
             case ENROLLMENTREQUEST: return "http://hl7.org/fhir/resource-types";
@@ -2539,6 +2547,7 @@ public class TestScript extends CanonicalResource {
             case DOCUMENTMANIFEST: return "A collection of documents compiled for a purpose together with metadata that applies to the collection.";
             case DOCUMENTREFERENCE: return "A reference to a document of any kind for any purpose. While the term “document” implies a more narrow focus, for this resource this \"document\" encompasses *any* serialized object with a mime-type, it includes formal patient-centric documents (CDA), clinical notes, scanned paper, non-patient specific documents like policy text, as well as a photo, video, or audio recording acquired or used in healthcare.  The DocumentReference resource provides metadata about the document so that the document can be discovered and managed.  The actual content may be inline base64 encoded data or provided by direct reference.";
             case DOMAINRESOURCE: return "A resource that includes narrative, extensions, and contained resources.";
+            case EIGHTBALL: return "The answer to a question in EightBall.";
             case ENCOUNTER: return "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.";
             case ENDPOINT: return "The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information.";
             case ENROLLMENTREQUEST: return "This resource provides the insurance enrollment details to the insurer regarding a specified coverage.";
@@ -2764,6 +2773,7 @@ public class TestScript extends CanonicalResource {
             case DOCUMENTMANIFEST: return "DocumentManifest";
             case DOCUMENTREFERENCE: return "DocumentReference";
             case DOMAINRESOURCE: return "DomainResource";
+            case EIGHTBALL: return "EightBall";
             case ENCOUNTER: return "Encounter";
             case ENDPOINT: return "Endpoint";
             case ENROLLMENTREQUEST: return "EnrollmentRequest";
@@ -3113,6 +3123,8 @@ public class TestScript extends CanonicalResource {
           return FHIRDefinedType.DOCUMENTREFERENCE;
         if ("DomainResource".equals(codeString))
           return FHIRDefinedType.DOMAINRESOURCE;
+        if ("EightBall".equals(codeString))
+          return FHIRDefinedType.EIGHTBALL;
         if ("Encounter".equals(codeString))
           return FHIRDefinedType.ENCOUNTER;
         if ("Endpoint".equals(codeString))
@@ -3563,6 +3575,8 @@ public class TestScript extends CanonicalResource {
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.DOCUMENTREFERENCE);
         if ("DomainResource".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.DOMAINRESOURCE);
+        if ("EightBall".equals(codeString))
+          return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.EIGHTBALL);
         if ("Encounter".equals(codeString))
           return new Enumeration<FHIRDefinedType>(this, FHIRDefinedType.ENCOUNTER);
         if ("Endpoint".equals(codeString))
@@ -4006,6 +4020,8 @@ public class TestScript extends CanonicalResource {
         return "DocumentReference";
       if (code == FHIRDefinedType.DOMAINRESOURCE)
         return "DomainResource";
+      if (code == FHIRDefinedType.EIGHTBALL)
+        return "EightBall";
       if (code == FHIRDefinedType.ENCOUNTER)
         return "Encounter";
       if (code == FHIRDefinedType.ENDPOINT)

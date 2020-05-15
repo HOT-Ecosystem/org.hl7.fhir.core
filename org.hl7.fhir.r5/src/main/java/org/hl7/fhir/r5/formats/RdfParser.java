@@ -9713,6 +9713,24 @@ public class RdfParser extends RdfParserBase {
     }
   }
 
+  protected void composeEightBall(Complex parent, String parentType, String name, EightBall element, int index) {
+    if (element == null)
+      return;
+    Complex t;
+    if (Utilities.noString(parentType))
+      t = parent;
+    else {
+      t = parent.predicate("fhir:"+parentType+'.'+name);
+    }
+    composeDomainResource(t, "EightBall", name, element, index);
+    if (element.hasQuestionElement()) {
+      composeString(t, "EightBall", "question", element.getQuestionElement(), -1);
+    }
+    if (element.hasAnswer()) {
+      composeCodeableConcept(t, "EightBall", "answer", element.getAnswer(), -1);
+    }
+  }
+
   protected void composeEncounter(Complex parent, String parentType, String name, Encounter element, int index) {
     if (element == null) 
       return;
@@ -24126,6 +24144,8 @@ public class RdfParser extends RdfParserBase {
       composeDocumentManifest(parent, null, "DocumentManifest", (DocumentManifest)resource, -1);
     } else if (resource instanceof DocumentReference) {
       composeDocumentReference(parent, null, "DocumentReference", (DocumentReference)resource, -1);
+    } else if (resource instanceof EightBall) {
+      composeEightBall(parent, null, "EightBall", (EightBall)resource, -1);
     } else if (resource instanceof Encounter) {
       composeEncounter(parent, null, "Encounter", (Encounter)resource, -1);
     } else if (resource instanceof Endpoint) {

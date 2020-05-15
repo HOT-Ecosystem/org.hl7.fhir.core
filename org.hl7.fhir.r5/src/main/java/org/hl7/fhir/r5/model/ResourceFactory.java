@@ -133,6 +133,8 @@ public class ResourceFactory extends Factory {
             return new DocumentManifest();
         if ("DocumentReference".equals(name))
             return new DocumentReference();
+        if ("EightBall".equals(name))
+          return new EightBall();
         if ("Encounter".equals(name))
             return new Encounter();
         if ("Endpoint".equals(name))
@@ -535,6 +537,7 @@ public class ResourceFactory extends Factory {
         case -1122842661: return new DiagnosticReport();
         case 1922784394: return new DocumentManifest();
         case -1202791344: return new DocumentReference();
+        case -1838593266: return new EightBall();
         case -766867181: return new Encounter();
         case 1805746613: return new Endpoint();
         case -1377846581: return new EnrollmentRequest();

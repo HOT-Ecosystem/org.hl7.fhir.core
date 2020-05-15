@@ -3126,7 +3126,11 @@ into another (possibly the same) biological entity.
         /**
          * A resource that includes narrative, extensions, and contained resources.
          */
-        DOMAINRESOURCE, 
+        DOMAINRESOURCE,
+        /**
+         * The answer to a question in EightBall.
+         */
+        EIGHTBALL,
         /**
          * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
          */
@@ -3786,6 +3790,8 @@ The primary difference between a medicationusage and a medicationadministration 
           return DOCUMENTREFERENCE;
         if ("DomainResource".equals(codeString))
           return DOMAINRESOURCE;
+        if ("EightBall".equals(codeString))
+          return EIGHTBALL;
         if ("Encounter".equals(codeString))
           return ENCOUNTER;
         if ("Endpoint".equals(codeString))
@@ -4115,6 +4121,7 @@ The primary difference between a medicationusage and a medicationadministration 
             case DOCUMENTMANIFEST: return "DocumentManifest";
             case DOCUMENTREFERENCE: return "DocumentReference";
             case DOMAINRESOURCE: return "DomainResource";
+            case EIGHTBALL: return "EightBall";
             case ENCOUNTER: return "Encounter";
             case ENDPOINT: return "Endpoint";
             case ENROLLMENTREQUEST: return "EnrollmentRequest";
@@ -4342,6 +4349,7 @@ The primary difference between a medicationusage and a medicationadministration 
             case DOCUMENTMANIFEST: return "http://hl7.org/fhir/resource-types";
             case DOCUMENTREFERENCE: return "http://hl7.org/fhir/resource-types";
             case DOMAINRESOURCE: return "http://hl7.org/fhir/resource-types";
+            case EIGHTBALL: return "http://hl7.org/fhir/resource-types";
             case ENCOUNTER: return "http://hl7.org/fhir/resource-types";
             case ENDPOINT: return "http://hl7.org/fhir/resource-types";
             case ENROLLMENTREQUEST: return "http://hl7.org/fhir/resource-types";
@@ -4569,6 +4577,7 @@ The primary difference between a medicationusage and a medicationadministration 
             case DOCUMENTMANIFEST: return "A collection of documents compiled for a purpose together with metadata that applies to the collection.";
             case DOCUMENTREFERENCE: return "A reference to a document of any kind for any purpose. While the term “document” implies a more narrow focus, for this resource this \"document\" encompasses *any* serialized object with a mime-type, it includes formal patient-centric documents (CDA), clinical notes, scanned paper, non-patient specific documents like policy text, as well as a photo, video, or audio recording acquired or used in healthcare.  The DocumentReference resource provides metadata about the document so that the document can be discovered and managed.  The actual content may be inline base64 encoded data or provided by direct reference.";
             case DOMAINRESOURCE: return "A resource that includes narrative, extensions, and contained resources.";
+            case EIGHTBALL: return "The answer to a question in EightBall.";
             case ENCOUNTER: return "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.";
             case ENDPOINT: return "The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information.";
             case ENROLLMENTREQUEST: return "This resource provides the insurance enrollment details to the insurer regarding a specified coverage.";
@@ -4796,6 +4805,7 @@ The primary difference between a medicationusage and a medicationadministration 
             case DOCUMENTMANIFEST: return "DocumentManifest";
             case DOCUMENTREFERENCE: return "DocumentReference";
             case DOMAINRESOURCE: return "DomainResource";
+            case EIGHTBALL: return "EightBall";
             case ENCOUNTER: return "Encounter";
             case ENDPOINT: return "Endpoint";
             case ENROLLMENTREQUEST: return "EnrollmentRequest";
@@ -5147,6 +5157,8 @@ The primary difference between a medicationusage and a medicationadministration 
           return FHIRAllTypes.DOCUMENTREFERENCE;
         if ("DomainResource".equals(codeString))
           return FHIRAllTypes.DOMAINRESOURCE;
+        if ("EightBall".equals(codeString))
+          return FHIRAllTypes.EIGHTBALL;
         if ("Encounter".equals(codeString))
           return FHIRAllTypes.ENCOUNTER;
         if ("Endpoint".equals(codeString))
@@ -5601,6 +5613,8 @@ The primary difference between a medicationusage and a medicationadministration 
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.DOCUMENTREFERENCE);
         if ("DomainResource".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.DOMAINRESOURCE);
+        if ("EightBall".equals(codeString))
+          return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.EIGHTBALL);
         if ("Encounter".equals(codeString))
           return new Enumeration<FHIRAllTypes>(this, FHIRAllTypes.ENCOUNTER);
         if ("Endpoint".equals(codeString))
@@ -6048,6 +6062,8 @@ The primary difference between a medicationusage and a medicationadministration 
         return "DocumentReference";
       if (code == FHIRAllTypes.DOMAINRESOURCE)
         return "DomainResource";
+      if (code == FHIRAllTypes.EIGHTBALL)
+        return "EightBall";
       if (code == FHIRAllTypes.ENCOUNTER)
         return "Encounter";
       if (code == FHIRAllTypes.ENDPOINT)
@@ -8951,7 +8967,11 @@ into another (possibly the same) biological entity.
         /**
          * A resource that includes narrative, extensions, and contained resources.
          */
-        DOMAINRESOURCE, 
+        DOMAINRESOURCE,
+        /**
+         * The answer to a question in EightBall.
+         */
+        EIGHTBALL,
         /**
          * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
          */
@@ -9461,6 +9481,8 @@ The primary difference between a medicationusage and a medicationadministration 
           return DOCUMENTREFERENCE;
         if ("DomainResource".equals(codeString))
           return DOMAINRESOURCE;
+        if ("EightBall".equals(codeString))
+          return EIGHTBALL;
         if ("Encounter".equals(codeString))
           return ENCOUNTER;
         if ("Endpoint".equals(codeString))
@@ -9715,6 +9737,7 @@ The primary difference between a medicationusage and a medicationadministration 
             case DOCUMENTMANIFEST: return "DocumentManifest";
             case DOCUMENTREFERENCE: return "DocumentReference";
             case DOMAINRESOURCE: return "DomainResource";
+            case EIGHTBALL: return "EightBall";
             case ENCOUNTER: return "Encounter";
             case ENDPOINT: return "Endpoint";
             case ENROLLMENTREQUEST: return "EnrollmentRequest";
@@ -9869,6 +9892,7 @@ The primary difference between a medicationusage and a medicationadministration 
             case DOCUMENTMANIFEST: return "http://hl7.org/fhir/resource-types";
             case DOCUMENTREFERENCE: return "http://hl7.org/fhir/resource-types";
             case DOMAINRESOURCE: return "http://hl7.org/fhir/resource-types";
+            case EIGHTBALL: return "http://hl7.org/fhir/resource-types";
             case ENCOUNTER: return "http://hl7.org/fhir/resource-types";
             case ENDPOINT: return "http://hl7.org/fhir/resource-types";
             case ENROLLMENTREQUEST: return "http://hl7.org/fhir/resource-types";
@@ -10023,6 +10047,7 @@ The primary difference between a medicationusage and a medicationadministration 
             case DOCUMENTMANIFEST: return "A collection of documents compiled for a purpose together with metadata that applies to the collection.";
             case DOCUMENTREFERENCE: return "A reference to a document of any kind for any purpose. While the term “document” implies a more narrow focus, for this resource this \"document\" encompasses *any* serialized object with a mime-type, it includes formal patient-centric documents (CDA), clinical notes, scanned paper, non-patient specific documents like policy text, as well as a photo, video, or audio recording acquired or used in healthcare.  The DocumentReference resource provides metadata about the document so that the document can be discovered and managed.  The actual content may be inline base64 encoded data or provided by direct reference.";
             case DOMAINRESOURCE: return "A resource that includes narrative, extensions, and contained resources.";
+            case EIGHTBALL: return "The answer to a question in EightBall.";
             case ENCOUNTER: return "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.";
             case ENDPOINT: return "The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information.";
             case ENROLLMENTREQUEST: return "This resource provides the insurance enrollment details to the insurer regarding a specified coverage.";
@@ -10177,6 +10202,7 @@ The primary difference between a medicationusage and a medicationadministration 
             case DOCUMENTMANIFEST: return "DocumentManifest";
             case DOCUMENTREFERENCE: return "DocumentReference";
             case DOMAINRESOURCE: return "DomainResource";
+            case EIGHTBALL: return "EightBall";
             case ENCOUNTER: return "Encounter";
             case ENDPOINT: return "Endpoint";
             case ENROLLMENTREQUEST: return "EnrollmentRequest";
@@ -10384,6 +10410,8 @@ The primary difference between a medicationusage and a medicationadministration 
           return ResourceTypeEnum.DOCUMENTREFERENCE;
         if ("DomainResource".equals(codeString))
           return ResourceTypeEnum.DOMAINRESOURCE;
+        if ("EightBall".equals(codeString))
+          return ResourceTypeEnum.EIGHTBALL;
         if ("Encounter".equals(codeString))
           return ResourceTypeEnum.ENCOUNTER;
         if ("Endpoint".equals(codeString))
@@ -10692,6 +10720,8 @@ The primary difference between a medicationusage and a medicationadministration 
           return new Enumeration<ResourceTypeEnum>(this, ResourceTypeEnum.DOCUMENTREFERENCE);
         if ("DomainResource".equals(codeString))
           return new Enumeration<ResourceTypeEnum>(this, ResourceTypeEnum.DOMAINRESOURCE);
+        if ("EightBall".equals(codeString))
+          return new Enumeration<ResourceTypeEnum>(this, ResourceTypeEnum.EIGHTBALL);
         if ("Encounter".equals(codeString))
           return new Enumeration<ResourceTypeEnum>(this, ResourceTypeEnum.ENCOUNTER);
         if ("Endpoint".equals(codeString))
@@ -10993,6 +11023,8 @@ The primary difference between a medicationusage and a medicationadministration 
         return "DocumentReference";
       if (code == ResourceTypeEnum.DOMAINRESOURCE)
         return "DomainResource";
+      if (code == ResourceTypeEnum.EIGHTBALL)
+        return "EightBall";
       if (code == ResourceTypeEnum.ENCOUNTER)
         return "Encounter";
       if (code == ResourceTypeEnum.ENDPOINT)

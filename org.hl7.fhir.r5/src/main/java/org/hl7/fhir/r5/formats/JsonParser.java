@@ -12162,6 +12162,22 @@ public class JsonParser extends JsonParserBase {
     };
   }
 
+  protected EightBall parseEightBall(JsonObject json) throws IOException, FHIRFormatError {
+    EightBall res = new EightBall();
+    parseEightBallProperties(json, res);
+    return res;
+  }
+
+  protected void parseEightBallProperties(JsonObject json, EightBall res) throws IOException, FHIRFormatError {
+    parseDomainResourceProperties(json, res);
+    if (json.has("question"))
+      res.setQuestionElement(parseString(json.get("question").getAsString()));
+    if (json.has("_question"))
+      parseElementProperties(getJObject(json, "_question"), res.getQuestionElement());
+    if (json.has("answer"))
+      res.setAnswer(parseCodeableConcept(getJObject(json, "answer")));
+  }
+
   protected Encounter parseEncounter(JsonObject json) throws IOException, FHIRFormatError {
     Encounter res = new Encounter();
     parseEncounterProperties(json, res);
@@ -30159,6 +30175,8 @@ public class JsonParser extends JsonParserBase {
       return parseDocumentManifest(json);
     } else if (t.equals("DocumentReference")) {
       return parseDocumentReference(json);
+    } else if (t.equals("EightBall")) {
+      return parseEightBall(json);
     } else if (t.equals("Encounter")) {
       return parseEncounter(json);
     } else if (t.equals("Endpoint")) {
@@ -44120,6 +44138,24 @@ public class JsonParser extends JsonParserBase {
           composeReference(null, e);
         closeArray();
       };
+  }
+
+  protected void composeEightBall(String name, EightBall element) throws IOException {
+    if (element != null) {
+      prop("resourceType", name);
+      composeEightBallProperties(element);
+    }
+  }
+
+  protected void composeEightBallProperties(EightBall element) throws IOException {
+    composeDomainResourceProperties(element);
+    if (element.hasQuestionElement()) {
+      composeStringCore("question", element.getQuestionElement(), false);
+      composeStringExtras("question", element.getQuestionElement(), false);
+    }
+    if (element.hasAnswer()) {
+      composeCodeableConcept("answer", element.getAnswer());
+    }
   }
 
   protected void composeEncounter(String name, Encounter element) throws IOException {
@@ -63049,6 +63085,8 @@ public class JsonParser extends JsonParserBase {
       composeDocumentManifest("DocumentManifest", (DocumentManifest)resource);
     } else if (resource instanceof DocumentReference) {
       composeDocumentReference("DocumentReference", (DocumentReference)resource);
+    } else if (resource instanceof EightBall) {
+      composeEightBall("EightBall", (EightBall)resource);
     } else if (resource instanceof Encounter) {
       composeEncounter("Encounter", (Encounter)resource);
     } else if (resource instanceof Endpoint) {
@@ -63351,6 +63389,8 @@ public class JsonParser extends JsonParserBase {
       composeDocumentManifest(name, (DocumentManifest)resource);
     } else if (resource instanceof DocumentReference) {
       composeDocumentReference(name, (DocumentReference)resource);
+    } else if (resource instanceof EightBall) {
+      composeEightBall(name, (EightBall)resource);
     } else if (resource instanceof Encounter) {
       composeEncounter(name, (Encounter)resource);
     } else if (resource instanceof Endpoint) {
